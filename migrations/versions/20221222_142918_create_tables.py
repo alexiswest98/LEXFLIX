@@ -86,11 +86,11 @@ def upgrade():
     )
     # ### end Alembic commands ###
     if environment == "production":
-        op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
-        op.execute(f"ALTER TABLE profiles SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE genres SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE movies SET SCHEMA {SCHEMA};")
+        op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE movie_genres SET SCHEMA {SCHEMA};")
+        op.execute(f"ALTER TABLE profiles SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE reviews SET SCHEMA {SCHEMA};")
 
 def downgrade():
