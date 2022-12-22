@@ -8,10 +8,10 @@ class Genre(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    genre = db.Column(db.String(100), nullable=False, unique=True)
+    genre_name = db.Column(db.String(100), nullable=False, unique=True)
 
     ##relationships
-    genres_to_movie = db.relationship('Movie', back_populates='movie_to_genres')
+    # genres_to_movie = db.relationship('Movie', back_populates='movie_to_genres')
 
     def to_dict(self):
         return {
