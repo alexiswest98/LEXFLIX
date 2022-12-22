@@ -18,7 +18,7 @@ class User(db.Model, UserMixin):
     updated_at = db.Column(db.DateTime, server_default=db.func.now(), server_onupdate=db.func.now())
     
     ##relationships
-    user_to_profiles = db.relationship('Profile', back_populates='profiles_to_user',  primaryjoin="User.id==Profile.user_id")
+    user_to_profiles = db.relationship('Profile', back_populates='profiles_to_user',  primaryjoin="User.id==Profile.user_id", cascade='all,delete')
 
     @property
     def password(self):

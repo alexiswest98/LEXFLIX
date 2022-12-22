@@ -12,8 +12,8 @@ class Review(db.Model):
     rating = db.Column(db.String, nullable=False)
 
     ##relationships
-    reviews_to_movie = db.relationship('Movie', back_populates="movie_to_reviews", primaryjoin="Review.movie_id==Movie.id")
-    reviews_to_profiles = db.relationship('Profile', back_populates="profiles_to_reviews",  primaryjoin="Review.profile_id==Profile.id")
+    reviews_to_movie = db.relationship('Movie', back_populates="movie_to_reviews", foreign_keys=[movie_id])
+    reviews_to_profiles = db.relationship('Profile', back_populates="profiles_to_reviews", foreign_keys=[profile_id])
 
     def to_dict(self):
         return {

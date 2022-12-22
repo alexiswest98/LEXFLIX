@@ -14,8 +14,8 @@ class Profile(db.Model):
     updated_at = db.Column(db.DateTime, server_default=db.func.now(), server_onupdate=db.func.now())
 
     ##relationships
-    profiles_to_user = db.relationship('User', back_populates='user_to_profiles', primaryjoin="Profile.user_id==User.id")
-    profiles_to_reviews = db.relationship("Review", back_populates="reviews_to_profiles",  primaryjoin="Profile.id==Review.profile_id")
+    profiles_to_user = db.relationship('User', back_populates='user_to_profiles', foreign_keys=[user_id])
+    profiles_to_reviews = db.relationship("Review", back_populates="reviews_to_profiles",  primaryjoin="Profile.id==Review.profile_id", cascade='all,delete')
 
     # reviews = db.relationship(
     #     "Profile",

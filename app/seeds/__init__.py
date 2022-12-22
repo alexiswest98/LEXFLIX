@@ -4,6 +4,7 @@ from .movies import seed_movies, undo_movies
 from .genres import seed_genres, undo_genres
 from .profiles import seed_profiles, undo_profiles
 from .reviews import seed_reviews, undo_reviews
+from .movie_genres import seed_movie_genres, undo_movie_genres
 
 from app.models.db import db, environment, SCHEMA
 
@@ -24,11 +25,13 @@ def seed():
         undo_profiles()
         undo_genres()
         undo_movies()
+        undo_movie_genres()
         undo_reviews()
     seed_users()
     seed_profiles()
     seed_genres()
     seed_movies()
+    seed_movie_genres()
     seed_reviews()
     # Add other seed functions here
 
@@ -37,6 +40,7 @@ def seed():
 @seed_commands.command('undo')
 def undo():
     undo_reviews()
+    undo_movie_genres()
     undo_movies()
     undo_genres()
     undo_profiles()

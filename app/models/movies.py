@@ -11,9 +11,9 @@ class Movie(db.Model):
     director = db.Column(db.String(255), nullable=False)
     cast = db.Column(db.String, nullable=False)
     writer = db.Column(db.String(500), nullable=False)
-    genre1 = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('genres.id')), nullable=False)
-    genre2 = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('genres.id')))
-    genre3 = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('genres.id')))
+    # genre1 = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('genres.id')), nullable=False)
+    # genre2 = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('genres.id')))
+    # genre3 = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('genres.id')))
     movie_is = db.Column(db.String(100), nullable=False)
     rating = db.Column(db.String(40), nullable=False)
     year = db.Column(db.Integer, nullable=False)
@@ -25,11 +25,12 @@ class Movie(db.Model):
     netflix_original = db.Column(db.Boolean)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
 
+
     ##relationships
-    movie_to_genres = db.relationship('Genre', foreign_keys='Movie.genre1')
-    movie_to_genres = db.relationship('Genre', foreign_keys='Movie.genre2')
-    movie_to_genres = db.relationship('Genre', foreign_keys='Movie.genre3')
-    movie_to_reviews = db.relationship("Review", back_populates="reviews_to_movie", primaryjoin="Movie.id==Review.movie_id")
+    # primaryjoin="Movie.id==Review.movie_id"
+    movie_to_reviews = db.relationship("Review", back_populates="reviews_to_movie", primaryjoin="Movie.id==Review.movie_id", cascade='all,delete')
+    movie_to_movie_genre = db.relationship("MovieGenres", primaryjoin="Movie.id==MovieGenres.movie_id", back_populates='movie', cascade='all,delete')
+
 
     def to_dict(self):
         return {

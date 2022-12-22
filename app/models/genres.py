@@ -1,6 +1,5 @@
 from .db import db, environment, SCHEMA, add_prefix_for_prod
 
-
 class Genre(db.Model):
     __tablename__ = 'genres'
 
@@ -11,7 +10,8 @@ class Genre(db.Model):
     genre_name = db.Column(db.String(100), nullable=False, unique=True)
 
     ##relationships
-    # genres_to_movie = db.relationship('Movie', back_populates='movie_to_genres')
+    genres_to_movie = db.relationship('MovieGenres', primaryjoin="Genre.id==MovieGenres.genre_id", back_populates='genre', cascade='all,delete')
+
 
     def to_dict(self):
         return {
