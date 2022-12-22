@@ -6,13 +6,14 @@ class Review(db.Model):
     if environment == 'production':
         __table_args__ = {'schema': SCHEMA}
 
-    movie_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("movies.id")), nullable=False),
-    profile_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("profiles.id")), nullable=False),
+    id = db.Column(db.Integer, primary_key=True)
+    movie_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("movies.id")), nullable=False)
+    profile_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("profiles.id")), nullable=False)
     rating = db.Column(db.String, nullable=False)
 
     ##relationships
-    reviews_to_movie = db.relationship('Movie', back_populates="movie_to_reviews")
-    reviews_to_profile = db.relationship('Profile', back_populates="profile_to_reviews")
+    reviews_to_movie = db.relationship('Movie', back_populates="movie_to_reviews", primaryjoin="Review.movie_id==Movie.id")
+    reviews_to_profiles = db.relationship('Profile', back_populates="profiles_to_reviews",  primaryjoin="Review.profile_id==Profile.id")
 
     def to_dict(self):
         return {

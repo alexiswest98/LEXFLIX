@@ -1,5 +1,5 @@
 from .db import db, environment, SCHEMA, add_prefix_for_prod
-from app.models.reviews import reviews
+from app.models.reviews import Review
 
 class Profile(db.Model):
     __tablename__ = 'profiles'
@@ -14,15 +14,22 @@ class Profile(db.Model):
     updated_at = db.Column(db.DateTime, server_default=db.func.now(), server_onupdate=db.func.now())
 
     ##relationships
-    profiles_to_user = db.relationship('User', back_populates='user_to_profiles')
-    profile_to_reviews = db.relationship('Review', back_populates='reviews_to_profile')
+    profiles_to_user = db.relationship('User', back_populates='user_to_profiles', primaryjoin="Profile.user_id==User.id")
+    profiles_to_reviews = db.relationship("Review", back_populates="reviews_to_profiles",  primaryjoin="Profile.id==Review.profile_id")
+
+    # reviews = db.relationship(
+    #     "Profile",
+    #     secondary=follows,
+    #     primaryjoin=(follows.c.follower_id == id),
+    #     backref=db.backref("following", lazy="dynamic"),
+    #     lazy="dynamic"
+    #     )
 
     def to_dict(self):
         return {
             'id': self.id,
             'user_id': self.user_id,
             'username': self.username,
-            'email': self.email,
             "created_at": self.created_at,
             "updated_at": self.updated_at
         }

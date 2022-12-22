@@ -25,7 +25,6 @@ def seed_genres():
         genre_name='Mysteries')
 
 
-
     db.session.add(genre1)
     db.session.add(genre2)
     db.session.add(genre3)

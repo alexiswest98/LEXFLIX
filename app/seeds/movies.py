@@ -10,7 +10,7 @@ def seed_movies():
         director="Adam McKay",
         cast="Leonardo DiCaprio, Jennifer Lawrence,	Meryl Streep",
         writer="Adam McKay, David Sirota",
-        genres=1,
+        genre1=1,
         genre2=2,
         genre3=3,
         movie_is="Offbeat, Provocative, Witty",
@@ -84,7 +84,7 @@ def seed_movies():
         writer= "Rhett Reese, Paul Wernick",
         genre1= 2,
         genre2= 4,
-        genre2= 7,
+        genre3= 7,
         movie_is= "Offbeat",
         rating= "R",
         year= 2022,
@@ -193,7 +193,6 @@ def seed_movies():
     db.session.add(movie2)
     db.session.add(movie3)
     db.session.add(movie4)
-    db.session.add(movie5)
     db.session.add(movie5)
     db.session.add(movie6)
     db.session.add(movie7)

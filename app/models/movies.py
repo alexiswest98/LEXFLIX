@@ -1,5 +1,4 @@
 from .db import db, environment, SCHEMA, add_prefix_for_prod
-from app.models.reviews import reviews
 
 class Movie(db.Model):
     __tablename__ = 'movies'
@@ -8,30 +7,29 @@ class Movie(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    movie_name = db.Column(db.Integer, nullable=False)
-    director = db.Column(db.String(40), nullable=False, unique=True)
-    cast = db.Column(db.String(255), nullable=False)
-    writer = db.Column(db.String(255), nullable=False)
+    movie_name = db.Column(db.String, nullable=False)
+    director = db.Column(db.String(255), nullable=False)
+    cast = db.Column(db.String, nullable=False)
+    writer = db.Column(db.String(500), nullable=False)
     genre1 = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('genres.id')), nullable=False)
     genre2 = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('genres.id')))
     genre3 = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('genres.id')))
-    movie_is = db.Column(db.String, nullable=False)
-    rating = db.Column(db.String, nullable=False)
+    movie_is = db.Column(db.String(100), nullable=False)
+    rating = db.Column(db.String(40), nullable=False)
     year = db.Column(db.Integer, nullable=False)
-    duration = db.Column(db.String)
-    description = db.Column(db.string(1000), nullable=False, unique=True)
+    duration = db.Column(db.String, nullable=False)
+    description = db.Column(db.String, nullable=False)
     prev_img = db.Column(db.String, nullable=False)
     detail_img = db.Column(db.String, nullable=False)
     trailer_src = db.Column(db.String, nullable=False)
     netflix_original = db.Column(db.Boolean)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
-    updated_at = db.Column(db.DateTime, server_default=db.func.now(), server_onupdate=db.func.now())
 
     ##relationships
     movie_to_genres = db.relationship('Genre', foreign_keys='Movie.genre1')
     movie_to_genres = db.relationship('Genre', foreign_keys='Movie.genre2')
     movie_to_genres = db.relationship('Genre', foreign_keys='Movie.genre3')
-    movie_to_reviews = db.relationship('Review', back_populates="reviews_to_movie" )
+    movie_to_reviews = db.relationship("Review", back_populates="reviews_to_movie", primaryjoin="Movie.id==Review.movie_id")
 
     def to_dict(self):
         return {
