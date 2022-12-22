@@ -16,6 +16,9 @@ class User(db.Model, UserMixin):
     plan = db.Column(db.String, nullable=False)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
     updated_at = db.Column(db.DateTime, server_default=db.func.now(), server_onupdate=db.func.now())
+    
+    ##relationships
+    user_to_profiles = db.relationship('Profile', back_populates='profiles_to_user')
 
     @property
     def password(self):

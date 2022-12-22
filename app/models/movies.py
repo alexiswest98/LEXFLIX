@@ -1,4 +1,5 @@
 from .db import db, environment, SCHEMA, add_prefix_for_prod
+from app.models.reviews import reviews
 
 class Movie(db.Model):
     __tablename__ = 'movies'
@@ -11,7 +12,7 @@ class Movie(db.Model):
     director = db.Column(db.String(40), nullable=False, unique=True)
     cast = db.Column(db.String(255))
     writer = db.Column(db.String(255))
-    genres = db.Column(db.String, nullable=False)
+    genres = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('genres.id')), nullable=False)
     overall_rating = db.Column(db.Integer, nullable=False)
     year = db.Column(db.Integer)
     duration = db.Column(db.Integer)
@@ -19,6 +20,17 @@ class Movie(db.Model):
     movie_img = db.Column(db.String, nullable=False)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
     updated_at = db.Column(db.DateTime, server_default=db.func.now(), server_onupdate=db.func.now())
+
+    ##relationships
+    movie_to_genres = db.relationship('Genre', back_populates='genres_to_movie')
+
+    movie = db.relationship(
+        "Movie",
+        secondary=reviews,
+        primaryjoin=(reviews.c.movie_id == id),
+        backref=db.backref("movie", lazy="dynamic"),
+        lazy="dynamic"
+        )
 
     def to_dict(self):
         return {
