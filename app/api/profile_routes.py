@@ -7,7 +7,7 @@ from app.forms.profile_form import CreateProfileForm
 
 profile_routes = Blueprint('profiles', __name__)
 
-## get all profiles
+## get all profiles of current user
 @profile_routes.route('/:current_id/all')
 @login_required
 def get_user_profiles(current_id):
