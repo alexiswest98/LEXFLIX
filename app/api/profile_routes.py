@@ -8,12 +8,14 @@ from app.forms.profile_form import CreateProfileForm
 profile_routes = Blueprint('profiles', __name__)
 
 ## get all profiles of current user
-@profile_routes.route('/:current_id/all')
+@profile_routes.route('/<int:userId>/all', methods=["GET"])
 @login_required
-def get_user_profiles(current_id):
-    profiles = Profile.query.filter(current_user.id == current_id).all()
-    profileobj = [prof.to_dict() for prof in profiles]
-    return jsonify(profileobj)
+def get_user_profiles(userId):
+    profiles = Profile.query.filter(Profile.user_id == userId).all()
+    if profiles:
+        profileobj = [prof.to_dict() for prof in profiles]
+        return jsonify(profileobj)
+    return jsonify({'errors': 'Profiles for that User not found'}, 404)
 
 ## make a profile 
 @profile_routes.route('/create', methods=["POST"])
@@ -26,21 +28,36 @@ def make_profile():
         newprof = Profile(
             user_id = data['user_id'],
             username = data['username']
-        )
+            )
         db.session.add(newprof)
         db.session.commit()
         return jsonify(newprof.to_dict())
     return jsonify(form.errors)
 
-##delete a profile 
-@profile_routes.route('/:profile_id/delete', methods=["DELETE"])
+##edit profile
+@profile_routes.route('/<int:profileId>/edit', methods=["PUT"])
 @login_required
-def delete_profile(profile_id):
-    profile = Profile.query.get(profile_id)
+def edit_profile(profileId):
+    form = CreateProfileForm()
+    prof = Profile.query.get(profileId)
+    form['csrf_token'].data = request.cookies['csrf_token']
+    data = form.data
+    if prof and form.validate_on_submit():
+        prof.username = data['username']
+        db.session.commit()
+        return (list.to_dict())
+    if not prof:
+        return {'errors': ['That profile does not exist']}, 404
+    else:
+        return jsonify(form.errors)
+
+##delete a profile 
+@profile_routes.route('/<int:profileId>/delete', methods=["DELETE"])
+@login_required
+def delete_profile(profileId):
+    profile = Profile.query.get(profileId)
     if profile:
         db.session.delete(profile)
         db.session.commit()
         return jsonify('Successfully deleted task')
-    return jsonify('This task does not exist')
-
-##edit profile
+    return jsonify({'errors': 'Profile not found'}, 404)
