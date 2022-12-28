@@ -12,3 +12,11 @@ class MovieGenres(db.Model):
 
     movie = db.relationship("Movie", back_populates="movie_to_movie_genre", foreign_keys=[movie_id])
     genre = db.relationship("Genre", back_populates="genres_to_movie", foreign_keys=[genre_id])
+
+    def to_dict(self):
+        return {
+            'movie_id': self.movie_id,
+            'genre_id': self.genre_id,
+            'genre_name': self.genre.genre_name,
+            'movie_name': self.movie.movie_name
+        }

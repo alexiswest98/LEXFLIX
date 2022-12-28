@@ -39,13 +39,15 @@ def make_profile():
 @login_required
 def edit_profile(profileId):
     form = CreateProfileForm()
-    prof = Profile.query.get(profileId)
     form['csrf_token'].data = request.cookies['csrf_token']
     data = form.data
+    prof = Profile.query.get(profileId)
+
     if prof and form.validate_on_submit():
+        prof.user_id = data['user_id']
         prof.username = data['username']
         db.session.commit()
-        return (list.to_dict())
+        return jsonify(prof.to_dict())
     if not prof:
         return {'errors': ['That profile does not exist']}, 404
     else:
@@ -59,5 +61,5 @@ def delete_profile(profileId):
     if profile:
         db.session.delete(profile)
         db.session.commit()
-        return jsonify('Successfully deleted task')
+        return jsonify('Successfully deleted profile')
     return jsonify({'errors': 'Profile not found'}, 404)

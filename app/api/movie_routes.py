@@ -4,6 +4,7 @@ from datetime import date, datetime, timedelta
 from app.models.db import db
 from app.models.movies import Movie
 from app.models.movie_genres import MovieGenres
+from app.models.genres import Genre
 
 movie_routes = Blueprint('movies', __name__)
 
@@ -27,7 +28,17 @@ def get_movie_byid(movieId):
         return jsonify(movobj)
     return jsonify({'errors': 'Unable to find movie'}, 404)
 
-## get movies by genre ??
-# @movie_routes.route('/<int:genreId>/all', methods=["GET"])
-# @login_required
-# def get_movie_bygenre(genreId):
+## get movies by genre
+@movie_routes.route('/<int:genreId>/all', methods=["GET"])
+@login_required
+def get_movie_bygenre(genreId):
+    movieGenreCombo = MovieGenres.query.filter(MovieGenres.genre_id == genreId)
+    # print("**************", movieGenreCombo)
+    movies = []
+    if not movieGenreCombo:
+        return jsonify({'errors': 'No movies under that genre'}, 404)
+    for combo in movieGenreCombo:
+        # print(combo.movie_id)
+        movie = Movie.query.get(combo.movie_id)
+        movies.append(movie.to_dict())
+    return jsonify(movies)

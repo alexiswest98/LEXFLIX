@@ -167,8 +167,7 @@ def seed_movies():
         description= "A U.S. marshal's troubling visions compromise his investigation into the disappearance of a patient from a hospital for the criminally insane.",
         prev_img= "https://occ-0-1339-1340.1.nflxso.net/dnm/api/v6/6g…JGY8XkyAkYFGOEd2GEL37rqkKUd-ByGNvCEp2M.webp?r=0d6",
         detail_img = "https://www.slashfilm.com/img/gallery/shutter-island-revisited/intro-import.jpg",
-        trailer_src= "https://www.youtube.com/embed/YDGldPitxic?controls=0",
-        netflix_original= True
+        trailer_src= "https://www.youtube.com/embed/YDGldPitxic?controls=0"
         )
 
     movie10 = Movie(
@@ -186,8 +185,7 @@ def seed_movies():
         description= "Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life.",
         prev_img= "https://ntvb.tmsimg.com/assets/p10543523_v_h8_at.jpg?w=960&h=540",
         detail_img = "https://images8.alphacoders.com/560/560736.jpg",
-        trailer_src= "https://www.youtube.com/embed/0vxOhd4qlnA?controls=0",
-        netflix_original= True
+        trailer_src= "https://www.youtube.com/embed/0vxOhd4qlnA?controls=0"
         )
 
     db.session.add(movie1)
