@@ -8,6 +8,7 @@ const SignUpForm = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [plan, setPlan] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const SignUpForm = () => {
   const onSignUp = async (e) => {
     e.preventDefault();
     if (password === repeatPassword) {
-      const data = await dispatch(signUp(username, email, password));
+      const data = await dispatch(signUp(username, email, password, plan));
       if (data) {
         setErrors(data)
       }
@@ -86,9 +87,42 @@ const SignUpForm = () => {
           required={true}
         ></input>
       </div>
+      <div>
+        <h3>Select a Payment Plan</h3>
+        <input
+        type='radio'
+        id="basic-with-ads"
+        name='plan'
+        value={plan}
+        onClick={() => setPlan('Basic with ads')}>
+        </input>
+        <label htmlFor="basic-with-ads">Basic with ads</label>
+        <input
+        type='radio'
+        id="standard"
+        name='plan'
+        value={plan}
+        onClick={() => setPlan('Standard')}>
+        </input>
+        <label htmlFor="standard">Standard</label>
+        <input
+        type='radio'
+        id="premium"
+        name='plan'
+        value={plan}
+        onClick={() => setPlan('Premium')}>
+        </input>
+        <label htmlFor="premium">Premium</label>
+      </div>
       <button type='submit'>Sign Up</button>
     </form>
   );
 };
 
 export default SignUpForm;
+
+// type='radio'
+// name='Basic with ads'
+// onChange={updatePlan}
+// value={plan}
+// checked
