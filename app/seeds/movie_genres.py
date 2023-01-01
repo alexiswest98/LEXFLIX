@@ -138,6 +138,131 @@ def seed_movie_genres():
         genre_id=4
     )
 
+    mov_genre28=MovieGenres(
+        movie_id=11,
+        genre_id=5
+    )
+
+    mov_genre29=MovieGenres(
+        movie_id=11,
+        genre_id=2
+    )
+
+    mov_genre30=MovieGenres(
+        movie_id=11,
+        genre_id=4
+    )
+
+    mov_genre31=MovieGenres(
+        movie_id=12,
+        genre_id=5
+    )
+
+    mov_genre32=MovieGenres(
+        movie_id=12,
+        genre_id=4
+    )
+
+    mov_genre33=MovieGenres(
+        movie_id=13,
+        genre_id=8
+    )
+
+    mov_genre34=MovieGenres(
+        movie_id=13,
+        genre_id=3
+    )
+
+    mov_genre35=MovieGenres(
+        movie_id=14,
+        genre_id=7
+    )
+
+    mov_genre36=MovieGenres(
+        movie_id=14,
+        genre_id=5
+    )
+
+    mov_genre37=MovieGenres(
+        movie_id=14,
+        genre_id=4
+    )
+
+    mov_genre38=MovieGenres(
+        movie_id=15,
+        genre_id=3
+    )
+
+    mov_genre39=MovieGenres(
+        movie_id=15,
+        genre_id=10
+    )
+
+    mov_genre39=MovieGenres(
+        movie_id=16,
+        genre_id=5
+    )
+
+    mov_genre39=MovieGenres(
+        movie_id=16,
+        genre_id=2
+    )
+
+    mov_genre39=MovieGenres(
+        movie_id=16,
+        genre_id=9
+    )
+
+    mov_genre40=MovieGenres(
+        movie_id=17,
+        genre_id=5
+    )
+
+    mov_genre41=MovieGenres(
+        movie_id=17,
+        genre_id=8
+    )
+
+    mov_genre42=MovieGenres(
+        movie_id=18,
+        genre_id=5
+    )
+
+    mov_genre43=MovieGenres(
+        movie_id=18,
+        genre_id=9
+    )
+
+    mov_genre44=MovieGenres(
+        movie_id=18,
+        genre_id=7
+    )
+
+    mov_genre45=MovieGenres(
+        movie_id=19,
+        genre_id=8
+    )
+
+    mov_genre46=MovieGenres(
+        movie_id=19,
+        genre_id=5
+    )
+
+    mov_genre47=MovieGenres(
+        movie_id=20,
+        genre_id=10
+    )
+
+    mov_genre48=MovieGenres(
+        movie_id=20,
+        genre_id=6
+    )
+
+    mov_genre49=MovieGenres(
+        movie_id=20,
+        genre_id=3
+    )
+
     db.session.add(mov_genre1)
     db.session.add(mov_genre2)
     db.session.add(mov_genre3)
@@ -165,6 +290,28 @@ def seed_movie_genres():
     db.session.add(mov_genre25)
     db.session.add(mov_genre26)
     db.session.add(mov_genre27)
+    db.session.add(mov_genre28)
+    db.session.add(mov_genre29)
+    db.session.add(mov_genre30)
+    db.session.add(mov_genre31)
+    db.session.add(mov_genre32)
+    db.session.add(mov_genre33)
+    db.session.add(mov_genre34)
+    db.session.add(mov_genre35)
+    db.session.add(mov_genre36)
+    db.session.add(mov_genre37)
+    db.session.add(mov_genre38)
+    db.session.add(mov_genre39)
+    db.session.add(mov_genre40)
+    db.session.add(mov_genre41)
+    db.session.add(mov_genre42)
+    db.session.add(mov_genre43)
+    db.session.add(mov_genre44)
+    db.session.add(mov_genre45)
+    db.session.add(mov_genre46)
+    db.session.add(mov_genre47)
+    db.session.add(mov_genre48)
+    db.session.add(mov_genre49)
     db.session.commit()
 
 def undo_movie_genres():

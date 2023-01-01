@@ -47,6 +47,8 @@ def upgrade():
     sa.Column('detail_img', sa.String(), nullable=False),
     sa.Column('trailer_src', sa.String(), nullable=False),
     sa.Column('netflix_original', sa.Boolean(), nullable=True),
+    sa.Column('lex_top', sa.Boolean(), nullable=True),
+    sa.Column('top_10', sa.Boolean(), nullable=True),
     sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )

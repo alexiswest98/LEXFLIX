@@ -23,6 +23,8 @@ class Movie(db.Model):
     detail_img = db.Column(db.String, nullable=False)
     trailer_src = db.Column(db.String, nullable=False)
     netflix_original = db.Column(db.Boolean)
+    lex_top = db.Column(db.Boolean)
+    top_10 = db.Column(db.Boolean)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
 
 
@@ -48,5 +50,7 @@ class Movie(db.Model):
             "detail_img": self.detail_img,
             "trailer_src": self.trailer_src,
             "netflix_original": self.netflix_original,
+            "lex_top": self.lex_top,
+            "top_10": self.top_10,
             "created_at": self.created_at
         }

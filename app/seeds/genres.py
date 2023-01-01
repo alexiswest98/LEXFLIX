@@ -23,6 +23,8 @@ def seed_genres():
         genre_name='Action')
     genre9 = Genre(
         genre_name='Mysteries')
+    genre10 = Genre(
+        genre_name='Children & Family')
 
 
     db.session.add(genre1)
@@ -34,6 +36,7 @@ def seed_genres():
     db.session.add(genre7)
     db.session.add(genre8)
     db.session.add(genre9)
+    db.session.add(genre10)
     db.session.commit()
 
 

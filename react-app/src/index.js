@@ -7,11 +7,21 @@ import configureStore from './store';
 
 const store = configureStore();
 
+function Root() {
+  return (
+    <Provider store={store}>
+      <ModalProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ModalProvider>
+    </Provider>
+  );
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-        <App />
-      </Provider>
+    <Root />
   </React.StrictMode>,
   document.getElementById('root')
 );

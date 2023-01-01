@@ -18,7 +18,7 @@ def get_movies():
         return jsonify(movieobj)
     return jsonify({'errors': 'Unable to get movies'}, 401)
 
-## get movie by id
+## get movie by id (just in case)
 @movie_routes.route('/<int:movieId>', methods=["GET"])
 @login_required
 def get_movie_byid(movieId):
@@ -28,7 +28,7 @@ def get_movie_byid(movieId):
         return jsonify(movobj)
     return jsonify({'errors': 'Unable to find movie'}, 404)
 
-## get movies by genre
+## get movies by genre (put in diff reducer)
 @movie_routes.route('/<int:genreId>/all', methods=["GET"])
 @login_required
 def get_movie_bygenre(genreId):

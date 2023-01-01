@@ -167,7 +167,8 @@ def seed_movies():
         description= "A U.S. marshal's troubling visions compromise his investigation into the disappearance of a patient from a hospital for the criminally insane.",
         prev_img= "https://occ-0-1339-1340.1.nflxso.net/dnm/api/v6/6g…JGY8XkyAkYFGOEd2GEL37rqkKUd-ByGNvCEp2M.webp?r=0d6",
         detail_img = "https://www.slashfilm.com/img/gallery/shutter-island-revisited/intro-import.jpg",
-        trailer_src= "https://www.youtube.com/embed/YDGldPitxic?controls=0"
+        trailer_src= "https://www.youtube.com/embed/YDGldPitxic?controls=0",
+        lex_top=True
         )
 
     movie10 = Movie(
@@ -185,8 +186,195 @@ def seed_movies():
         description= "Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life.",
         prev_img= "https://ntvb.tmsimg.com/assets/p10543523_v_h8_at.jpg?w=960&h=540",
         detail_img = "https://images8.alphacoders.com/560/560736.jpg",
-        trailer_src= "https://www.youtube.com/embed/0vxOhd4qlnA?controls=0"
+        trailer_src= "https://www.youtube.com/embed/0vxOhd4qlnA?controls=0",
+        lex_top=True
         )
+
+    movie11 = Movie(
+        movie_name= "Glass Onion: A Knives Out Mystery", 
+        director= "Rian Johnson",
+        cast= "Daniel Craig, Edward Norton, Kate Hudson",
+        writer= "Rian Johnson",
+        # genre1= 5,
+        # genre2= 2,
+        # genre3= 4,
+        movie_is= "Offbeat, Witty",
+        rating= "PG-13",
+        year= 2022,
+        duration= "2h 19m", 
+        description= "World-famous detective Benoit Blanc heads to Greece to peel back the layers of a mystery surrounding a tech billionaire and his eclectic crew of friends.",
+        prev_img= "https://occ-0-1339-1340.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTc_7_sLJTeV53u7JhE96G9iXXy3IDanPm8P13mpug-VmoXa-Ff5ff6zd6mDWsU3ME262EZXiVDhQx1PygCDdLtqwUnhkPEI3vV5cwwgmbTSsYCMG7QTdfHsM9rrb9j10k9YGpvjlWzttHYJh64kl-SW_ID2-wwpq0fjUAoImlcUcTZHsdebgUeyhiZSxY4.jpg?r=005",
+        detail_img = "https://occ-0-37-34.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABekeLR1_UTvm-LGCdAfnoJm8ghWkXLS8izpG3FQ9ok9fwONCMPKSy6iLZz82y9QqnSgbgBBJNw0DsROmZ3Ye3c0ERgCAp7yLMvy5.jpg?r=878",
+        trailer_src= "https://www.youtube.com/embed/gj5ibYSz8C0?controls=0",
+        netflix_original= True
+        )
+
+    movie12 = Movie(
+        movie_name= "Velvet Buzzsaw", 
+        director= "Dan Gilroy",
+        cast= "Jake Gyllenhaal, Rene Russo, Zawe Ashton",
+        writer= "Dan Gilroy",
+        # genre1= 5,
+        # genre2= 4,
+        movie_is= "Cerebral",
+        rating= "R",
+        year= 2019,
+        duration= "1h 52m", 
+        description= "A feared critic, an icy gallery owner and an ambitious assistant snap up a recently deceased artist's stash of paintings -- with dire consequences.",
+        prev_img= "https://occ-0-1339-1340.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABU9ztP6Jm7POyIV1q9CCL_UbNXS6RzHl4zqDUnhx0KdBCwiMGqXYja47lfPEHyyqgydKLnijmtxyEXlPNIsC1PoIVrKx7rDfnVunWpJ6aIOgoW7upfDZlUG1nny-h-4Udoxd.jpg?r=e0e",
+        detail_img = "https://d2xl3i29vwgm2y.cloudfront.net/media/static/4b/c0/4bc0bacc-4c91-438c-b7b5-1b1297e949a9/1.jpg",
+        trailer_src= "https://www.youtube.com/embed/XdAR-lK43YU?controls=0",
+        netflix_original= True
+        )
+
+    movie13 = Movie(
+        movie_name= "Spider-Man: Into the Spider-Verse", 
+        director= "Bob Persichetti",
+        cast= "Shameik Moore, Jake Johnson, Hailee Steinfeld",
+        writer= "Phil Lord, Rodney Rothman",
+        # genre1= 8,
+        # genre2= 3,
+        movie_is= "Exciting",
+        rating= "PG",
+        year= 2018,
+        duration= "1h 57m", 
+        description= "Teen Miles Morales becomes the Spider-Man of his universe, and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.",
+        prev_img= "https://hbomax-images.warnermediacdn.com/images/GYWkQzQT5VKTDwgEAAACb/tileburnedin?size=1280x720&partner=hbomaxcom&v=bb23236b5edf9b0260ae882bbbcbd679&host=art-gallery.api.hbo.com&language=en-us&w=1280",
+        detail_img = "https://www.comingsoon.net/wp-content/uploads/sites/3/2018/11/Spider-Man-e1541797886422.jpg",
+        trailer_src= "https://www.youtube.com/embed/cqGjhVJWtEg?controls=0",
+        lex_top=True
+        )
+
+    movie14 = Movie(
+        movie_name= "Harry Potter and the Goblet of Fire", 
+        director= "Mike Newell",
+        cast= "Daniel Radcliffe, Emma Watson, Rupert Grint",
+        writer= "Steve Kloves, J.K. Rowling",
+        # genre1= 7,
+        # genre2= 5,
+        # genre3= 4,
+        movie_is= "Magical, Exciting",
+        rating= "PG-13",
+        year= 2005,
+        duration= "2h 37m", 
+        description= "Harry Potter finds himself competing in a hazardous tournament between rival schools of magic, but he is distracted by recurring nightmares.",
+        prev_img= "https://hbomax-images.warnermediacdn.com/images/GXssOeAtVmlVGwwEAAABR/tileburnedin?size=1280x720&partner=hbomaxcom&v=57cd564a8452ab3931c9463515a0da3e&host=art-gallery.api.hbo.com&language=en-us&w=1280",
+        detail_img = "https://www.pluggedin.com/wp-content/uploads/2019/12/harry-potter-and-the-goblet-of-fire.jpg",
+        trailer_src= "https://www.youtube.com/embed/4xkFJgcCQRE?controls=0",
+        lex_top=True
+        )
+    
+    movie15 = Movie(
+        movie_name= "Zoolander", 
+        director= "Ben Stiller",
+        cast= "Ben Stiller, Owen Wilson, Christine Taylor",
+        writer= "Drake Sather, Ben Stiller, John Hamburg",
+        # genre1= 3,
+        # genre2= 10,
+        movie_is= "Irreverant, Goofy",
+        rating= "PG-13",
+        year= 2001,
+        duration= "1h 30m", 
+        description= "At the end of his career, a clueless fashion model is brainwashed to kill the Prime Minister of Malaysia.",
+        prev_img= "https://image.tmdb.org/t/p/w780/7vVVSkFauLKvbSxX1eYwcij074F.jpg",
+        detail_img = "https://media.architecturaldigest.com/photos/56be5970f80b269a4abb014e/2:1/w_4928,h_2464,c_limit/zoolander-2-movie-set-design-004.jpg",
+        trailer_src= "https://www.youtube.com/embed/YtQq0T3ExLs?controls=0",
+        lex_top=True
+        )
+    
+    movie16 = Movie(
+        movie_name= "Arrival", 
+        director= "Denis Villenueve",
+        cast= "Amy Adams, Jeremy Renner, Forest Whitaker",
+        writer= "Eric Heisserer, Ted Chiang",
+        # genre1= 5,
+        # genre2= 2,
+        # genre3= 9,
+        movie_is= "Suspenseful, Exciting",
+        rating= "PG-13",
+        year= 2016,
+        duration= "1h 56m", 
+        description= "A linguist works with the military to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.",
+        prev_img= "https://occ.a.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUHSnfcPVTUcNhlA6ZxJsQ5yQUPDqAbuUceVp0YMVl7p8zIjmYZzvjhWVWlKubF_F9CXqmkCgYOYPTGEz_JbWZql1Brbd-I8S8MP.jpg?r=1aa",
+        detail_img = "https://s.studiobinder.com/wp-content/uploads/2010/03/Arrival-Video-Essay-How-to-Balance-Fear-and-Intrigue-WP.jpg",
+        trailer_src= "https://www.youtube.com/embed/tFMo3UJ4B4g?controls=0",
+        lex_top=True
+        )
+    
+    movie17 = Movie(
+        movie_name= "Pulp Fiction", 
+        director= "Quentin Tarantino",
+        cast= "John Travolta, Uma Thurman, Samuel L. Jackson",
+        writer= "Quentin Tarantino, Roger Avary",
+        # genre1= 5,
+        # genre2= 8,
+        movie_is= "Gritty, Exciting",
+        rating= "R",
+        year= 1994,
+        duration= "2h 34m", 
+        description= "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+        prev_img= "https://www.sho.com/site/image-bin/images/0_0_3507086/0_0_3507086_00h_1280x640.jpg",
+        detail_img = "https://www.today.it/~media/horizontal-hi/1419668529936/pulp-fiction-ballo-2.jpg",
+        trailer_src= "https://www.youtube.com/embed/5ZAhzsi1ybM?controls=0",
+        lex_top=True
+        )
+    
+    movie18 = Movie(
+        movie_name= "The Lovely Bones", 
+        director= "Peter Jackson",
+        cast= "Rachel Weisz, Mark Wahlberg, Saoirse Ronan",
+        writer= "Fran Walsh, Alice Sebold",
+        # genre1= 5,
+        # genre2= 9,
+        # genre3= 7,
+        movie_is= "Suspenseful",
+        rating= "PG-13",
+        year= 2009,
+        duration= "2h 15m", 
+        description= "Centers on a young girl who has been murdered and watches over her family - and her killer - from purgatory. She must weigh her desire for vengeance against her desire for her family to heal.",
+        prev_img= "https://img3.hulu.com/user/v3/artwork/a90a24ff-e8e8-4059-943e-9a1fda060186?base_image_bucket_name=image_manager&base_image=2e0ab599-f934-4b2b-83d2-8d929fccf659&region=US&format=jpeg&size=952x536",
+        detail_img = "https://m.media-amazon.com/images/M/MV5BMTUwNjc2Mjg5M15BMl5BanBnXkFtZTcwMjAzNzAxMw@@._V1_.jpg",
+        trailer_src= "https://www.youtube.com/embed/lTBeK-fwyQs?controls=0",
+        lex_top=True
+        )
+    
+    movie19 = Movie(
+        movie_name= "he Dark Knight", 
+        director= "Christopher Nolan",
+        cast= "Christian Bale, Heath Ledger, Aaron Eckhart",
+        writer= "Jonathan Nolan, David S. Goyer",
+        # genre1= 8,
+        # genre2= 5,
+        movie_is= "Exciting",
+        rating= "PG-13",
+        year= 2008,
+        duration= "2h 32m", 
+        description= "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+        prev_img= "https://occ-0-34-41.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTQpo96D_Ag7ZsiDNLdWUjM73ShPJR4Xj63AKD9lYKMohCTTYD2RcWfII8TtbNuV3ntf5KIuUkyHXqLJzk-_nyGsVjU5oU2y7pzR.jpg?r=157",
+        detail_img = "https://www.slashfilm.com/img/gallery/how-joker-would-have-played-a-role-in-the-dark-knight-rises/l-intro-1648651771.jpg",
+        trailer_src= "https://www.youtube.com/embed/_PZpmTj1Q8Q?controls=0",
+        lex_top=True
+        )
+    
+    movie20 = Movie(
+        movie_name= "The Princess and the Frog", 
+        director= "Ron Clements, John Musker",
+        cast= "Anika Noni Rose, Keith David, Oprah Winfrey",
+        writer= "Ron Clements, John Musker, Greg Erb",
+        # genre1= 10,
+        # genre2= 6,
+        # genre3= 3,
+        movie_is= "Magical, For Children",
+        rating= "G",
+        year= 2009,
+        duration= "1h 37m", 
+        description= "A waitress, desperate to fulfill her dreams as a restaurant owner, is set on a journey to turn a frog prince back into a human being, but she has to face the same problem after she kisses him.",
+        prev_img= "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6E4425084B8F6CEDC2A4A983A71CC783BA2F694229C89E7AA9F1C204E169AC64/scale?width=1200&aspectRatio=1.78&format=jpeg",
+        detail_img = "http://img3.wikia.nocookie.net/__cb20121008153240/disney/images/7/7c/Friends_on_the_Other_Side.png",
+        trailer_src= "https://www.youtube.com/embed/uQBy6jqbmlU?controls=0",
+        lex_top=True
+        )
+
 
     db.session.add(movie1)
     db.session.add(movie2)
@@ -198,10 +386,19 @@ def seed_movies():
     db.session.add(movie8)
     db.session.add(movie9)
     db.session.add(movie10)
+    db.session.add(movie11)
+    db.session.add(movie12)
+    db.session.add(movie13)
+    db.session.add(movie14)
+    db.session.add(movie15)
+    db.session.add(movie16)
+    db.session.add(movie17)
+    db.session.add(movie18)
+    db.session.add(movie19)
+    db.session.add(movie20)
     db.session.commit()
 
     
-
 
 # Uses a raw SQL query to TRUNCATE or DELETE the users table. SQLAlchemy doesn't
 # have a built in function to do this. With postgres in production TRUNCATE
