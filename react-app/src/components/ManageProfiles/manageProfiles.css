@@ -1,0 +1,56 @@
+.outer-indiv-manage-profile {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.outer-indiv-manage-profile:hover >img {
+    border: 1px solid rgb(188, 184, 184);
+}
+
+.outer-indiv-manage-profile:hover >h4 {
+    color: rgb(188, 184, 184);
+}
+
+.outer-prof-img {
+    position: relative;
+    display: inline-block;
+    transition: transform 150ms ease-in-out;
+}
+
+.outer-prof-img img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.outer-prof-img svg {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+}
+
+.svg-icon-edit {
+    color: white;
+}
+
+.done-manage-button {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin: 2em 0 1em;
+    padding: 0.5em 1.5em;
+}
+
+.done-manage-button:hover {
+    background-color: #e50914;
+    color: white;
+}

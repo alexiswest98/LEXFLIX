@@ -22,6 +22,7 @@ export const getAllMoviesThunk = () => async (dispatch) => {
     if (response.ok) {
         const movies = await response.json()
         dispatch(getAllMoviesAction(movies))
+        return movies
     }
 }
 
@@ -30,6 +31,7 @@ export const getOneMovieThunk = (movie_id) => async (dispatch) => {
     if (response.ok) {
         const movie = await response.json()
         dispatch(getOneMovieAction(movie))
+        return movie
     }
 }
 

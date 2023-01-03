@@ -8,6 +8,8 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
+import GetProfiles from './components/Profiles';
+import ManageProfiles from './components/ManageProfiles';
 
 
 function App() {
@@ -37,6 +39,12 @@ function App() {
         </Route>
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
+        </ProtectedRoute>
+        <ProtectedRoute path='/profiles' exact={true} >
+          <GetProfiles/>
+        </ProtectedRoute>
+        <ProtectedRoute path='/profiles/manage' exact={true} >
+          <ManageProfiles/>
         </ProtectedRoute>
         <ProtectedRoute path='/users/:userId' exact={true} >
           <User />

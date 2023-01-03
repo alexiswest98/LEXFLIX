@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { login } from '../../store/session';
+import './LoginForm.css'
 
 const LoginForm = () => {
   const [errors, setErrors] = useState([]);
@@ -27,11 +29,11 @@ const LoginForm = () => {
   };
 
   if (user) {
-    return <Redirect to='/' />;
+    return <Redirect to='/profiles' />;
   }
 
   return (
-    <form onSubmit={onLogin}>
+    <form onSubmit={onLogin} className='outer-log-in'>
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
@@ -57,6 +59,18 @@ const LoginForm = () => {
           onChange={updatePassword}
         />
         <button type='submit'>Login</button>
+        <div className='outer-demo'>
+          <button
+            type='submit'
+            onClick={() => { dispatch(login('demo@aa.io', 'password')) }}
+          >Login as Demo User</button>
+        </div>
+        <div className='outer-demo'> 
+          New To Netflix?
+          <NavLink to='/sign-up' exact={true} className='sign-up-link'>
+            Sign Up
+          </NavLink>
+        </div>
       </div>
     </form>
   );

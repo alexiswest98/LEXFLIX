@@ -1,0 +1,66 @@
+.outer-nav-bar {
+    height: 10vh;
+    width: 100%;
+    border-bottom: solid 1px yellow;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+}
+
+.prof-text {
+    color: white;
+    margin: 1em;
+    text-decoration: none;
+}
+
+.outer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rosybrown;
+    width: 15%;
+}
+
+.logo {
+    height: 70%;
+    width: 65%;
+}
+
+.action-outer-div {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid blue;
+}
+
+.language-button {
+    color: white;
+    background: transparent;
+    border: 0.09px solid rgb(251, 232, 232, 0.7);
+    padding: 8px 12px;
+    width: 6.5vw;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.fa-globe {
+    margin-right: 5px;
+}
+
+.sign-in-button {
+    border: none;
+    background-color: #e50914;
+    width: 6vw;
+    padding: 8px 17px;
+    border-radius: 2px;
+}
+
+.sign-in {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 400;
+}

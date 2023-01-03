@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Netflix';
+    src: url('../../fonts/NetflixSans-Regular.woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Netflix;
+}
+
+.outer-prof-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* border: 1px solid white; */
+    width: 100%;
+    height: 87vh;
+}
+
+.select-prof-text {
+    color: white;
+    /* border: 2px solid rgb(165, 165, 255); */
+    margin: 2%;
+    font-size: 2.5vw;
+}
+
+.profiles-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 30%;
+    /* border: 1px solid white; */
+}
+
+.outer-indiv-profile {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.outer-indiv-profile:hover >img {
+    border: 1px solid white;
+}
+
+.outer-indiv-profile:hover >h4 {
+    color: white;
+}
+
+.outer-prof-img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.profile-img {
+    width: 90%;
+    height: auto;
+    border-radius: 0.5em;
+}
+
+.profile-img:hover {
+    border: 1px solid white;
+}
+
+.profile-username {
+    color: grey;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
+}
+
+
+.manage-prof-button {
+    margin-top: 4%;
+    border: 1px solid grey;
+    background: transparent;
+    color: grey;
+    padding: 0.8em 2em;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.manage-prof-button:hover {
+    color: white;
+    border: 1px solid white
+}
