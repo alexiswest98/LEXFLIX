@@ -8,10 +8,10 @@ from app.forms.profile_form import CreateProfileForm
 profile_routes = Blueprint('profiles', __name__)
 
 ## get all profiles of current user
-@profile_routes.route('/<int:userId>/all', methods=["GET"])
+@profile_routes.route('/all', methods=["GET"])
 @login_required
-def get_user_profiles(userId):
-    profiles = Profile.query.filter(Profile.user_id == userId).all()
+def get_user_profiles():
+    profiles = Profile.query.filter(Profile.user_id == current_user.id).all()
     if profiles:
         profileobj = [prof.to_dict() for prof in profiles]
         return jsonify(profileobj)

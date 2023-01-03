@@ -10,6 +10,7 @@ class Profile(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
     username = db.Column(db.String(40), nullable=False)
+    profile_img = db.Column(db.String, default='https://occ-0-1339-1340.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABUoj4FT-0Rr558WbETiintMnmH2JKw4l_p4MdMoxqVx7YXwsvLvvnGUtx3HKZN_BJFH4EHpXn5KqSCBVxLrRz0n4gk64yyeAFw.png?r=229')
     created_at = db.Column(db.DateTime, server_default=db.func.now())
     updated_at = db.Column(db.DateTime, server_default=db.func.now(), server_onupdate=db.func.now())
 
@@ -30,6 +31,7 @@ class Profile(db.Model):
             'id': self.id,
             'user_id': self.user_id,
             'username': self.username,
-            "created_at": self.created_at,
-            "updated_at": self.updated_at
+            'profile_img': self.profile_img,
+            'created_at': self.created_at,
+            'updated_at': self.updated_at
         }

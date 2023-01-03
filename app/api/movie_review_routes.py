@@ -7,7 +7,18 @@ from app.forms.review_form import CreateReviewForm
 
 movie_review_routes = Blueprint('movieReview', __name__)
 
-##get all user ratings (may not need)
+## get all reviews for profile user
+## added after need this may not need bottom route
+@movie_review_routes.route('/profile/<int:profileId>/all', methods=["GET"])
+@login_required
+def get_prof_reviews(profileId):
+    reviews = Review.query.filter(Review.profile_id==profileId).all()
+    reviewsobj = []
+    if reviews:
+        for rev in reviews:
+            reviewsobj.append(rev.to_dict())
+        return jsonify(reviewsobj)
+    return jsonify({'errors': 'Profile user has no reviews'}, 404)
 
 ## get rating for a movie based off profile
 @movie_review_routes.route('/profile/<int:profileId>/movie/<int:movieId>', methods=["GET"])
@@ -17,12 +28,11 @@ def get_user_movie_review(profileId, movieId):
     review = Review.query.filter(Review.movie_id==movieId and Review.profile_id==profileId).all()
     if review:
         for rev in review:
-            print(rev.to_dict())
+            # print(rev.to_dict())
             return jsonify(rev.to_dict())
     return jsonify({'errors': 'Review for this movie not found'}, 404)
 
 ## make a rating for a movie
-##need validation if profile already has a review for movie
 @movie_review_routes.route('/profile/<int:profileId>/movie/<int:movieId>', methods=["POST"])
 @login_required
 def make_movie_review(profileId, movieId):
