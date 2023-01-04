@@ -12,11 +12,13 @@ export default function GetProfiles() {
         dispatch(getAllProfilesThunk())
     }, [dispatch])
 
+    if (!profiles ) return null;
+
     return (
         <div className="outer-prof-div">
             <h1 className="select-prof-text">Who's Watching?</h1>
             <div className="profiles-box">
-            {profiles.map(prof => (
+            {!profiles.includes(404) && profiles.map(prof => (
                 <NavLink to={`/browse/${prof.id}`} className="outer-indiv-profile">
                     <div className="outer-prof-img">
                     <img src={prof.profile_img} alt='profile image' className="profile-img"></img>

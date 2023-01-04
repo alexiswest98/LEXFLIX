@@ -10,13 +10,15 @@ export default function ManageProfiles() {
 
     useEffect(() => {
         dispatch(getAllProfilesThunk())
-    }, [dispatch, profiles])
+    }, [dispatch])
+
+    if (!profiles ) return null;
 
     return (
         <div className="outer-prof-div">
             <h1 className="select-prof-text">Manage Profiles:</h1>
             <div className="profiles-box">
-                {profiles.map(prof => (
+                {!profiles.includes(404) && profiles.map(prof => (
                     <NavLink to={`/ManageProfiles/${prof.id}`} className="outer-indiv-manage-profile">
                         <div className="outer-prof-img">
                             <img src={prof.profile_img} alt='profile image' className="profile-img" />
