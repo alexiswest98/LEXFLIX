@@ -10,6 +10,9 @@ import User from './components/User';
 import { authenticate } from './store/session';
 import GetProfiles from './components/Profiles';
 import ManageProfiles from './components/ManageProfiles';
+import EditProfile from './components/EditProfile';
+import AddProfile from './components/addProfile';
+import HomePage from './components/HomePage/HomePage';
 
 
 function App() {
@@ -17,7 +20,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    (async() => {
+    (async () => {
       await dispatch(authenticate());
       setLoaded(true);
     })();
@@ -29,28 +32,42 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar />
+      {/* <NavBar /> */}
       <Switch>
-        <Route path='/login' exact={true}>
+        <Route path='/login' exact='true'>
+          <NavBar />
           <LoginForm />
         </Route>
-        <Route path='/sign-up' exact={true}>
+        <Route path='/sign-up' exact='true'>
+          <NavBar />
           <SignUpForm />
         </Route>
-        <ProtectedRoute path='/users' exact={true} >
-          <UsersList/>
+        <ProtectedRoute path='/users' exact='true' >
+          <UsersList />
         </ProtectedRoute>
-        <ProtectedRoute path='/profiles' exact={true} >
-          <GetProfiles/>
+        <ProtectedRoute path='/profiles' exact='true' >
+          <GetProfiles />
         </ProtectedRoute>
-        <ProtectedRoute path='/profiles/manage' exact={true} >
-          <ManageProfiles/>
+        <ProtectedRoute path='/manageProfiles/:id' exact='true' >
+          <EditProfile />
         </ProtectedRoute>
-        <ProtectedRoute path='/users/:userId' exact={true} >
+        <ProtectedRoute path='/profiles/manage' exact='true' >
+          <ManageProfiles />
+        </ProtectedRoute>
+        <ProtectedRoute path='/profiles/create' exact='true' >
+          <AddProfile />
+        </ProtectedRoute>
+        <ProtectedRoute path='/users/:userId' exact='true' >
+          <NavBar />
           <User />
         </ProtectedRoute>
-        <Route path='/' exact={true} >
-          <h1>hello</h1>
+        <ProtectedRoute path='/browse/:profId' exact='true' >
+          <NavBar />
+          <HomePage />
+        </ProtectedRoute>
+        <Route path='/' exact='true' >
+          <NavBar />
+          <h1>homePage</h1>
         </Route>
       </Switch>
     </BrowserRouter>

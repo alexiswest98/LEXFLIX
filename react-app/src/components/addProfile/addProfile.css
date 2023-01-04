@@ -1,0 +1,95 @@
+
+.outer-whole-add-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 87vh;
+}
+
+.inner-whole-add-prof {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: pink; */
+}
+
+.outer-add-prof {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1em;
+}
+
+.add-prof-title {
+    font-size: 4vw;
+    margin: 0;
+    font-weight: 400;
+}
+
+.prof-add-img {
+    margin-right: 1em;
+    border-radius: 4px;
+    height: 90%;
+    width: 38%;
+}
+
+.add-dets-span {
+    color: #666;
+    font-size: 1.3vw;
+    font-weight: 400;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1em;
+    margin-block-start: 0em;
+}
+
+.outer-input-div-add {
+    width: 62%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-username-add::placeholder {
+    color: rgb(209, 206, 206)
+}
+
+.input-username-add {
+    width: 100%;
+    height: 60%;
+    background: #666;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.3vw;
+    height: 2em;
+    margin: 0 0.8em 0 0;
+    padding: 0.2em 0.6em;
+    text-indent: 0.1vw;
+    outline: none;
+}
+
+.input-username-add-bad {
+    border: 1px solid #ea3841;
+    width: 100%;
+    height: 60%;
+    background: #666;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.3vw;
+    height: 2em;
+    margin: 0 0.8em 0 0;
+    padding: 0.2em 0.6em;
+    text-indent: 0.1vw;
+    outline: none;
+}
+
+#add-prof {
+    width: 45%;
+    height: 7%;
+    margin-top: 1em;
+}

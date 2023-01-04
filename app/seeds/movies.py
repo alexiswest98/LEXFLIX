@@ -72,7 +72,7 @@ def seed_movies():
         year= 2019,
         duration= "1h 32m", 
         description= "On the heels of a blindsiding breakup, music journalist Jenny braces for a new beginning -- and one last adventure with her closest friends.",
-        prev_img= "https://occ-0-1339-1340.1.nflxso.net/dnm/api/v6/6g…B6Cl8PpABtrkmBhfYqvsiCLk61u4RfqiL0joPgA.jpg?r=8e1",
+        prev_img= "https://occ.a.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABSlNOgddyhfTKZIEYtWWwjpuSxhm9ebG3TJUJ5Yu_mhhtnSBvzYd1Yqp7tVVHbIMvywCORjZhm6x_rpkOFHlhuXc5Z9BC0Tako_c6_qYVHWy0leum-RrYOUot_5l9nRQESFhPw.jpg?r=7df",
         detail_img = "https://occ-0-56-1123.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABYS8Zaxee9mTX3Af5Uo2iyd9uWrZmHrqm_3V2kqg45uNf9Y2jQTsKXeB8nRZKF2LH2bVkxfbpNMApplNCn3cqqPwe2f6HaaAmzWu.jpg?r=9ce",
         trailer_src= "https://www.youtube.com/embed/BBd9gcrj2Wk?controls=0",
         netflix_original= True
@@ -91,7 +91,7 @@ def seed_movies():
         year= 2022,
         duration= "1h 47m", 
         description= "A prisoner in a state-of-the-art penitentiary begins to question the purpose of the emotion-controlling drugs he's testing for a pharmaceutical genius.",
-        prev_img= "	https://occ-0-1339-1340.1.nflxso.net/dnm/api/v6/6g…pcCKlbVuljP6PK1W3jmAkIvKhkJJPC87oiq6H1j.jpg?r=ee6",
+        prev_img= "https://i0.wp.com/highoncinemaa.com/wp-content/uploads/2022/06/Spiderhead-Reviews-Roundup-Chris-Hemsworths-Best-Performance-Yet.jpg?fit=1604%2C870&ssl=1",
         detail_img = "https://fictionhorizon.com/wp-content/uploads/2022/06/spiderhead-1.jpg",
         trailer_src= "https://www.youtube.com/embed/BfsNfFoA0J0?controls=0",
         netflix_original= True
@@ -109,7 +109,7 @@ def seed_movies():
         year= 2017,
         duration= "2h 3m", 
         description= "In a future with a strict one-child policy, six septuplets must avoid government detection while searching for their missing sister.",
-        prev_img= "https://www.youtube.com/embed/hOiWSWLt-NA?controls=0",
+        prev_img= "https://occ-0-58-990.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZb1JZZT_wEWc6iWaLHqiQWwrSTmTejotmwG2TEe6Sg7wUe__pG6hNUxKSGGSvzG7VQwKVOnIRtWfn3Twzf0FdEaU2gsSBeOVEPryLOgmFQUq5XS5NYrF_ZNdjlMnsqKAXUI2Q.jpg?r=436",
         detail_img = "https://s3.amazonaws.com/static.rogerebert.com/uploads/review/primary_image/reviews/what-happened-to-monday-2017/What_Happened_to_Monday.jpg",
         trailer_src= "https://www.youtube.com/embed/hOiWSWLt-NA?controls=0",
         netflix_original= True
@@ -128,7 +128,7 @@ def seed_movies():
         year= 2018,
         duration= "2h 4m", 
         description= "Five years after an ominous unseen presence drives most of society to suicide, a survivor and her two children make a desperate bid to reach safety.",
-        prev_img= "https://occ-0-1339-1340.1.nflxso.net/dnm/api/v6/6g…kOxEBSwPPi5b-a5uPuFizHWBS2thzIAo4v_NPuv.jpg?r=ef5",
+        prev_img= "https://occ-0-33-41.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQ-Fi5X9KMeL6VSvn_HMJtFUzbnArBRh3mrqyNZSaDFr4LkeZcI2jxYZJ3T6O5RYaDbrtGGHQ4Wnmxamw5EkV6eibuikDMrDTy8iA7ujh_-NRk9X20dRz16Cs7SwXr2-6Ge-WA.jpg?r=ca8",
         detail_img = "https://s3-us-west-2.amazonaws.com/prd-rteditorial/wp-content/uploads/2019/01/03113538/bird-box-700x380.jpg",
         trailer_src= "https://www.youtube.com/embed/o2AsIXSh2xo?controls=0",
         netflix_original= True
@@ -147,7 +147,7 @@ def seed_movies():
         year= 2022,
         duration= "2h 6m", 
         description= "Five assassins board a Japanese bullet train bound for Kyoto and come to discover that their seemingly separate missions are mysteriously linked.",
-        prev_img= "https://occ-0-1339-1340.1.nflxso.net/dnm/api/v6/6g…yUZWcTLTbxBihCCNzB0oKjMiEn9e6FwBg5Vga4.webp?r=83c",
+        prev_img= "https://occ.a.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVDdKjzrLi9DErgrVtSjCJIIAnj5vlTilGmIJNo3qy80pO2YMCMAOp75GGFXjkTE0eGJoa2ZaWFgF2Ue7VDAILOPJQtOsfgLzdgu.jpg?r=397",
         detail_img = "https://www.indiewire.com/wp-content/uploads/2022/08/Bullet-Train-trailer-still.jpeg",
         trailer_src= "https://www.youtube.com/embed/iUZ5H1g5CSg?controls=0"
         )
@@ -165,7 +165,7 @@ def seed_movies():
         year= 2010,
         duration= "2h 18m", 
         description= "A U.S. marshal's troubling visions compromise his investigation into the disappearance of a patient from a hospital for the criminally insane.",
-        prev_img= "https://occ-0-1339-1340.1.nflxso.net/dnm/api/v6/6g…JGY8XkyAkYFGOEd2GEL37rqkKUd-ByGNvCEp2M.webp?r=0d6",
+        prev_img= "https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2019/11/Shutter-Island.jpg?fit=1392%2C696&ssl=1",
         detail_img = "https://www.slashfilm.com/img/gallery/shutter-island-revisited/intro-import.jpg",
         trailer_src= "https://www.youtube.com/embed/YDGldPitxic?controls=0",
         lex_top=True
@@ -339,7 +339,7 @@ def seed_movies():
         )
     
     movie19 = Movie(
-        movie_name= "he Dark Knight", 
+        movie_name= "The Dark Knight", 
         director= "Christopher Nolan",
         cast= "Christian Bale, Heath Ledger, Aaron Eckhart",
         writer= "Jonathan Nolan, David S. Goyer",

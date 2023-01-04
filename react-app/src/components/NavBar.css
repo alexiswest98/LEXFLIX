@@ -1,10 +1,18 @@
 .outer-nav-bar {
     height: 10vh;
     width: 100%;
-    border-bottom: solid 1px yellow;
+    border: solid 1px yellow;
     display: flex;
     justify-content: space-between;
     background: transparent;
+}
+
+.inner-nav-prof {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(255, 0, 0);
 }
 
 .prof-text {
@@ -17,13 +25,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rosybrown;
-    width: 15%;
+    width: 20%;
+    height: 100%;
 }
 
 .logo {
     height: 70%;
     width: 65%;
+}
+
+.nav-home-link {
+    color: white;
+    text-decoration: none;
+    margin: 0.5em;
 }
 
 .action-outer-div {
@@ -34,6 +48,17 @@
     align-items: center;
     border: 1px solid blue;
 }
+
+.action-outer-div-prof {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: pink; */
+}
+
+
 
 .language-button {
     color: white;
@@ -63,4 +88,29 @@
     color: white;
     font-size: 0.9rem;
     font-weight: 400;
+}
+
+.nav-bar-prof {
+    width: 30%;
+    height: 50%;
+    margin-right: 1em;
+}
+
+.inner-div-prof-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 192, 203, 0.3);
+}
+
+.inner-div-prof-nav:hover > i {
+    transform: rotate(180deg);
+}
+
+.fa-caret-down {
+    color: white;
+    transform: rotate(0deg);  /* initial rotation */
+    transition: transform 0.5s;  /* add a transition effect */
 }

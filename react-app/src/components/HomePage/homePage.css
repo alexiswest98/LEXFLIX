@@ -1,0 +1,5 @@
+.movie-poster {
+    width: 40vw;
+    height: 26vh;
+    object-fit: contain;
+}

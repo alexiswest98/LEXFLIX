@@ -2,7 +2,7 @@
 
 /* ----- TYPES ------ */
 const GETALLPROFILES = 'profiles/getAllProfiles'
-const CREATEPROFLE = 'profiles/createProfile'
+const CREATEPROFILE = 'profiles/createProfile'
 const EDITPROFILE = 'profiles/editProfile'
 const DELETEPROFILE = 'profiles/deleteProfile'
 
@@ -16,7 +16,7 @@ export const getAllProfilesAction = (profiles) => {
 
 export const createProfileAction = (profile) => {
     return {
-        type: CREATEPROFLE,
+        type: CREATEPROFILE,
         profile
     }
 }
@@ -56,13 +56,13 @@ export const createProfileThunk = (profile) => async dispatch => {
 
     if (response.ok) {
         const newprofile = await response.json()
-        dispatch(getAllProfilesAction(newprofile))
+        dispatch(createProfileAction(newprofile))
         return newprofile
     }
 }
 
 export const editProfileThunk = (profile) => async dispatch => {
-    const response = await fetch(`/api/profiles/all`, {
+    const response = await fetch(`/api/profiles/${profile.id}/edit`, {
         method: 'PUT',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify(profile)
@@ -70,15 +70,18 @@ export const editProfileThunk = (profile) => async dispatch => {
 
     if (response.ok) {
         const newprofile = await response.json()
-        dispatch(getAllProfilesAction(newprofile))
+        dispatch(editProfileAction(newprofile))
         return newprofile
     }
 }
 
 export const deleteProfileThunk = (profileId) => async (dispatch) => {
-    const res = await fetch(`/api/profiles/${profileId}/delete`, { method: 'DELETE' });
-    if (res.ok) {
+    const response = await fetch(`/api/profiles/${profileId}/delete`, { method: 'DELETE' });
+
+    if (response.ok) {
+        const deletedProf = await response.json()
       dispatch(deleteProfileAction(profileId))
+      return deletedProf
     }
   }
 
@@ -87,12 +90,13 @@ const profileReducer = (state = {}, action) => {
     let newState = {};
     switch (action.type) {
         case GETALLPROFILES:
-            newState = { ...state }
+            // newState = { ...state }
+            // console.log('************', action.profiles)
             action.profiles.forEach(prof => {
                 newState[prof.id] = prof
             });
             return newState;
-        case CREATEPROFLE:
+        case CREATEPROFILE:
             newState = { ...state }
             newState[action.profile.id] = action.profile
             return newState;

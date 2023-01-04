@@ -1,0 +1,173 @@
+.outer-edit-prof {
+    width: 100%;
+    height: 87vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-edit-prof {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 1px solid white; */
+
+}
+
+.edit-prof-div {
+    border-bottom: 1px solid #333;
+    width: 98%;
+    height: 10%;
+    padding: 1%;
+}
+
+.edit-prof-text {
+    margin-block-end: 0;
+    margin-block-start: 0;
+    font-size: 4vw;
+    font-weight: 400;
+    height: 100%;
+    width: 100%;
+}
+
+.outer-prof-details {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #333;
+}
+
+.inner-prof-dets {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: center; */
+    flex-direction: column;
+    /* background-color: rgba(255, 0, 43, 0.2); */
+}
+
+.outer-input-div {
+    height: 10%;
+    width: 100%;
+}
+
+.input-username {
+    width: 100%;
+    height: 60%;
+    background: #666;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.3vw;
+    height: 2em;
+    margin: 0 0.8em 0 0;
+    padding: 0.2em 0.6em;
+    text-indent: 0.1vw;
+    outline: none;
+}
+
+.input-username-bad {
+    border: 1px solid #ea3841;
+    width: 100%;
+    height: 60%;
+    background: #666;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.3vw;
+    height: 2em;
+    margin: 0 0.8em 0 0;
+    padding: 0.2em 0.6em;
+    text-indent: 0.1vw;
+    outline: none;
+}
+
+.input-username::placeholder {
+    color: rgb(209, 206, 206)
+}
+
+.no-name-red {
+    color: #ea3841;
+}
+
+.prof-img-div {
+    width: 21%;
+    height: 26%;
+    margin-right: 4%;
+}
+
+.edit-prof-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.4em;
+}
+
+.outer-lang-div {
+    width: 100%;
+    height: 24%;
+    border-bottom: 1px solid #333;
+    margin-top:1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.svg-icon-check-mark {
+    border: 1px solid #99a1a7;
+    color: #99a1a7;
+    margin-right: 0.4em;
+    margin-bottom: 0.2em;
+}
+
+.maturity {
+    background: #333;
+    border-radius: 2px;
+    font-weight: 500;
+    margin-right: 5px;
+    padding: 7px 10px;
+    border: none;
+    color: white;
+    width: 10vw;
+}
+
+.lang-text-title {
+    margin-block-start: 0;
+    margin-block-end: 0.3em;
+    font-size: 1.3vw;
+    color: #ccc;
+}
+
+.extra-edit-dets {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.edit-language-button {
+    color: white;
+    background: transparent;
+    border: 0.09px solid rgb(251, 232, 232, 0.7);
+    padding: 5px 12px;
+    width: 5vw;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-prof-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    height: 8%;
+}
