@@ -12,7 +12,7 @@ export default function HomePage() {
       }, [dispatch])
 
     return (
-        <div>
+        <div className='whole-outer-movie-body'>
             <h1>Movies</h1>
             {movies.map(mov => (
                 <div>

@@ -12,7 +12,7 @@ const LogoutButton = () => {
     history.push('/')
   };
 
-  return <button onClick={onLogout}>Logout</button>;
+  return <button onClick={onLogout} className='log-out-actual-butt'>Sign Out of Lexflix</button>;
 };
 
 export default LogoutButton;

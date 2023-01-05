@@ -21,9 +21,11 @@ export default function GetProfiles() {
             {!profiles.includes(404) && profiles.map(prof => (
                 <NavLink to={`/browse/${prof.id}`} className="outer-indiv-profile">
                     <div className="outer-prof-img">
-                    <img src={prof.profile_img} alt='profile image' className="profile-img"></img>
+                        <img src={prof.profile_img} alt='profile image' className="profile-img"></img>
                     </div>
-                    <h4 className="profile-username">{prof.username}</h4>
+                    <div className="profiles-username-div">
+                        <h4 className="profile-username">{prof.username}</h4>
+                    </div>
                 </NavLink>
             ))}
             {
@@ -34,7 +36,9 @@ export default function GetProfiles() {
                         <i class="fa-sharp fa-solid fa-circle-plus"></i>
                         </div>
                     </div>
+                    <div className="profiles-username-div">
                         <h4 className="profile-username">Add Profile</h4>
+                    </div>
                 </NavLink>
                 )
             }

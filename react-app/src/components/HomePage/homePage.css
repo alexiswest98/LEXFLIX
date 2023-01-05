@@ -3,3 +3,7 @@
     height: 26vh;
     object-fit: contain;
 }
+
+.whole-outer-movie-body {
+    margin-top: 10vh;
+}
