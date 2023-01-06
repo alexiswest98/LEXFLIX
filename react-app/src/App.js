@@ -13,6 +13,7 @@ import ManageProfiles from './components/ManageProfiles';
 import EditProfile from './components/EditProfile';
 import AddProfile from './components/addProfile';
 import HomePage from './components/HomePage/HomePage';
+import HomePageCarousel from './components/HomePageCarousels/HomePageCarousels';
 
 
 function App() {
@@ -57,6 +58,18 @@ function App() {
         <ProtectedRoute path='/profiles/create' exact='true' >
           <AddProfile />
         </ProtectedRoute>
+        <ProtectedRoute path='/browse/TV' exact='true' >
+          <NavBar />
+          <h1>Coming Soon</h1>
+        </ProtectedRoute>
+        <ProtectedRoute path='/browse/my-list' exact='true' >
+          <NavBar />
+          <h1>Coming Soon</h1>
+        </ProtectedRoute>
+        <ProtectedRoute path='/browse/movies' exact='true' >
+          {/* <NavBar /> */}
+          <HomePageCarousel/>
+        </ProtectedRoute>
         <ProtectedRoute path='/users/:userId' exact='true' >
           <NavBar />
           <User />
@@ -71,7 +84,7 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/' exact='true' >
           <NavBar />
-          <h1>homePage</h1>
+          <h1>SplashPage</h1>
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

@@ -3,7 +3,7 @@
 }
 
 .outer-nav-bar {
-    height: 10vh;
+    height: 9vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -43,13 +43,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 18%;
     height: 100%;
 }
 
 .logo {
-    height: 70%;
-    width: 65%;
+    height: 60%;
+    width: 57%;
 }
 
 .nav-home-link {
@@ -75,8 +75,6 @@
     align-items: center;
     /* background-color: pink; */
 }
-
-
 
 .language-button {
     color: white;
@@ -110,7 +108,7 @@
 
 .nav-bar-prof {
     width: 65%;
-    height: 90%;
+    height: 95%;
     margin-right: 0.5em;
     border-radius: 0.2em;
 }
