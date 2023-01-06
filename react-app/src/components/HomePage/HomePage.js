@@ -39,6 +39,7 @@ export default function HomePage() {
             </div>
             <div className='fade-bottom'></div>
             <HomePageCarousel/>
+            <HomePageCarousel/>
         </div>
     )
 }

@@ -13,8 +13,8 @@ import ManageProfiles from './components/ManageProfiles';
 import EditProfile from './components/EditProfile';
 import AddProfile from './components/addProfile';
 import HomePage from './components/HomePage/HomePage';
-import HomePageCarousel from './components/HomePageCarousels/HomePageCarousels';
-
+// import HomePageCarousel from './components/HomePageCarousels/HomePageCarousels';
+import SplashPage from './components/MainSplashPage/SplashPage';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -40,7 +40,7 @@ function App() {
           <LoginForm />
         </Route>
         <Route path='/sign-up' exact='true'>
-          <NavBar />
+          {/* <NavBar /> */}
           <SignUpForm />
         </Route>
         <ProtectedRoute path='/users' exact='true' >
@@ -82,10 +82,10 @@ function App() {
           <NavBar />
           <h1>movie here playing</h1>
         </ProtectedRoute>
-        <ProtectedRoute path='/' exact='true' >
+        <Route path='/' exact='true' >
           <NavBar />
-          <h1>SplashPage</h1>
-        </ProtectedRoute>
+          <SplashPage/>
+        </Route>
       </Switch>
     </BrowserRouter>
   );

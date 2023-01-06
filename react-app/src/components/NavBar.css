@@ -15,6 +15,11 @@
     transition: all .5s ease;
 }
 
+#darker-background-nav {
+    background-image: linear-gradient(180deg,rgba(0,0,0,.6) 50%,transparent);
+    position: relative;
+}
+
 .fixed {
     background-color: black;
     height: 10vh;
@@ -49,8 +54,8 @@
 }
 
 .logo {
-    height: 60%;
-    width: 60%;
+    height: 62%;
+    width: 66%;
 }
 
 .nav-home-link {
@@ -70,7 +75,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .action-outer-div-prof {

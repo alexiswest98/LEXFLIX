@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/session';
+import "./auth.css";
 
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
@@ -44,13 +45,14 @@ const SignUpForm = () => {
   }
 
   return (
-    <form onSubmit={onSignUp}>
+    <form onSubmit={onSignUp} className='outer-whole-signup-form'>
+      <h1>Let's Get You Started</h1>
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
       </div>
-      <div>
+      <div className='whole-input-div'>
         <label>User Name</label>
         <input
           type='text'
@@ -59,7 +61,7 @@ const SignUpForm = () => {
           value={username}
         ></input>
       </div>
-      <div>
+      <div className='whole-input-div'>
         <label>Email</label>
         <input
           type='text'
@@ -68,7 +70,7 @@ const SignUpForm = () => {
           value={email}
         ></input>
       </div>
-      <div>
+      <div className='whole-input-div'>
         <label>Password</label>
         <input
           type='password'
@@ -77,7 +79,7 @@ const SignUpForm = () => {
           value={password}
         ></input>
       </div>
-      <div>
+      <div className='whole-input-div'>
         <label>Repeat Password</label>
         <input
           type='password'
@@ -87,8 +89,8 @@ const SignUpForm = () => {
           required="true"
         ></input>
       </div>
-      <div>
-        <h3>Select a Payment Plan</h3>
+      <div className='whole-input-div'>
+        <h3 className='sel-pay-title'>Select a Payment Plan</h3>
         <input
         type='radio'
         id="basic-with-ads"
@@ -114,7 +116,7 @@ const SignUpForm = () => {
         </input>
         <label htmlFor="premium">Premium</label>
       </div>
-      <button type='submit'>Sign Up</button>
+      <button type='submit' className='sign-up-submit'>Sign Up</button>
     </form>
   );
 };

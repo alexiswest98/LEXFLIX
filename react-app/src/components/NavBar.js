@@ -55,7 +55,7 @@ const NavBar = () => {
   return (<div className='whole-outer-nav-full'>
     {
       !sessionUser && path !== '/login' &&
-      <div className='outer-nav-bar'>
+      <div className='outer-nav-bar' id='darker-background-nav'>
         <div className='inner-nav-prof'>
           <Link to='/' exact='true' className='outer-logo'>
             <img src={lexflixLogo} alt='logo' className='logo' />

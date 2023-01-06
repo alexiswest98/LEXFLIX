@@ -1,0 +1,20 @@
+.outer-whole-signup-form {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.sign-up-submit {
+    margin-top: 2vh;
+}
+
+.whole-input-div {
+    margin: 0.5em;
+}
+
+.sel-pay-title {
+    color: #e50914
+}

@@ -34,13 +34,14 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={onLogin} className='outer-log-in'>
+      <h1>Sign In</h1>
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
       </div>
-      <div>
-        <label htmlFor='email'>Email</label>
+      <div className='whole-input-div'>
+        <label htmlFor='email'> Email </label>
         <input
           name='email'
           type='text'
@@ -49,8 +50,8 @@ const LoginForm = () => {
           onChange={updateEmail}
         />
       </div>
-      <div>
-        <label htmlFor='password'>Password</label>
+      <div className='whole-input-div'>
+        <label htmlFor='password'> Password </label>
         <input
           name='password'
           type='password'
@@ -66,9 +67,9 @@ const LoginForm = () => {
           >Login as Demo User</button>
         </div>
         <div className='outer-demo'> 
-          New To Netflix?
+          <h2 className='new-sign-up-title'>New To Netflix?</h2>
           <NavLink to='/sign-up' exact="true" className='sign-up-link'>
-            Sign Up
+            <span className='sign-up-link'>Sign Up</span>
           </NavLink>
         </div>
       </div>
