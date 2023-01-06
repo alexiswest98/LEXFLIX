@@ -67,7 +67,7 @@ const LoginForm = () => {
         </div>
         <div className='outer-demo'> 
           New To Netflix?
-          <NavLink to='/sign-up' exact={true} className='sign-up-link'>
+          <NavLink to='/sign-up' exact="true" className='sign-up-link'>
             Sign Up
           </NavLink>
         </div>

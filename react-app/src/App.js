@@ -65,10 +65,14 @@ function App() {
           <NavBar />
           <HomePage />
         </ProtectedRoute>
-        <Route path='/' exact='true' >
+        <ProtectedRoute path='/watch/:movieId' exact='true' >
+          <NavBar />
+          <h1>movie here playing</h1>
+        </ProtectedRoute>
+        <ProtectedRoute path='/' exact='true' >
           <NavBar />
           <h1>homePage</h1>
-        </Route>
+        </ProtectedRoute>
       </Switch>
     </BrowserRouter>
   );

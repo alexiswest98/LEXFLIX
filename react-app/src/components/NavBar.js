@@ -57,7 +57,7 @@ const NavBar = () => {
       !sessionUser && path !== '/login' &&
       <div className='outer-nav-bar'>
         <div className='inner-nav-prof'>
-          <Link to='/' exact={true} className='outer-logo'>
+          <Link to='/' exact='true' className='outer-logo'>
             <img src={lexflixLogo} alt='logo' className='logo' />
           </Link>
         </div>
@@ -78,10 +78,10 @@ const NavBar = () => {
       sessionUser &&
       <div className={`outer-nav-bar ${show && 'fixed'}`}>
         <div className='inner-nav-prof'>
-          <Link to={`/browse/${profId}`} exact={true} className='outer-logo'>
+          <Link to={`/browse/${profId}`} exact="true" className='outer-logo'>
             <img src={lexflixLogo} alt='logo' className='logo' />
           </Link>
-          <Link to='/' exact={true} className='nav-home-link'>
+          <Link to={`/browse/${profId}`} exact="true" className='nav-home-link'>
             <span>Home</span>
           </Link>
           <Link to={`/browse/TV`} exact='true' className='nav-home-link'>
@@ -106,7 +106,7 @@ const NavBar = () => {
               </div>
               <div className='drop-down-menu'>
                 {userProfiles.map(prof => (
-                  <Link to={`/browse/${prof.id}`} exact={true} className='outer-drop-down-div'>
+                  <Link to={`/browse/${prof.id}`} exact="true" className='outer-drop-down-div'>
                     <img src={prof.profile_img} alt='profile image' className='drop-down-prof-image'></img>
                     <h4 className='drop-down-menu-text'>{prof.username.length < 20 ? prof.username : prof.username.slice(0, 10) + '..'}</h4>
                   </Link>

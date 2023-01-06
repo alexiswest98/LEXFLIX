@@ -263,6 +263,16 @@ def seed_movie_genres():
         genre_id=3
     )
 
+    mov_genre50=MovieGenres(
+        movie_id=21,
+        genre_id=5
+    )
+
+    mov_genre51=MovieGenres(
+        movie_id=21,
+        genre_id=6
+    )
+
     db.session.add(mov_genre1)
     db.session.add(mov_genre2)
     db.session.add(mov_genre3)
@@ -312,6 +322,8 @@ def seed_movie_genres():
     db.session.add(mov_genre47)
     db.session.add(mov_genre48)
     db.session.add(mov_genre49)
+    db.session.add(mov_genre50)
+    db.session.add(mov_genre51)
     db.session.commit()
 
 def undo_movie_genres():

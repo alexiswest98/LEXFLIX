@@ -375,6 +375,23 @@ def seed_movies():
         lex_top=True
         )
 
+    movie21 = Movie(
+        movie_name= "The Grand Budapest Hotel", 
+        director= "Wes Anderson",
+        cast= "Ralph Fiennes, Murray Abraham, Mathieu Amalric",
+        writer= "Stefan Zweig, Wes Anderson, Hugo Guinness",
+        # genre1= 5,
+        # genre2= 6,
+        movie_is= "Beautiful, Exciting",
+        rating= "R",
+        year= 2014,
+        duration= "1h 39m", 
+        description= "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
+        prev_img= "https://ntvb.tmsimg.com/assets/p10295153_v_h8_ad.jpg?w=1280&h=720",
+        detail_img = "https://s26162.pcdn.co/wp-content/uploads/2021/11/budapest-feature.jpg",
+        trailer_src= "https://www.youtube.com/embed/1Fg5iWmQjwk?controls=0"
+        )
+
 
     db.session.add(movie1)
     db.session.add(movie2)
@@ -396,6 +413,7 @@ def seed_movies():
     db.session.add(movie18)
     db.session.add(movie19)
     db.session.add(movie20)
+    db.session.add(movie21)
     db.session.commit()
 
 
