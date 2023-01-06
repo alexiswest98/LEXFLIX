@@ -1,20 +1,24 @@
-import React, { useRef, useState } from "react";
+import React, {useEffect} from "react";
+import { useDispatch, useSelector } from "react-redux";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import 'swiper/swiper.min.css';
+import 'swiper/modules/pagination/pagination.min.css';
+import 'swiper/modules/navigation/navigation.min.css';
+
+import './styles.css';
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
 import { getAllMoviesThunk } from '../../store/movies';
-import './HomeCarousel.css'
+
 
 export default function HomePageCarousel() {
     const dispatch = useDispatch();
     const movies = Object.values(useSelector(state => state.movies))
+    const moviesCarousel = movies.slice(0, 18)
 
     useEffect(() => {
         dispatch(getAllMoviesThunk())
@@ -23,30 +27,28 @@ export default function HomePageCarousel() {
     if (!movies) return null;
 
     return (
-        <>
+        <div className="whole-carousel-outer-div">
+        <h1 className="movie-carousel-title">Movies</h1>
           <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
+            slidesPerView={6}
+            spaceBetween={10}
             slidesPerGroup={3}
             loop={true}
             loopFillGroupWithBlank={true}
             pagination={{
-              clickable: true,
+              clickable: true
             }}
             navigation={true}
             modules={[Pagination, Navigation]}
             className="mySwiper"
-          >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+          >{
+            moviesCarousel.map(movie => (
+                <SwiperSlide>
+                    <img src={movie.prev_img} alt='movie poster'></img>
+                </SwiperSlide>
+            ))
+          }
           </Swiper>
-        </>
+        </div>
       );
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getAllMoviesThunk } from '../../store/movies';
+import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
 import './homePage.css'
 
 export default function HomePage() {
@@ -37,12 +38,7 @@ export default function HomePage() {
                 </div>
             </div>
             <div className='fade-bottom'></div>
-            {movies.map(mov => (
-                <div key={mov.id}>
-                    <h2>{mov.movie_name}</h2>
-                    <img src={mov.prev_img} alt='movie poster' className='movie-poster'></img>
-                </div>
-            ))}
+            <HomePageCarousel/>
         </div>
     )
 }

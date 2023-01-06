@@ -67,8 +67,8 @@ function App() {
           <h1>Coming Soon</h1>
         </ProtectedRoute>
         <ProtectedRoute path='/browse/movies' exact='true' >
-          {/* <NavBar /> */}
-          <HomePageCarousel/>
+          <NavBar />
+          <h1>Need to Add</h1>
         </ProtectedRoute>
         <ProtectedRoute path='/users/:userId' exact='true' >
           <NavBar />

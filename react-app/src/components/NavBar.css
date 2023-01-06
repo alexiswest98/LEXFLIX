@@ -3,7 +3,7 @@
 }
 
 .outer-nav-bar {
-    height: 9vh;
+    height: 10vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@
 
 .inner-nav-prof {
     height: 100%;
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     /* border: 1px solid rgb(255, 0, 0); */
@@ -43,19 +43,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 18%;
+    width: 15%;
     height: 100%;
+    /* background-color: pink; */
 }
 
 .logo {
     height: 60%;
-    width: 57%;
+    width: 60%;
 }
 
 .nav-home-link {
     color: white;
     text-decoration: none;
     margin: 0.5em;
+    font-weight: 200;
+}
+
+.nav-home-link:hover {
+    color: rgb(205, 203, 203);
 }
 
 .action-outer-div {
@@ -107,7 +113,7 @@
 }
 
 .nav-bar-prof {
-    width: 65%;
+    width: 56%;
     height: 95%;
     margin-right: 0.5em;
     border-radius: 0.2em;
@@ -163,7 +169,7 @@ body {
     width: 17em;
     height: 24em;
     box-shadow: 0 0 7px rgba(37, 36, 36, 0.95);
-    padding: 0.5em 0em;
+    padding: 0.5em 0em 0em 0em;
 }
 
 .outer-drop-down-div {
@@ -182,7 +188,7 @@ body {
 
 .drop-down-prof-image {
     height: 80%;
-    width: 28%;
+    width: 26%;
     margin-left: 0.6vw;
     margin-right: 0.6vw;
     border-radius: 0.2em;
@@ -213,7 +219,7 @@ body {
 .log-out-actual-butt {
     width: 100%;
     height: 100%;
-    /* font-size: 1.2vw; */
+    font-size: 1vw;
     color: white;
     cursor: pointer;
     border: none;
