@@ -32,11 +32,12 @@ export default function HomePageCarousel() {
           <Swiper
             slidesPerView={6}
             spaceBetween={10}
-            slidesPerGroup={3}
+            slidesPerGroup={6}
             loop={true}
             loopFillGroupWithBlank={true}
             pagination={{
-              clickable: true
+              clickable: true,
+              type: 'bullets'
             }}
             navigation={true}
             modules={[Pagination, Navigation]}
