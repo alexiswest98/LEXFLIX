@@ -63,7 +63,7 @@
   height: 150%;
   width: 100%;
   /* border: 1px solid rgb(255, 222, 6); */
-  z-index: 100;
+  z-index: 20;
   margin-top: -4vh;
   background: transparent;
 }
@@ -155,21 +155,7 @@
   width: 9.5%;
   height: 50%;
   margin-left: 3%;
-  background-color: rgba(42,42,42,.6);;
-  color: hsla(0,0%,100%,.5);
-  border: 0.2em solid hsla(0,0%,100%,.5);
-  border-width: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.rate-movie-button {
-  border-radius: 50%;
-  width: 9.5%;
-  height: 50%;
-  margin-left: 3%;
-  background-color: rgba(42,42,42,.6);;
+  background-color: rgba(42,42,42,.6);
   color: hsla(0,0%,100%,.5);
   border: 0.2em solid hsla(0,0%,100%,.5);
   border-width: 2px;
@@ -188,8 +174,8 @@
 
 .get-details-button {
   border-radius: 50%;
-  width: 9.5%;
-  height: 50%;
+  width: 1.6vw;
+  height: 2.9vh;
   background-color: rgba(42,42,42,.6);;
   color: hsla(0,0%,100%,.5);
   border: 0.2em solid hsla(0,0%,100%,.5);
@@ -197,8 +183,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 41%;
+  margin-left: 83%;
+  position: fixed
 }
+
 
 .top-bottom-movie-details {
   height: 50%;

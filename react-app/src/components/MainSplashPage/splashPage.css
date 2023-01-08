@@ -1,16 +1,18 @@
 .whole-outer-splash-page {
-    width: 100%;
-    height: 80vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
+    margin-top: -10vh;
 }
 
 .whole-outer-splash-body {
     width: 100%;
-    height: 100%;
+    height: 93%;
     position: relative;
-    object-fit: contain;
+    object-fit: cover;
     z-index: -1;
-    margin-top: -10vh;
+    /* margin-top: -10vh; */
 }
 
 .splash-page-title {
@@ -34,4 +36,31 @@
     align-items: center;
     text-align: center;
     /* background-color: red; */
+}
+
+.lex-details {
+    height: 7%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-lex-text {
+    font-size: 1.2rem;
+    color: #e50914
+}
+
+#github-icon, #linkedin {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.footer-link-div {
+    height: 52%;
+    width: 2%;
+    margin-left: 0.5em;
 }

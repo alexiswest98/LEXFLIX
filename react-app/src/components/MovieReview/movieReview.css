@@ -1,0 +1,91 @@
+.rate-movie-button {
+    border-radius: 50%;
+    width: 1.6vw;
+    height: 2.9vh;
+    background-color: rgba(42,42,42,.6);;
+    color: hsla(0,0%,100%,.5);
+    border: 0.2em solid hsla(0,0%,100%,.5);
+    border-width: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+}
+
+
+.rate-movie-button:hover {
+    width: 8vw;
+    height: 4.5vh;
+    background-color: rgb(35, 35, 35);
+    border-radius: 1em;
+    border: none;
+    margin-left: -16%;
+}
+
+.thumbs-down-div, .double-thumbs-up-div {
+    display: none;
+    cursor: pointer;
+}
+
+.rate-movie-button:hover .thumbs-down-div {
+    display: block;
+    border-radius: 50%;
+    width: 1.6vw;
+    height: 2.9vh;
+    /* background-color: rgb(100, 100, 100);
+    border: 0.2em solid rgb(100, 100, 100); */
+    color: white;
+    border-width: 2px;
+    margin-right: 3vw;
+}
+
+.thumbs-down-div:hover, .double-thumbs-up-div:hover, .thumbs-up-holder:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+.rate-movie-button:hover .double-thumbs-up-div {
+    display: block;
+    border-radius: 50%;
+    width: 1.6vw;
+    height: 2.9vh;
+    /* background-color: rgb(100, 100, 100);
+    border: 0.2em solid rgb(100, 100, 100); */
+    color: white;
+    border-width: 2px;
+}
+
+.rate-movie-button:hover .thumbs-down {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.rate-movie-button:hover {
+    color: white;
+}
+
+.rate-movie-button:hover .thumbs-up-holder {
+    border-radius: 50%;
+    width: 1.6vw;
+    height: 2.9vh;
+    /* background-color: rgb(100, 100, 100);
+    border: 0.2em solid rgb(100, 100, 100); */
+    color: white;
+    border-width: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: 0.5s ease;
+}
+
+.thumbs-up-holder {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.thumbs-up {
+    position: fixed;
+}

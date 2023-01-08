@@ -54,8 +54,8 @@
 }
 
 .logo {
-    height: 62%;
-    width: 68%;
+    height: 60%;
+    width: 69%;
 }
 
 .nav-home-link {
@@ -175,6 +175,7 @@ body {
     height: 24em;
     box-shadow: 0 0 7px rgba(37, 36, 36, 0.95);
     padding: 0.5em 0em 0em 0em;
+    /* z-index: 100; */
 }
 
 .outer-drop-down-div {
@@ -277,3 +278,13 @@ body {
 .drop-manage-prof-button {
     color: white;
 }
+
+@media (max-width: 1425px) {
+    .language-button {
+        width: 9vw;
+    }
+
+    .sign-in-button{
+        width: 8vw;
+    }
+  }
