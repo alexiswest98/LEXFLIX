@@ -15,6 +15,8 @@ import AddProfile from './components/addProfile';
 import HomePage from './components/HomePage/HomePage';
 // import HomePageCarousel from './components/HomePageCarousels/HomePageCarousels';
 import SplashPage from './components/MainSplashPage/SplashPage';
+import TrailerPage from './components/TrailerPage/TrailerPage';
+import ComingSoon from './components/ComingSoon';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -58,15 +60,15 @@ function App() {
         <ProtectedRoute path='/profiles/create' exact='true' >
           <AddProfile />
         </ProtectedRoute>
-        <ProtectedRoute path='/browse/TV' exact='true' >
+        <ProtectedRoute path='/browse/:profId/TV' exact='true' >
           <NavBar />
-          <h1>Coming Soon</h1>
+          <ComingSoon/>
         </ProtectedRoute>
-        <ProtectedRoute path='/browse/my-list' exact='true' >
+        <ProtectedRoute path='/browse/:profId/my-list' exact='true' >
           <NavBar />
-          <h1>Coming Soon</h1>
+          <ComingSoon/>
         </ProtectedRoute>
-        <ProtectedRoute path='/browse/movies' exact='true' >
+        <ProtectedRoute path='/browse/:profId/movies' exact='true' >
           <NavBar />
           <h1>Need to Add</h1>
         </ProtectedRoute>
@@ -78,9 +80,9 @@ function App() {
           <NavBar />
           <HomePage />
         </ProtectedRoute>
-        <ProtectedRoute path='/watch/:movieId' exact='true' >
-          <NavBar />
-          <h1>movie here playing</h1>
+        <ProtectedRoute path='/:profId/watch/:movieId' exact='true' >
+          {/* <NavBar /> */}
+          <TrailerPage/>
         </ProtectedRoute>
         <Route path='/' exact='true' >
           <NavBar />

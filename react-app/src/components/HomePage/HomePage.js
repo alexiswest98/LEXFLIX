@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getAllMoviesThunk } from '../../store/movies';
 import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
 import './homePage.css'
@@ -9,6 +10,7 @@ export default function HomePage() {
     const dispatch = useDispatch();
     const movies = Object.values(useSelector(state => state.movies))
     const headerMovie = useSelector(state => state.movies[21])
+    const { profId } = useParams();
 
     useEffect(() => {
         dispatch(getAllMoviesThunk())
@@ -26,7 +28,7 @@ export default function HomePage() {
                 }}>
             </div>
             <div className='banner-buttons'>
-                <NavLink to={`/watch/${headerMovie.id}`} exact='true'>
+                <NavLink to={`/${profId}/watch/${headerMovie.id}`} exact='true'>
                     <button className='play-header-button'>
                         <i class="fa-sharp fa-solid fa-play"></i>
                         Play
@@ -39,7 +41,7 @@ export default function HomePage() {
             </div>
             <div className='fade-bottom'></div>
             <HomePageCarousel/>
-            <div className='more-movies-holder'>more movies</div>
+            {/* <div className='more-movies-holder'>more movies</div> */}
             {/* <HomePageCarousel/> */}
         </div>
     )

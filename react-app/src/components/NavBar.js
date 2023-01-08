@@ -84,13 +84,13 @@ const NavBar = () => {
           <Link to={`/browse/${profId}`} exact="true" className='nav-home-link'>
             <span>Home</span>
           </Link>
-          <Link to={`/browse/TV`} exact='true' className='nav-home-link'>
+          <Link to={`/browse/${profId}/TV`} exact='true' className='nav-home-link'>
             <span>TV Shows</span>
           </Link>
-          <Link to={`/browse/movies`} exact='true' className='nav-home-link'>
+          <Link to={`/browse/${profId}/movies`} exact='true' className='nav-home-link'>
             <span>Movies</span>
           </Link>
-          <Link to={`/browse/my-list`} exact='true' className='nav-home-link'>
+          <Link to={`/browse/${profId}/my-list`} exact='true' className='nav-home-link'>
             <span>My List</span>
           </Link>
         </div>
