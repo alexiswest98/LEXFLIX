@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { getAllMoviesThunk } from '../../store/movies';
+import { getAllReviewsThunk } from '../../store/reviews';
 import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
 import './homePage.css'
 
@@ -14,7 +15,8 @@ export default function HomePage() {
 
     useEffect(() => {
         dispatch(getAllMoviesThunk())
-    }, [dispatch])
+        dispatch(getAllReviewsThunk(profId))
+    }, [dispatch, profId])
 
     if (!headerMovie || !movies) return null;
 

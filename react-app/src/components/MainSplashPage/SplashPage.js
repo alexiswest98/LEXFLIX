@@ -24,10 +24,10 @@ export default function SplashPage() {
             </div>
             <div className='lex-details'>
                 <h1 className='footer-lex-text'>Created and Styled by Alexis West · </h1>
-                <a className="linkedin" target="_blank" href='https://www.linkedin.com/in/alexis-west-596a6b203/' className='footer-link-div'>
+                <a target="_blank" href='https://www.linkedin.com/in/alexis-west-596a6b203/' className='footer-link-div'>
                     <img id="linkedin" src={linkedin} alt="li"></img>
                 </a>
-                <a className="githubFooter" target="_blank" href='https://github.com/alexiswest98' className='footer-link-div'>
+                <a target="_blank" href='https://github.com/alexiswest98' className='footer-link-div'>
                     <img id="github-icon" src={github} alt="gh"></img>
                 </a>
             </div>

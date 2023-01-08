@@ -12,7 +12,6 @@
     margin-left: 3%;
 }
 
-
 .rate-movie-button:hover {
     width: 8vw;
     height: 4.5vh;
@@ -88,4 +87,7 @@
 
 .thumbs-up {
     position: fixed;
+}
+
+.explanation-review {
 }
