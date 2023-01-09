@@ -56,6 +56,7 @@
   border-radius: 0;
   width: 1.4em;
   height: 0.25em;
+  color: white;
   /* display: block; */
 }
 
@@ -166,10 +167,12 @@
 
 .swiper-button-prev {
   margin-top: -16vh;
+  color: white;
 }
 
 .swiper-button-next {
   margin-top: -16vh;
+  color: white;
 }
 
 .get-details-button {
