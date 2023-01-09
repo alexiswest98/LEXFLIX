@@ -20,6 +20,7 @@ const SignUpForm = () => {
   useEffect(() => {
     let errs = []
     if (!username) errs.push('Please provide username')
+    if (!password) errs.push('Please provide a password')
     if (!email || !email.includes('@')) errs.push('Please provide a valid email')
     if (password !== repeatPassword) errs.push('Passwords do not match.')
     if (password.length > 255) errs.push('Password must be less than 255 characters.')
