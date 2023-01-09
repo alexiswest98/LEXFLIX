@@ -328,7 +328,7 @@ def seed_movie_genres():
 
 def undo_movie_genres():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.users RESTART IDENTITY CASCADE;")
+        db.session.execute(f"TRUNCATE table {SCHEMA}.movie_genres RESTART IDENTITY CASCADE;")
     else:
         db.session.execute("DELETE FROM movie_genres")
         

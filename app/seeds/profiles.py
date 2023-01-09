@@ -34,7 +34,7 @@ def seed_profiles():
 # it will reset the primary keys for you as well.
 def undo_profiles():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.users RESTART IDENTITY CASCADE;")
+        db.session.execute(f"TRUNCATE table {SCHEMA}.profiles RESTART IDENTITY CASCADE;")
     else:
         db.session.execute("DELETE FROM profiles")
         
