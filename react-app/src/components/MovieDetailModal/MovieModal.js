@@ -14,7 +14,7 @@ function MovieDetail({ setShowModal, movieId }) {
     const movieGenres = Object.values(useSelector(state => state.movieGenres))
     const [movGenres, setMovieGenres] = useState("")
     // const currMovie = movies[movieId]
-    console.log(movieGenres)
+    // console.log(movieGenres)
 
     useEffect(() => {
         dispatch(getMoviesGenresThunk(movieId))

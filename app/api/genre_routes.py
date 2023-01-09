@@ -34,7 +34,7 @@ def get_genre_byid(genreId):
 @login_required
 def get_movie_genres(movieId):
     moviegenres = MovieGenres.query.filter(MovieGenres.movie_id==movieId).all()
-    print(moviegenres)
+    # print(moviegenres)
     moviegenresobj = []
     if moviegenres:
         for mov in moviegenres:

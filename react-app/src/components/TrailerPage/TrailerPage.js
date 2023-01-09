@@ -8,7 +8,7 @@ export default function TrailerPage() {
     const dispatch = useDispatch();
     const { profId, movieId } = useParams();
     const movie = useSelector(state => state.movies[+movieId])
-    console.log(profId)
+    // console.log(profId)
 
     useEffect(() => {
         dispatch(getAllMoviesThunk())
