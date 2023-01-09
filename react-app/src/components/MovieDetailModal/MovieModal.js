@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { useHistory, useParams } from "react-router-dom";
 import MovieReviewComponent from "../MovieReview/MovieReview";
+import { getMoviesGenresThunk } from "../../store/genresmovies";
 import "./movieModal.css";
 
 function MovieDetail({ setShowModal, movieId }) {
@@ -10,25 +11,26 @@ function MovieDetail({ setShowModal, movieId }) {
     const history = useHistory();
     const { profId } = useParams();
     const movie = useSelector(state => state.movies[movieId])
+    const movieGenres = Object.values(useSelector(state => state.movieGenres))
     const [movGenres, setMovieGenres] = useState("")
     // const currMovie = movies[movieId]
+    console.log(movieGenres)
 
     useEffect(() => {
-        async function fetchData() {
-            const response = await fetch(`/api/genre/movie/${movieId}`);
-            const movieGenres = await response.json();
-            console.log("____________", movieGenres)
-            let newWords = [];
-            for (let i = 0; i < movieGenres.length - 1; i++) {
-                newWords.push(movieGenres[i].genre_name, ", ");
-            }
-            newWords.push(movieGenres[movieGenres.length - 1].genre_name)
-            let newGenres = newWords.join("")
-            setMovieGenres(newGenres)
-        }
-        fetchData();
-    }, [movieId]);
+        dispatch(getMoviesGenresThunk(movieId))
+    }, [movieId, dispatch]);
 
+    const movieGenreWord = () => {
+        let newWords = [];
+        for (let i = 0; i < movieGenres.length - 1; i++) {
+            let curr = movieGenres[i]
+            newWords.push(curr.genre_name, ", ");
+        }
+        let last = movieGenres[movieGenres.length - 1]
+        newWords.push(last?.genre_name)
+        let newGenres = newWords.join("")
+        return newGenres;
+    }
 
     return (
         <div className="outer-whole-movie-modal">
@@ -75,7 +77,7 @@ function MovieDetail({ setShowModal, movieId }) {
                         </div>
                         <div className="indiv-modal-right-details">
                             <span className="modal-midd-right-txt" id="label-grey">Genres: </span>
-                            <span className="modal-midd-right-txt">{movGenres}</span>
+                            <span className="modal-midd-right-txt">{movieGenreWord()}</span>
                         </div>
                         <div className="indiv-modal-right-details">
                             <span className="modal-midd-right-txt" id="label-grey">This Movie is: </span>

@@ -1,10 +1,10 @@
 const GETMOVIESGENRES = 'movies/getGenreMovies'
 
 /* ___________ Action Creators   ___________ */
-export const getMoviesGenresAction = (movies) => {
+export const getMoviesGenresAction = (genres) => {
     return {
         type: GETMOVIESGENRES,
-        movies
+        genres
     }
 }
 
@@ -23,8 +23,7 @@ export default function moviesGenresReducer(state={}, action) {
     let newState = {};
     switch(action.type){
         case GETMOVIESGENRES:
-            newState = {...state}
-            action.genres.forEach(genre => newState[genre.id] = genre)
+            action.genres.forEach(genre => newState[genre.genre_id] = genre)
             return newState;
         default:
              return state

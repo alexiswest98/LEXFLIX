@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import LogoutButton from './auth/LogoutButton';
 import lexflixLogo from '../images/lexflixLogo.png';
 import { getAllProfilesThunk } from '../store/profiles';
+import { logout } from '../store/session';
 import './NavBar.css'
 
 const NavBar = () => {
   const dispatch = useDispatch();
-  const { profId } = useParams()
+  const history = useHistory();
+  const { profId } = useParams();
   const sessionUser = useSelector(state => state.session.user);
   const userProfiles = Object.values(useSelector(state => state.profiles))
   const profile = useSelector(state => state.profiles[+profId]);

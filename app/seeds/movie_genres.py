@@ -145,7 +145,7 @@ def seed_movie_genres():
 
     mov_genre29=MovieGenres(
         movie_id=11,
-        genre_id=2
+        genre_id=3
     )
 
     mov_genre30=MovieGenres(

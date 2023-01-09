@@ -196,7 +196,7 @@ def seed_movies():
         cast= "Daniel Craig, Edward Norton, Kate Hudson",
         writer= "Rian Johnson",
         # genre1= 5,
-        # genre2= 2,
+        # genre2= 3,
         # genre3= 4,
         movie_is= "Offbeat, Witty",
         rating= "PG-13",
