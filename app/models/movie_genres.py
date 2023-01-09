@@ -20,3 +20,4 @@ class MovieGenres(db.Model):
             'genre_name': self.genre.genre_name,
             'movie_name': self.movie.movie_name
         }
+
