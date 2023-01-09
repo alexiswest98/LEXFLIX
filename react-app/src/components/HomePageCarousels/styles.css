@@ -2,7 +2,7 @@
   position: relative;
   height: 38%;
   /* border: 1px solid green; */
-  margin-top: -7vh;
+  margin-top: -10vh;
   z-index: 10;
 }
 
@@ -184,7 +184,13 @@
   justify-content: center;
   align-items: center;
   margin-left: 83%;
-  position: fixed
+  position: fixed;
+  cursor: pointer;
+}
+
+.get-details-button:hover {
+  border: 0.2em solid hsla(0,0%,100%,.9);
+  border-width: 2px;
 }
 
 
@@ -221,6 +227,10 @@
   justify-content: center;
   align-items: center;
   width: 15%;
+}
+
+.smaller-rating {
+  width: 4%;
 }
 
 .movie-rating-txt {

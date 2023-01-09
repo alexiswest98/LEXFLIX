@@ -73,7 +73,7 @@ def seed_movies():
         duration= "1h 32m", 
         description= "On the heels of a blindsiding breakup, music journalist Jenny braces for a new beginning -- and one last adventure with her closest friends.",
         prev_img= "https://occ.a.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABSlNOgddyhfTKZIEYtWWwjpuSxhm9ebG3TJUJ5Yu_mhhtnSBvzYd1Yqp7tVVHbIMvywCORjZhm6x_rpkOFHlhuXc5Z9BC0Tako_c6_qYVHWy0leum-RrYOUot_5l9nRQESFhPw.jpg?r=7df",
-        detail_img = "https://occ-0-56-1123.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABYS8Zaxee9mTX3Af5Uo2iyd9uWrZmHrqm_3V2kqg45uNf9Y2jQTsKXeB8nRZKF2LH2bVkxfbpNMApplNCn3cqqPwe2f6HaaAmzWu.jpg?r=9ce",
+        detail_img = "https://thecinemaholic.com/wp-content/uploads/2019/04/Someone-Great-Ending.jpg",
         trailer_src= "https://www.youtube.com/embed/BBd9gcrj2Wk?controls=0",
         netflix_original= True
         )
@@ -92,7 +92,7 @@ def seed_movies():
         duration= "1h 47m", 
         description= "A prisoner in a state-of-the-art penitentiary begins to question the purpose of the emotion-controlling drugs he's testing for a pharmaceutical genius.",
         prev_img= "https://i0.wp.com/highoncinemaa.com/wp-content/uploads/2022/06/Spiderhead-Reviews-Roundup-Chris-Hemsworths-Best-Performance-Yet.jpg?fit=1604%2C870&ssl=1",
-        detail_img = "https://fictionhorizon.com/wp-content/uploads/2022/06/spiderhead-1.jpg",
+        detail_img = "https://media.wired.com/photos/62bce1c09c301780cc3296a2/master/pass/Spiderhead-Lacks-Charm-Culture-SH_JK_FP_099149_CC.jpg",
         trailer_src= "https://www.youtube.com/embed/BfsNfFoA0J0?controls=0",
         netflix_original= True
         )
@@ -183,7 +183,7 @@ def seed_movies():
         rating= "PG-13",
         year= 2014,
         duration= "2h 49m", 
-        description= "Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life.",
+        description= "Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel.",
         prev_img= "https://ntvb.tmsimg.com/assets/p10543523_v_h8_at.jpg?w=960&h=540",
         detail_img = "https://images8.alphacoders.com/560/560736.jpg",
         trailer_src= "https://www.youtube.com/embed/0vxOhd4qlnA?controls=0",
@@ -240,7 +240,7 @@ def seed_movies():
         duration= "1h 57m", 
         description= "Teen Miles Morales becomes the Spider-Man of his universe, and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.",
         prev_img= "https://hbomax-images.warnermediacdn.com/images/GYWkQzQT5VKTDwgEAAACb/tileburnedin?size=1280x720&partner=hbomaxcom&v=bb23236b5edf9b0260ae882bbbcbd679&host=art-gallery.api.hbo.com&language=en-us&w=1280",
-        detail_img = "https://www.comingsoon.net/wp-content/uploads/sites/3/2018/11/Spider-Man-e1541797886422.jpg",
+        detail_img = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/846a9086-8a40-43e0-aa10-2fc7d6d73730/dcv16z1-7c3d92fe-c484-4580-82e8-c6220c2626f2.png/v1/fill/w_900,h_463,q_80,strp/spider_man__into_the_spider_verse___wallpaper_by_mintmovi3_dcv16z1-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDYzIiwicGF0aCI6IlwvZlwvODQ2YTkwODYtOGE0MC00M2UwLWFhMTAtMmZjN2Q2ZDczNzMwXC9kY3YxNnoxLTdjM2Q5MmZlLWM0ODQtNDU4MC04MmU4LWM2MjIwYzI2MjZmMi5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.I9RsR-vuiJdbK6LjbHtanINuGiH8fwSS_Xe8UdS96UE",
         trailer_src= "https://www.youtube.com/embed/cqGjhVJWtEg?controls=0",
         lex_top=True
         )
@@ -370,7 +370,7 @@ def seed_movies():
         duration= "1h 37m", 
         description= "A waitress, desperate to fulfill her dreams as a restaurant owner, is set on a journey to turn a frog prince back into a human being, but she has to face the same problem after she kisses him.",
         prev_img= "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6E4425084B8F6CEDC2A4A983A71CC783BA2F694229C89E7AA9F1C204E169AC64/scale?width=1200&aspectRatio=1.78&format=jpeg",
-        detail_img = "http://img3.wikia.nocookie.net/__cb20121008153240/disney/images/7/7c/Friends_on_the_Other_Side.png",
+        detail_img = "https://imagesvc.meredithcorp.io/v3/mm/image?q=60&c=sc&rect=0%2C211%2C2000%2C1211&poi=%5B1540%2C346%5D&w=2000&h=1000&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2021%2F08%2F21%2FPrincess-and-the-Frog-1.jpg",
         trailer_src= "https://www.youtube.com/embed/uQBy6jqbmlU?controls=0",
         lex_top=True
         )

@@ -7,12 +7,11 @@ import { getAllReviewsThunk } from '../../store/reviews';
 import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
 import { Modal } from '../../context/Modal';
 import MovieDetail from "../MovieDetailModal/MovieModal";
-import './homePage.css'
 
-export default function HomePage() {
+export default function MovieHomePage() {
     const dispatch = useDispatch();
     const movies = Object.values(useSelector(state => state.movies))
-    const headerMovie = useSelector(state => state.movies[21])
+    const headerMovie = useSelector(state => state.movies[20])
     const [showModal, setShowModal] = useState(false);
     const { profId } = useParams();
 

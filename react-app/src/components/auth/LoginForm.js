@@ -74,7 +74,7 @@ const LoginForm = () => {
           >Login as Demo User
         </button>
         <div className='outer-demo'> 
-          <h2 className='new-sign-up-title'>New To Netflix?</h2>
+          <h2 className='new-sign-up-title'>New To Letflix?</h2>
           <NavLink to='/sign-up' exact="true" className='sign-up-link'>
             <span>Sign up now.</span>
           </NavLink>

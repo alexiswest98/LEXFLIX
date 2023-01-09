@@ -16,6 +16,7 @@ import HomePage from './components/HomePage/HomePage';
 // import HomePageCarousel from './components/HomePageCarousels/HomePageCarousels';
 import SplashPage from './components/MainSplashPage/SplashPage';
 import TrailerPage from './components/TrailerPage/TrailerPage';
+import MovieHomePage from './components/MovieHomePage/MovieHomePage';
 import ComingSoon from './components/ComingSoon';
 
 function App() {
@@ -70,7 +71,7 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/browse/:profId/movies' exact='true' >
           <NavBar />
-          <h1>Need to Add</h1>
+          <MovieHomePage/>
         </ProtectedRoute>
         <ProtectedRoute path='/users/:userId' exact='true' >
           <NavBar />

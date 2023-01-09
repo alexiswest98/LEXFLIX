@@ -36,23 +36,25 @@ def get_user_movie_review(profileId, movieId):
 @movie_review_routes.route('/profile/<int:profileId>/movie/<int:movieId>', methods=["POST"])
 @login_required
 def make_movie_review(profileId, movieId):
-    review = Review.query.filter(Review.movie_id==movieId and Review.profile_id==profileId).all()
-    if review: 
-        return jsonify({'errors': 'Profile user can only have one review per movie'}, 400)
-    else:
-        form = CreateReviewForm()
-        form['csrf_token'].data = request.cookies['csrf_token']
-        data = form.data
-        if form.validate_on_submit():
-            newReview = Review(
-                movie_id = data['movie_id'],
-                profile_id = data['profile_id'],
-                rating = data['rating']
-            )
-            db.session.add(newReview)
-            db.session.commit()
-            return jsonify(newReview.to_dict())
-        return jsonify(form.errors)
+    # can do in front end
+    # review = Review.query.filter(Review.movie_id==movieId and Review.profile_id==profileId).all()
+    # print(review)
+    # if review: 
+    #     return jsonify({'errors': 'Profile user can only have one review per movie'}, 400)
+    # else:
+    form = CreateReviewForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+    data = form.data
+    if form.validate_on_submit():
+        newReview = Review(
+            movie_id = data['movie_id'],
+            profile_id = data['profile_id'],
+            rating = data['rating']
+        )
+        db.session.add(newReview)
+        db.session.commit()
+        return jsonify(newReview.to_dict())
+    return jsonify(form.errors)
 
 
 ## edit a rating for a movie 

@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import MovieReviewComponent from "../MovieReview/MovieReview";
 import { getAllReviewsThunk } from "../../store/reviews";
+import { Modal } from '../../context/Modal';
+import MovieDetail from "../MovieDetailModal/MovieModal";
 
 // Import Swiper styles
 import 'swiper/swiper.min.css';
@@ -24,12 +26,13 @@ export default function HomePageCarousel() {
   const movies = Object.values(useSelector(state => state.movies))
   const moviesCarousel = movies.slice(0, 18)
   const { profId } = useParams();
-  const [currMovieId, setCurrMovieId] = useState(1);
+  const [currMovieId, setCurrMovieId] = useState();
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     dispatch(getAllMoviesThunk())
-    dispatch(getAllReviewsThunk(profId))
-  }, [dispatch])
+    dispatch(getAllReviewsThunk(+profId))
+  }, [dispatch, profId])
 
   // const setMovieId = (movieId) => {
   //   setCurrMovieId(movieId);
@@ -85,7 +88,7 @@ export default function HomePageCarousel() {
             <SwiperSlide>
               <div className={`swiper-indiv-div ${hoverRight(movie.id) && "hover-entire-right"} ${hoverLeft(movie.id) && "hover-entire-left"}`}>
                 <img src={movie.prev_img} alt='movie poster' className="swiper-img" onMouseOver={() => setCurrMovieId(movie.id)}></img>
-                {console.log("------------", currMovieId)}
+                {/* {console.log("------------", currMovieId)} */}
                 <div className="hidden-details-info">
                   <div className="top-half-hidden-details">
                     <Link to={`/${profId}/watch/${movie.id}`} className="play-butt-details">
@@ -95,14 +98,20 @@ export default function HomePageCarousel() {
                       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 2V11H2V13H11V22H13V13H22V11H13V2H11Z" fill="currentColor"></path></svg>
                     </div>
                     <MovieReviewComponent movieId={currMovieId}/>
-                    <div className="get-details-button">
+                    <div className="get-details-button" onClick={() => setShowModal(true)}>
                       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="down-arrow-details"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.293 7.29297L12.0001 14.5859L4.70718 7.29297L3.29297 8.70718L11.293 16.7072C11.4805 16.8947 11.7349 17.0001 12.0001 17.0001C12.2653 17.0001 12.5196 16.8947 12.7072 16.7072L20.7072 8.70718L19.293 7.29297Z" fill="currentColor"></path></svg>
                     </div>
+                    {showModal && (
+                      <Modal onClose={() => setShowModal(false)}>
+                        <MovieDetail setShowModal={setShowModal} movieId={currMovieId}/>
+                      </Modal>
+                    )}
                   </div>
                   <div className="bottom-half-hidden-details">
                     <div className="top-bottom-movie-details">
                       <span className="new-span">New</span>
-                      <div className="movie-detail-rating">
+                      <div className={`movie-detail-rating 
+                      ${movie.rating == "R"|| movie.rating == "G" || movie.rating == "PG" ? "smaller-rating": ""}`}>
                         <span className="movie-rating-txt">{movie.rating}</span>
                       </div>
                       <span className="movie-duration">{movie.duration}</span>
