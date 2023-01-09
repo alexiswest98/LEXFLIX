@@ -13,6 +13,7 @@
     top: 0px;
     transition-timing-function: ease-in;
     transition: all .5s ease;
+    z-index: 1000;
 }
 
 #darker-background-nav {
@@ -132,6 +133,7 @@
     height: 53%;
     /* background-color: rgba(255, 0, 43); */
     margin-right: 2em;
+    cursor: pointer;
 }
 
 .carrot-transform > i {
@@ -167,7 +169,7 @@ body {
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
     top: 70%;
     right: 5%;
@@ -176,16 +178,34 @@ body {
     box-shadow: 0 0 7px rgba(37, 36, 36, 0.95);
     padding: 0.5em 0em 0em 0em;
     /* z-index: 100; */
+    /* border: 1px solid yellow; */
 }
 
+.smaller-nav {
+    height: 19em;
+}
+
+.smallest-nav {
+    height: 14em;
+}
+
+
 .outer-drop-down-div {
-    height: 15%;
+    height: 14%;
     width: 57%;
     /* border: 1px solid red; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
     text-decoration: none;
+}
+
+.smaller-nav-prof{
+    height: 18%;
+}
+
+.smallest-nav-prof {
+    height: 24%;
 }
 
 .outer-drop-down-div:hover > h4 {
@@ -215,17 +235,25 @@ body {
 .log-out-div {
     width: 100%;
     height: 10%;
-    /* background-color: yellow; */
+    /* border: 1px solid yellow; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-top: 1px solid grey;
 }
 
+.smaller-nav-logout {
+    height: 16%;
+}
+
+.smallest-nav-logout {
+    height: 20%;
+}
+
 .log-out-actual-butt {
     width: 100%;
     height: 100%;
-    font-size: 1vw;
+    font-size: 1.1vw;
     color: white;
     cursor: pointer;
     border: none;
@@ -238,7 +266,7 @@ body {
 
 .drop-down-manage-prof-div {
     width: 100%;
-    height: 15%;
+    height: 14%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,6 +274,14 @@ body {
     text-decoration: none;
     color: white;
 }
+
+.smaller-nav-manage {
+    height: 17%;
+}
+
+.smallest-nav-manage {
+    height: 20%;
+} 
 
 .drop-down-manage-prof-div:hover {
     text-decoration: underline;
@@ -259,7 +295,7 @@ body {
 }
 
 .left-side-drop-svg {
-    width: 24%;
+    width: 18%;
     height: 100%;
     display: flex;
     justify-content: flex-start;

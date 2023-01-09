@@ -24,7 +24,7 @@ export default function HomePageCarousel() {
   const movies = Object.values(useSelector(state => state.movies))
   const moviesCarousel = movies.slice(0, 18)
   const { profId } = useParams();
-  const [currMovieId, setCurrMovieId] = useState();
+  const [currMovieId, setCurrMovieId] = useState(1);
 
   useEffect(() => {
     dispatch(getAllMoviesThunk())
@@ -48,7 +48,7 @@ export default function HomePageCarousel() {
     const words = string.split(',');
     let newWords = [];
     for (let i = 0; i < words.length - 1; i++) {
-      newWords.push(words[i], " ● ");
+      newWords.push(words[i], " · ");
     }
     newWords.push(words[words.length - 1])
     return newWords.join("")
@@ -85,6 +85,7 @@ export default function HomePageCarousel() {
             <SwiperSlide>
               <div className={`swiper-indiv-div ${hoverRight(movie.id) && "hover-entire-right"} ${hoverLeft(movie.id) && "hover-entire-left"}`}>
                 <img src={movie.prev_img} alt='movie poster' className="swiper-img" onMouseOver={() => setCurrMovieId(movie.id)}></img>
+                {console.log("------------", currMovieId)}
                 <div className="hidden-details-info">
                   <div className="top-half-hidden-details">
                     <Link to={`/${profId}/watch/${movie.id}`} className="play-butt-details">

@@ -1,20 +1,119 @@
-.outer-whole-signup-form {
-    margin-top: 10vh;
+.whole-outer-sign-up {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    background-color: #000000;
+    margin-top: -10vh;
+}
+
+.header-sign-up-div {
+    /* background-color: pink; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+    margin-bottom: 2vh;
+}
+
+
+.outer-whole-signup-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 100%;
+    /* border: 1px solid rgb(246, 206, 206); */
+}
+
+.errors-sign-up-div {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+.right-half-outer-sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 10px rgba(148, 147, 147, 0.25);
+    border-radius: 0.3em;
+    width: 30%;
+    height: 100%;
+    margin-right: 4vw;
+}
+
+.sign-up-input-field {
+    border-radius: 0.5em;
+    height: 35%;
+}
+
+.sign-up-whole-input-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: rgba(80, 1, 1, 0.5); */
+    width: 75%;
+    height: 20%;
+    margin-bottom: 2vh;
+    border-radius: 0.2em;
+    font-size: 1em;
+} 
+
+.left-half-outer-sign-up {
+    box-shadow: 0 0 20px 10px rgba(148, 147, 147, 0.25);
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.3em;
+}
+
+.outer-plan-selection {
+    display: flex;
+    /* background-color: rgb(1, 73, 73); */
+    height: 60%;
+    width: 100%;
+    margin-bottom: 2vw;
+    justify-content: space-around;
+}
+
+.outer-plan-div {
+    width: 30%;
+    height: 90%;
+    border: 0.3px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3em;
+}
+
+.box-each-plan {
+    height: 60%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e50914;
+    margin-bottom: 0.5vh;
+    border-radius: 0.3em;
 }
 
 .sign-up-submit {
     margin-top: 2vh;
 }
 
-.whole-input-div {
-    margin: 0.5em;
-}
-
 .sel-pay-title {
-    color: #e50914
+    color: #e50914;
+    font-size: 1.6em;
+    font-weight: 500;
 }
