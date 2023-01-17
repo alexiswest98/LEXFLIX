@@ -7,6 +7,10 @@ import './splashPage.css'
 
 export default function SplashPage() {
 
+    //check
+    //if user {
+    //     dispatch logout to happen every time on render
+    // }
     return (
         <div className='whole-outer-splash-page'>
             <div className='whole-outer-splash-body'
