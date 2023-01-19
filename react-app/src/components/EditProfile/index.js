@@ -34,7 +34,6 @@ export default function EditProfile() {
                 id: profile.id,
                 user_id: profile.user_id,
                 username
-    
             }
     
             dispatch(editProfileThunk(updatedProfile))

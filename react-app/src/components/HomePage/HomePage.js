@@ -4,21 +4,37 @@ import { NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { getAllMoviesThunk } from '../../store/movies';
 import { getAllReviewsThunk } from '../../store/reviews';
+import { getAllProfilesThunk } from '../../store/profiles';
 import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
 import { Modal } from '../../context/Modal';
 import MovieDetail from "../MovieDetailModal/MovieModal";
 import './homePage.css'
 
 export default function HomePage() {
+    const { profId } = useParams();
     const dispatch = useDispatch();
     const movies = Object.values(useSelector(state => state.movies))
+    const profiles = Object.values(useSelector(state => state.profiles))
+    const currProfile = profiles[+profId]
     const headerMovie = useSelector(state => state.movies[21])
     const [showModal, setShowModal] = useState(false);
-    const { profId } = useParams();
 
+    //set curr profile in local storage time limit 1 hour
+    function setTimedLocalStorage(key, value, minutes) {
+        var expiration = new Date().getTime() + minutes * 60 * 1000;
+        localStorage.setItem(key, JSON.stringify({ value: value, expiration: expiration }));
+      }
+      
     useEffect(() => {
         dispatch(getAllMoviesThunk())
         dispatch(getAllReviewsThunk(+profId))
+        dispatch(getAllProfilesThunk())
+
+        window.addEventListener("beforeunload", function (e) {
+            if(profId){
+                setTimedLocalStorage('currProfileId', `${profId}`, 60)
+            }
+          });
     }, [dispatch, profId])
 
     if (!headerMovie || !movies) return null;

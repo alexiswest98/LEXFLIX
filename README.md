@@ -95,3 +95,6 @@ To get a local copy up and running follow these simple example steps.
 ## Get in touch!
 - [Alexis' GitHub](https://github.com/alexiswest98)
 - [Alexis' Linkedin](https://www.linkedin.com/in/alexis-west-596a6b203/)
+
+
+
