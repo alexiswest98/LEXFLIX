@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import LogoutButton from './auth/LogoutButton';
 import lexflixLogo from '../images/lexflixLogo.png';
 import { getAllProfilesThunk } from '../store/profiles';
-import { logout } from '../store/session';
+// import { logout } from '../store/session';
 import './NavBar.css'
 
 const NavBar = () => {
