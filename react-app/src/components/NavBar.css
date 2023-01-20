@@ -253,7 +253,7 @@ body {
 .log-out-actual-butt {
     width: 100%;
     height: 100%;
-    font-size: 1.1vw;
+    font-size: 1em;
     color: white;
     cursor: pointer;
     border: none;
