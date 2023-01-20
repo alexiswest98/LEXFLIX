@@ -30,6 +30,10 @@ export default function SplashPage() {
 //         }
 //   }, [dispatch])
 
+    useEffect(async() => {
+        await dispatch(logout());
+    }, [dispatch])
+
     return (
         <div className='whole-outer-splash-page'>
             <div className='whole-outer-splash-body'

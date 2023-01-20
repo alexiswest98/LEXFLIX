@@ -56,11 +56,9 @@ const NavBar = () => {
     //event listener for nav bar background transition
     window.addEventListener("scroll", transitionNavBar)
 
-    window.addEventListener("beforeunload", function (e) {
-      if(profId){
-        dispatch(logout());
-      }
-    });
+    // window.addEventListener("unload", function (e) {
+    //     dispatch(logout());
+    // });
 
     //clean up
     return () => window.removeEventListener("scroll", transitionNavBar)
