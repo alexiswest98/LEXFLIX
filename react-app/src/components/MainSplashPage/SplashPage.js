@@ -11,24 +11,24 @@ export default function SplashPage() {
     const dispatch = useDispatch();
     const history = useHistory();
     //in order to get local storage value(profileIdd)
-    function getTimedLocalStorage(key) {
-        const data = JSON.parse(localStorage.getItem(key));
-        if (data && data.expiration > new Date().getTime()) {
-          return data.value;
-        } else {
-          localStorage.removeItem(key);
-          return null;
-        }
-      }
+//     function getTimedLocalStorage(key) {
+//         const data = JSON.parse(localStorage.getItem(key));
+//         if (data && data.expiration > new Date().getTime()) {
+//           return data.value;
+//         } else {
+//           localStorage.removeItem(key);
+//           return null;
+//         }
+//       }
 
-    useEffect(() => {
-        const myData = getTimedLocalStorage("currProfileId");
-        if (myData) {
-            history.push(`/browse/${myData}`)
-        } else {
-          dispatch(logout());
-        }
-  }, [dispatch])
+//     useEffect(() => {
+//         const myData = getTimedLocalStorage("currProfileId");
+//         if (myData) {
+//             history.push(`/browse/${myData}`)
+//         } else {
+//           dispatch(logout());
+//         }
+//   }, [dispatch])
 
     return (
         <div className='whole-outer-splash-page'>
