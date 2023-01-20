@@ -8,8 +8,9 @@ const LogoutButton = () => {
   const dispatch = useDispatch();
 
   const onLogout = async (e) => {
+    await localStorage.removeItem('currProfileId');
     await dispatch(logout());
-    history.push('/')
+    history.push('/');
   };
 
   return <button onClick={onLogout} className='log-out-actual-butt'>Sign Out of Lexflix</button>;

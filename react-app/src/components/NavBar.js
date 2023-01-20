@@ -45,6 +45,7 @@ const NavBar = () => {
     return () => document.removeEventListener("click", closeMenu);
   }, [showMenu])
 
+
   function setTimedLocalStorage(key, value, minutes) {
     var expiration = new Date().getTime() + minutes * 60 * 1000;
     localStorage.setItem(key, JSON.stringify({ value: value, expiration: expiration }));
@@ -63,6 +64,8 @@ const NavBar = () => {
     window.addEventListener("beforeunload", function (e) {
       if(profId){
           setTimedLocalStorage('currProfileId', `${profId}`, 60)
+      } else {
+        localStorage.removeItem('currProfileId')
       }
     });
 
@@ -70,6 +73,8 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", transitionNavBar)
 
   }, [dispatch, path, profId])
+
+  
 
   return (<div className='whole-outer-nav-full'>
     {

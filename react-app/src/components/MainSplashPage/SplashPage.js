@@ -11,6 +11,7 @@ export default function SplashPage() {
     const dispatch = useDispatch();
     const history = useHistory();
     //in order to get local storage value(profileIdd)
+
     function getTimedLocalStorage(key) {
         const data = JSON.parse(localStorage.getItem(key));
         if (data && data.expiration > new Date().getTime()) {
@@ -21,14 +22,17 @@ export default function SplashPage() {
         }
       }
 
-    useEffect(() => {
+      console.log(getTimedLocalStorage("currProfileId"))
+
+
+    useEffect(async () => {
         const myData = getTimedLocalStorage("currProfileId");
-        if (myData) {
-            history.push(`/browse/${myData}`)
+        if (myData !== null) {
+            history.push(`/browse/${+myData}`)
         } else {
-          dispatch(logout());
+          await dispatch(logout());
         }
-  }, [dispatch])
+    }, [])
 
     return (
         <div className='whole-outer-splash-page'>
