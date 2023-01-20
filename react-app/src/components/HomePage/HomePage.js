@@ -52,7 +52,6 @@ export default function HomePage() {
             <div className='fade-bottom'></div>
             <HomePageCarousel/>
             <h1 className='more-movies-holder'></h1>
-            {/* <HomePageCarousel/> */}
         </div>
     )
 }

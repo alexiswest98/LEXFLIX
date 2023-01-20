@@ -45,15 +45,31 @@ const NavBar = () => {
     return () => document.removeEventListener("click", closeMenu);
   }, [showMenu])
 
+  function setTimedLocalStorage(key, value, minutes) {
+    var expiration = new Date().getTime() + minutes * 60 * 1000;
+    localStorage.setItem(key, JSON.stringify({ value: value, expiration: expiration }));
+  }
 
   useEffect(() => {
-    dispatch(getAllProfilesThunk())
+
+    if(sessionUser){
+      dispatch(getAllProfilesThunk())
+    }
+
     //event listener for nav bar background transition
     window.addEventListener("scroll", transitionNavBar)
+
+    //trying local storage again 
+    window.addEventListener("beforeunload", function (e) {
+      if(profId){
+          setTimedLocalStorage('currProfileId', `${profId}`, 60)
+      }
+    });
+
     //clean up
     return () => window.removeEventListener("scroll", transitionNavBar)
 
-  }, [dispatch, path])
+  }, [dispatch, path, profId])
 
   return (<div className='whole-outer-nav-full'>
     {

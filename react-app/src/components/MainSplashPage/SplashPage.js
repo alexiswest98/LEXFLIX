@@ -1,16 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import splashPageBackground from '../../images/splashPageBackground.jpg'
 import linkedin from "../../images/linkedin.png"
 import github from "../../images/github.png"
+import { logout } from '../../store/session';
 import './splashPage.css'
 
 export default function SplashPage() {
+    const dispatch = useDispatch();
+    const history = useHistory();
+    //in order to get local storage value(profileIdd)
+    function getTimedLocalStorage(key) {
+        const data = JSON.parse(localStorage.getItem(key));
+        if (data && data.expiration > new Date().getTime()) {
+          return data.value;
+        } else {
+          localStorage.removeItem(key);
+          return null;
+        }
+      }
 
-    //check
-    //if user {
-    //     dispatch logout to happen every time on render
-    // }
+    useEffect(() => {
+        const myData = getTimedLocalStorage("currProfileId");
+        if (myData) {
+            history.push(`/browse/${myData}`)
+        } else {
+          dispatch(logout());
+        }
+  }, [dispatch])
+
     return (
         <div className='whole-outer-splash-page'>
             <div className='whole-outer-splash-body'
