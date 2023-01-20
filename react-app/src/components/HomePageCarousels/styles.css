@@ -1,3 +1,7 @@
+:root {
+  --swiper-theme-color: #ffffff;
+}
+
 .whole-carousel-outer-div {
   position: relative;
   height: 38%;
