@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import LogoutButton from './auth/LogoutButton';
 import lexflixLogo from '../images/lexflixLogo.png';
 import { getAllProfilesThunk } from '../store/profiles';
-// import { logout } from '../store/session';
+import { logout } from '../store/session';
 import './NavBar.css'
 
 const NavBar = () => {
@@ -47,13 +47,21 @@ const NavBar = () => {
 
 
   useEffect(() => {
-    dispatch(getAllProfilesThunk())
+
+    if(sessionUser) {dispatch(getAllProfilesThunk())}
     //event listener for nav bar background transition
     window.addEventListener("scroll", transitionNavBar)
+
+    window.addEventListener("beforeunload", function (e) {
+      if(profId){
+        dispatch(logout());
+      }
+    });
+
     //clean up
     return () => window.removeEventListener("scroll", transitionNavBar)
 
-  }, [dispatch, path])
+  }, [dispatch, path, profId])
 
   return (<div className='whole-outer-nav-full'>
     {
