@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import LogoutButton from './auth/LogoutButton';
 import lexflixLogo from '../images/lexflixLogo.png';
 import { getAllProfilesThunk } from '../store/profiles';
-// import { logout } from '../store/session';
+import { logout } from '../store/session';
 import './NavBar.css'
 
 const NavBar = () => {
@@ -52,19 +52,15 @@ const NavBar = () => {
 
   useEffect(() => {
 
-    if(sessionUser){
-      dispatch(getAllProfilesThunk())
-    }
+    if(sessionUser) {dispatch(getAllProfilesThunk())}
+    //event listener for nav bar background transition
+    window.addEventListener("scroll", transitionNavBar)
 
-    // //event listener for nav bar background transition
-    // window.addEventListener("scroll", transitionNavBar)
-
-    // //trying local storage again 
-    // window.addEventListener("beforeunload", function (e) {
-    //   if(profId){
-    //       setTimedLocalStorage('currProfileId', `${profId}`, 60)
-    //   }
-    // });
+    window.addEventListener("beforeunload", function (e) {
+      if(profId){
+        dispatch(logout());
+      }
+    });
 
     //clean up
     return () => window.removeEventListener("scroll", transitionNavBar)
