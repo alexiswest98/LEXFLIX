@@ -11,6 +11,7 @@ from .api.profile_routes import profile_routes
 from .api.movie_routes import movie_routes
 from .api.movie_review_routes import movie_review_routes
 from .api.genre_routes import genre_routes
+from .api.my_list_routes import my_list_routes
 from .seeds import seed_commands
 from .config import Config
 
@@ -36,6 +37,7 @@ app.register_blueprint(profile_routes, url_prefix='/api/profiles')
 app.register_blueprint(movie_routes, url_prefix='/api/movies')
 app.register_blueprint(movie_review_routes, url_prefix='/api/review')
 app.register_blueprint(genre_routes, url_prefix='/api/genre')
+app.register_blueprint(my_list_routes, url_prefix='/api/mylist')
 
 db.init_app(app)
 Migrate(app, db)
@@ -45,7 +47,7 @@ CORS(app)
 
 
 # Since we are deploying with Docker and Flask,
-# we won't be using a buildpack when we deploy to Heroku.
+# we won't be using a buildpack when we deploy to Render.
 # Therefore, we need to make sure that in production any
 # request made over http is redirected to https.
 # Well.........

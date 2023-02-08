@@ -32,7 +32,7 @@ class Movie(db.Model):
     # primaryjoin="Movie.id==Review.movie_id"
     movie_to_reviews = db.relationship("Review", back_populates="reviews_to_movie", primaryjoin="Movie.id==Review.movie_id", cascade='all,delete')
     movie_to_movie_genre = db.relationship("MovieGenres", primaryjoin="Movie.id==MovieGenres.movie_id", back_populates='movie', cascade='all,delete')
-
+    movie_to_my_list = db.relationship("MyList", primaryjoin="Movie.id==MyList.movie_id", back_populates='my_list_to_movie', cascade='all,delete')
 
     def to_dict(self):
         return {

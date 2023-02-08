@@ -5,6 +5,7 @@ from .genres import seed_genres, undo_genres
 from .profiles import seed_profiles, undo_profiles
 from .reviews import seed_reviews, undo_reviews
 from .movie_genres import seed_movie_genres, undo_movie_genres
+from .my_list import seed_my_list, undo_my_list
 
 from app.models.db import db, environment, SCHEMA
 
@@ -27,12 +28,14 @@ def seed():
         undo_movies()
         undo_movie_genres()
         undo_reviews()
+        undo_my_list()
     seed_users()
     seed_profiles()
     seed_genres()
     seed_movies()
     seed_movie_genres()
     seed_reviews()
+    seed_my_list()
     # Add other seed functions here
 
 
@@ -45,4 +48,5 @@ def undo():
     undo_genres()
     undo_profiles()
     undo_users()
+    undo_my_list()
     # Add other undo functions here
