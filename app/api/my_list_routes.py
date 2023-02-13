@@ -19,8 +19,7 @@ def get_prof_my_list(profileId):
         return jsonify(mediaobj)
     return jsonify({'errors': 'Profile user has no shows or movies in My-List'}, 404)
 
-##add a movie or show to my list
-## make a rating for a movie
+##add a movie to my list
 @my_list_routes.route('/profile/<int:profileId>/movie/<int:movieId>', methods=["POST"])
 @login_required
 def add_my_list(profileId, movieId):
@@ -36,6 +35,8 @@ def add_my_list(profileId, movieId):
         db.session.commit()
         return jsonify(newAddition.to_dict())
     return jsonify(form.errors)
+
+##add a show to my list
 
 ##delete from my-list
 @my_list_routes.route('/<int:mediaId>/delete', methods=["DELETE"])

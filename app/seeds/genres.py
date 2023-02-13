@@ -11,19 +11,19 @@ def seed_genres():
         genre_name='Comedies')
     genre4 = Genre(
         genre_name='Spanish')
-    genre4 = Genre(
-        genre_name='Thriller')
     genre5 = Genre(
-        genre_name='Dramas')
+        genre_name='Thriller')
     genre6 = Genre(
-        genre_name='Romance')
+        genre_name='Dramas')
     genre7 = Genre(
-        genre_name='Movies Based on Books')
+        genre_name='Romance')
     genre8 = Genre(
-        genre_name='Action')
+        genre_name='Movies Based on Books')
     genre9 = Genre(
-        genre_name='Mysteries')
+        genre_name='Action')
     genre10 = Genre(
+        genre_name='Mysteries')
+    genre11 = Genre(
         genre_name='Children & Family')
 
 
@@ -37,6 +37,7 @@ def seed_genres():
     db.session.add(genre8)
     db.session.add(genre9)
     db.session.add(genre10)
+    db.session.add(genre11)
     db.session.commit()
 
 

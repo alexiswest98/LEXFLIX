@@ -5,15 +5,16 @@ import movieReducer from './movies';
 import profileReducer from './profiles';
 import reviewsReducer from './reviews';
 import moviesGenresReducer from './genresmovies';
+import myListReducer from './mylist';
 
 const rootReducer = combineReducers({
   session,
   movies: movieReducer,
   profiles: profileReducer,
   reviews: reviewsReducer,
-  movieGenres: moviesGenresReducer
+  movieGenres: moviesGenresReducer,
+  myList: myListReducer
 });
-
 
 let enhancer;
 
