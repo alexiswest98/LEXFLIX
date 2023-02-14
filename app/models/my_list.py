@@ -20,5 +20,9 @@ class MyList(db.Model):
             'id': self.id,
             'movie_id': self.movie_id,
             'profile_id': self.profile_id,
-            'movie_name':self.my_list_to_movie.movie_name
+            'movie_name':self.my_list_to_movie.movie_name,
+            'detail_img':self.my_list_to_movie.prev_img,
+            'movie_rating':self.my_list_to_movie.rating,
+            'movie_duration':self.my_list_to_movie.duration,
+            'movie_is':self.my_list_to_movie.movie_is
         }

@@ -29,13 +29,13 @@ const deleteAllMyListAction = (mediaId) => {
 
 /* ------ THUNKS ------ */
 
-export const getAllMyListThunk = (profile) => async dispatch => {
-    const response = await fetch(`/api/mylist/profile/${profile.id}/all`)
+export const getAllMyListThunk = (profileId) => async dispatch => {
+    const response = await fetch(`/api/mylist/profile/${profileId}/all`)
 
     if (response.ok) {
         const media = await response.json()
         dispatch(getAllMyListAction(media))
-        return media
+        return media;
     }
 }
 
@@ -67,16 +67,15 @@ export const deleteMyListThunk = (mediaId) => async dispatch => {
 }
 
 /* ------ REDUCER ------ */
-const myListReducer = (state= {}, action) => {
+const myListReducer = (state = {}, action) => {
     let newState = {};
-    switch (action.type) {
+    switch(action.type) {
         case GETMYLIST:
-            newState = {...state}
-            action.media.forEach(med => {
+            action.media.forEach((med) => {
                 newState[med.id] = med
             });
             return newState;
-        case ADDMYLIST:
+        case ADDMOVIEMYLIST:
             newState = {...state}
             newState[action.movie.id] = action.movie
             return newState;

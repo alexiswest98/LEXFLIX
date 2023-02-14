@@ -91,7 +91,6 @@
   transform: scale(1.5);
   position: absolute;
   z-index: 100;
-  transform: 0.5s ease;
   height: 60%;
   margin-top: -5vh;
   box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
@@ -128,12 +127,14 @@
   width: 100%;
   display: flex;
   align-items: center;
+  background-color: #fcc7c7;
   /* justify-content: center; */
 }
 
 .bottom-half-hidden-details {
   height: 50%;
   width: 100%;
+  /* background-color: #c7c8fc; */
 }
 
 .play-butt-details {
@@ -204,6 +205,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  /* background-color: #c7c8fc; */
   /* background-color: pink; */
 }
 

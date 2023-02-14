@@ -18,6 +18,7 @@ import SplashPage from './components/MainSplashPage/SplashPage';
 import TrailerPage from './components/TrailerPage/TrailerPage';
 import MovieHomePage from './components/MovieHomePage/MovieHomePage';
 import ComingSoon from './components/ComingSoon';
+import MyList from './components/myList/MyList';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -67,7 +68,7 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/browse/:profId/my-list' exact='true' >
           <NavBar />
-          <ComingSoon/>
+          <MyList/>
         </ProtectedRoute>
         <ProtectedRoute path='/browse/:profId/movies' exact='true' >
           <NavBar />

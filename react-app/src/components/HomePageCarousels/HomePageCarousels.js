@@ -7,6 +7,7 @@ import MovieReviewComponent from "../MovieReview/MovieReview";
 import { getAllReviewsThunk } from "../../store/reviews";
 import { Modal } from '../../context/Modal';
 import MovieDetail from "../MovieDetailModal/MovieModal";
+import { movieIs } from "../../store/repeatfuncs";
 
 // Import Swiper styles
 import 'swiper/swiper.min.css';
@@ -47,22 +48,13 @@ export default function HomePageCarousel() {
   //   // return () => document.removeEventListener("click", closeMenu);
   // }, [showMenu])
 
-  const movieIs = (string) => {
-    const words = string.split(',');
-    let newWords = [];
-    for (let i = 0; i < words.length - 1; i++) {
-      newWords.push(words[i], " · ");
-    }
-    newWords.push(words[words.length - 1])
-    return newWords.join("")
-  };
 
   const hoverRight = (num) => {
-    if (num == 1 || num == 7 || num == 13) return true;
+    if (num === 1 || num === 7 || num === 13) return true;
   }
 
   const hoverLeft = (num) => {
-    if (num == 6 || num == 12 || num == 18) return true;
+    if (num === 6 || num === 12 || num === 18) return true;
   }
 
   if (!movies) return null;
