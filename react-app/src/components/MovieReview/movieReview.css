@@ -12,6 +12,14 @@
     margin-left: 3%;
 }
 
+/* diff sizing for my-list */
+#my-list-rate-movie-button {
+    width: 2.8%;
+    height: 4.8%;
+    position: fixed;
+    margin-left: 8.6%;
+}
+
 .rate-movie-button:hover {
     width: 8vw;
     height: 4.5vh;
@@ -19,6 +27,15 @@
     border-radius: 1em;
     border: none;
     margin-left: -16%;
+}
+
+/* diff sizing for my-list */
+#my-list-rate-movie-button:hover {
+    width: 14.5%;
+    height: 8%;
+    position: fixed;
+    margin-left: 2.9%;
+    border-radius: 1.9em;
 }
 
 .thumbs-down-div, .double-thumbs-up-div {
@@ -38,6 +55,14 @@
     margin-right: 3vw;
 }
 
+/* diff sizing for my-list */
+.rate-movie-button:hover #my-list-thumbs-down-div {
+    width: 2.8%;
+    height: 4.8%;
+    position: fixed;
+    margin-right: 7.9vw;
+}
+
 .thumbs-down-div:hover, .double-thumbs-up-div:hover, .thumbs-up-holder:hover {
     background-color: rgb(100, 100, 100);
 }
@@ -55,6 +80,13 @@
     border: 0.2em solid rgb(100, 100, 100); */
     color: white;
     border-width: 2px;
+}
+
+.rate-movie-button:hover #my-list-double-thumbs-up-div {
+    width: 2.8%;
+    height: 4.8%;
+    position: fixed;
+    margin-left: 7.9vw;
 }
 
 .rate-movie-button:hover .thumbs-down {
@@ -81,6 +113,13 @@
     transform: 0.5s ease;
 }
 
+/* my list styling */
+.rate-movie-button:hover #my-list-thumbs-up-holder {
+    width: 2.8%;
+    height: 4.8%;
+    position: fixed;
+}
+
 .thumbs-up-holder {
     position: fixed;
     display: flex;
@@ -95,5 +134,5 @@
 }
 
 .extra-styling {
-    box-shadow: 0 0 1px 2px rgba(255, 254, 254, 0.5);
+    box-shadow: 0 0 1px 1.5px rgba(255, 254, 254, 0.5);
 }

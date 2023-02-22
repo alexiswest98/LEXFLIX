@@ -16,6 +16,12 @@ def seed_my_list():
         movie_id=5, profile_id=1)
     MyList6 = MyList(
         movie_id=6, profile_id=1)
+    MyList7 = MyList(
+        movie_id=7, profile_id=1)
+    MyList8 = MyList(
+        movie_id=8, profile_id=1)
+    MyList9 = MyList(
+        movie_id=9, profile_id=1)
 
     db.session.add(MyList1)
     db.session.add(MyList2)
@@ -23,6 +29,9 @@ def seed_my_list():
     db.session.add(MyList4)
     db.session.add(MyList5)
     db.session.add(MyList6)
+    db.session.add(MyList7)
+    db.session.add(MyList8)
+    db.session.add(MyList9)
     db.session.commit()
 
 

@@ -40,7 +40,7 @@ export const getOneMovieThunk = (movie_id) => async (dispatch) => {
 export default function movieReducer(state={}, action) {
     let newState = {};
 
-    switch(action.type){
+    switch (action.type){
         case GETALLMOVIES:
             action.movies.forEach(mov => newState[mov.id] = mov)
             return newState;

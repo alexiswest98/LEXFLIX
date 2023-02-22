@@ -7,7 +7,7 @@ class MyList(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    movie_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("movies.id")))
+    movie_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("movies.id")), unique=True)
     # tv_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("movies.id")))
     profile_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("profiles.id")), nullable=False)
 

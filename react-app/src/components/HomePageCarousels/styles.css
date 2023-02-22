@@ -78,6 +78,7 @@
   /* border: 1px solid red; */
   margin-top: -27vh;
   border-radius: 0.2em;
+  cursor: pointer;
 }
 
 .swiper-img {
@@ -127,7 +128,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #fcc7c7;
+  /* background-color: #fcc7c7; */
   /* justify-content: center; */
 }
 
@@ -167,6 +168,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.add-to-my-list:hover {
+  border: 0.2em solid hsla(0,0%,100%,.9);
+  border-width: 2px;
 }
 
 .swiper-button-prev {
