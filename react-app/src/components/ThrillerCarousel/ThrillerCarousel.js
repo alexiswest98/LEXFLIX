@@ -63,7 +63,7 @@ export default function ThrillerCarousel() {
     setCount(count + 1);
   }
 
-  console.log(moviesCarousel)
+  // console.log(moviesCarousel)
 
   //CSS FUNCTIONS
   const hoverRight = (idx) => {
