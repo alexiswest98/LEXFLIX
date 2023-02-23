@@ -52,7 +52,6 @@ export default function MovieHomePage() {
             <div className='fade-bottom'></div>
             <HomePageCarousel/>
             {/* <ThrillerCarousel/> */}
-            {/* <h1 className='more-movies-holder'></h1> */}
         </div>
     )
 }
