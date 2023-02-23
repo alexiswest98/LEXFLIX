@@ -39,13 +39,13 @@ export const getAllMyListThunk = (profileId) => async dispatch => {
     }
 }
 
-export const addMovieMyListThunk = (profile, movieId ) => async dispatch => {
-    const response = await fetch(`/api/mylist/profile/${profile.id}/movie/${movieId}`, {
+export const addMovieMyListThunk = (profileId, movieId ) => async dispatch => {
+    const response = await fetch(`/api/mylist/profile/${profileId}/movie/${movieId}`, {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
             movie_id: movieId,
-            profile_id: profile.id
+            profile_id: profileId
         })
     })
 

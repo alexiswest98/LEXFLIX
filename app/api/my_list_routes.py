@@ -27,11 +27,13 @@ def add_my_list(profileId, movieId):
     form['csrf_token'].data = request.cookies['csrf_token']
     data = form.data
     ##error validation
-    media = MyList.query.filter(MyList.profile_id==profileId and MyList.movie_id==movieId).first()
+    media = MyList.query.filter(MyList.profile_id==profileId, MyList.movie_id==movieId).first()
+    # print(media)
+
     if media:
         return jsonify({'errors': 'Profile user already has this show or movie in My-List'}, 400)
 
-    if form.validate_on_submit():
+    if not media and form.validate_on_submit():
         newAddition = MyList(
             movie_id = data['movie_id'],
             profile_id = data['profile_id'],
