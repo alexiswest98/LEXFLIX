@@ -67,7 +67,7 @@
   height: 150%;
   width: 100%;
   /* border: 1px solid rgb(255, 222, 6); */
-  z-index: 20;
+  position: absolute;
   margin-top: -4vh;
   background: transparent;
 }
@@ -79,6 +79,8 @@
   margin-top: -27vh;
   border-radius: 0.2em;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 .swiper-img {
@@ -113,7 +115,7 @@
 .swiper-indiv-div:hover > div {
   display: block;
   height: 45%;
-  z-index: 100;
+  z-index: 500;
   border-radius:0em 0em 0.2em 0.2em;
 }
 

@@ -393,6 +393,186 @@ def seed_movies():
         detail_img = "https://s26162.pcdn.co/wp-content/uploads/2021/11/budapest-feature.jpg",
         trailer_src= "https://www.youtube.com/embed/1Fg5iWmQjwk?controls=0"
         )
+    movie21 = Movie(
+        movie_name= "The Grand Budapest Hotel", 
+        director= "Wes Anderson",
+        cast= "Ralph Fiennes, Murray Abraham, Mathieu Amalric",
+        writer= "Stefan Zweig, Wes Anderson, Hugo Guinness",
+        # genre1= 5,
+        # genre2= 6,
+        movie_is= "Beautiful, Exciting",
+        rating= "R",
+        year= 2014,
+        duration= "1h 39m", 
+        description= "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
+        prev_img= "https://ntvb.tmsimg.com/assets/p10295153_v_h8_ad.jpg?w=1280&h=720",
+        detail_img = "https://s26162.pcdn.co/wp-content/uploads/2021/11/budapest-feature.jpg",
+        trailer_src= "https://www.youtube.com/embed/1Fg5iWmQjwk?controls=0"
+        )
+    movie22 = Movie(
+        movie_name= "Elf", 
+        director= "Jon Favreau",
+        cast= "Will Ferrell, James CaanBob, Newhart",
+        writer= "David Berenbaum",
+        # genre1= 3,
+        # genre2= 11,
+        movie_is= "Heart Warming, For Children",
+        rating= "PG",
+        year= 2003,
+        duration= "1h 37m", 
+        description= "Raised as an oversized elf, Buddy travels from the North Pole to New York City to meet his biological father, Walter Hobbs, who doesn't know he exists and is in desperate need of some Christmas spirit.",
+        prev_img= "https://keithandthemovies.files.wordpress.com/2012/12/elf.jpg",
+        detail_img = "https://hips.hearstapps.com/hmg-prod/images/will-ferrell-buddy-the-elf-1541700803.jpg",
+        trailer_src= "https://www.youtube.com/embed/14o38xfHlXc?controls=0"
+        )
+    movie23 = Movie(
+        movie_name= "Get Out", 
+        director= "Jordan Peele",
+        cast= "Daniel Kaluuya, Allison Williams, Bradley Whitford",
+        writer= "Jordan Peele",
+        # genre1= 9,
+        # genre2= 10,
+        #genre3= 5,
+        movie_is= "Exciting, New",
+        rating= "R",
+        year= 2017,
+        duration= "1h 44m", 
+        description= "A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.",
+        prev_img= "http://noirehistoir.com/wp-content/uploads/2019/10/Get-Out-Feature-Image.jpg",
+        detail_img = "https://thehoya.com/wp-content/uploads/2017/02/B6_GetOut_youtube.png",
+        trailer_src= "https://www.youtube.com/embed/DzfpyUB60YY?controls=0"
+        )
+    movie24 = Movie(
+        movie_name= "Léon: The Professional", 
+        director= "Luc Besson",
+        cast= "Jean Reno, Gary Oldman, Natalie Portman",
+        writer= "Luc Besson",
+        # genre1= 9,
+        # genre2= 5,
+        movie_is= "Intense, Gripping",
+        rating= "R",
+        year= 1994,
+        duration= "1h 50m", 
+        description= "12-year-old Mathilda is reluctantly taken in by Léon, a professional assassin, after her family is murdered. An unusual relationship forms as she becomes his protégée and learns the assassin's trade.",
+        prev_img= "https://e7.pngegg.com/pngimages/285/446/png-clipart-mathilda-film-1080p-high-definition-video-720p-leon-the-professional-film-poster-weapon.png",
+        detail_img = "https://assets.mubicdn.net/images/film/168/image-w856.jpg",
+        trailer_src= "https://www.youtube.com/embed/jawVxq1Iyl0?controls=0"
+        )
+    movie25 = Movie(
+        movie_name= "Donnie Darko", 
+        director= "Richard Kelly",
+        cast= "Jake Gyllenhaal, Jena MaloneMary, McDonnell",
+        writer= "Richard Kelly",
+        # genre1= 2,
+        # genre2= 5,
+        #genre3= 10,
+        movie_is= "Enigmatic, Thought-provoking",
+        rating= "R",
+        year= 2001,
+        duration= "1h 53m", 
+        description= "After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.",
+        prev_img= "https://64.media.tumblr.com/d087ba53f14ef0035d45d88eeef527f2/7b8b230420606f43-5a/s1280x1920/6c46e943b5f4d0a91120d45d5d79dbd7ac660dc0.jpg",
+        detail_img = "https://images.mubicdn.net/images/film/159/cache-33084-1617107095/image-w1280.jpg",
+        trailer_src= "https://www.youtube.com/embed/rPeGaos7DB4?controls=0"
+        )
+    movie26 = Movie(
+        movie_name= "Hitch", 
+        director= "Andy Tennant",
+        cast= "Will Smith, Eva Mendes, Kevin James",
+        writer= "Kevin Bisch",
+        # genre1= 7,
+        # genre2= 3,
+        movie_is= "Romantic, Lighthearted",
+        rating= "PG-13",
+        year= 2005,
+        duration= "1h 58m", 
+        description= "A smooth-talking man falls for a hardened columnist while helping a shy accountant woo a beautiful heiress.",
+        prev_img= "https://ntvb.tmsimg.com/assets/p35562_v_h8_an.jpg",
+        detail_img = "https://imagesvc.meredithcorp.io/v3/mm/image?q=60&c=sc&poi=face&w=2000&h=1000&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F10%2F000029121-2000.jpg",
+        trailer_src= "https://www.youtube.com/embed/dMaq_pfxs-0?controls=0"
+        )
+    movie27 = Movie(
+        movie_name= "Scott Pilgrim vs. the World", 
+        director= "Edgar Wright",
+        cast= "Michael Cera, Mary Elizabeth Winstead, Kieran Culkin",
+        writer= "Michael Bacall, Edgar Wright, Bryan Lee O'Malley",
+        # genre1= 9,
+        # genre2= 7,
+        #genre3= 3,
+        movie_is= "Whimsical, Irreverent",
+        rating= "PG-13",
+        year= 2010,
+        duration= "1h 52m", 
+        description= "In a magically realistic version of Toronto, a young man must defeat his new girlfriend's seven evil exes one by one in order to win her heart.",
+        prev_img= "https://popculturalstudies.files.wordpress.com/2016/11/scott-pilgrim-8.jpg",
+        detail_img = "https://static01.nyt.com/images/2010/08/13/arts/13scott-span/13scott-span-articleLarge.jpg",
+        trailer_src= "https://www.youtube.com/embed/7wd5KEaOtm4?controls=0"
+        )
+    movie28 = Movie(
+        movie_name= "Deadpool", 
+        director= "Tim Miller",
+        cast= "Ryan Reynolds, Morena Baccarin, T.J. Miller",
+        writer= "Rhett Reese, Paul Wernick",
+        # genre1= 3,
+        # genre2= 9,
+        #genre3= 7,
+        movie_is= "Witty, Irreverent",
+        rating= "R",
+        year= 2016,
+        duration= "1h 48m", 
+        description= "A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks.",
+        prev_img= "https://staticg.sportskeeda.com/editor/2022/01/74d3c-16426630332228-1920.jpg",
+        detail_img = "https://m.media-amazon.com/images/M/MV5BMzYyNjI0MzA3M15BMl5BanBnXkFtZTgwMDA3Nzc5NzE@._V1_.jpg",
+        trailer_src= "https://www.youtube.com/embed/ONHBaC-pfsk?controls=0"
+        )
+    movie29 = Movie(
+        movie_name= "Eternal Sunshine of the Spotless Mind", 
+        director= "Michel Gondry",
+        cast= "Jim Carrey, Kate Winslet, Tom Wilkinson",
+        writer= "Charlie Kaufman, Michel Gondry, Pierre Bismuth",
+        # genre1= 7,
+        # genre2= 3,
+        movie_is= "Intricate, Poignant",
+        rating= "R",
+        year= 2004,
+        duration= "1h 48m", 
+        description= "When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories for ever.",
+        prev_img= "https://keithandthemovies.files.wordpress.com/2014/03/eternalposter.jpg",
+        detail_img = "https://www.hollywoodreporter.com/wp-content/uploads/2016/10/eternal_sunshine_of_the_spotless_mind_-_kate_winslet_-_jim_carey_-_h_-_2016.jpg",
+        trailer_src= "https://www.youtube.com/embed/yE-f1alkq9I?controls=0"
+        )
+    movie30 = Movie(
+        movie_name= "Spy Kids", 
+        director= "Robert Rodriguez",
+        cast= "Alexa PenaVega, Daryl Sabara, Antonio Banderas",
+        writer= "Robert Rodriguez",
+        # genre1= 9,
+        # genre2= 11,
+        movie_is= "Adventurous, Whimsical",
+        rating= "PG",
+        year= 2001,
+        duration= "1h 28m", 
+        description= "Using high tech gadgets, two kids have to save their reactivated OSS top spy parents when they're taken by an evil, high tech enemy.",
+        prev_img= "https://occ-0-55-41.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVi8Vpnx85AOYD5YgbF6lDFfwZ5VspsjtAJ6bm9H8CzLOjU9Adw0V-gtjw88X2di8lAndAdssHdnV6zZ18efOA8jea6XnNCY2d_2.jpg",
+        detail_img = "https://pyxis.nymag.com/v1/imgs/28a/90a/61814819a1f1b78862c093f00ea706aad5-tony-shalhoub-spy-kids-role-call-lede-.2x.rsocial.w600.jpg",
+        trailer_src= "https://www.youtube.com/embed/GE5aHKJp6HI?controls=0"
+        )
+    movie31 = Movie(
+        movie_name= "The Parent Trap", 
+        director= "Nancy Meyers",
+        cast= "Lindsay Lohan, Dennis Quaid, Natasha Richardson",
+        writer= "Erich Kästner, David Swift, Nancy Meyers",
+        # genre1= 7,
+        # genre2= 11,
+        movie_is= "Heartwarming, Entertaining",
+        rating= "PG",
+        year= 1998,
+        duration= "2h 8m", 
+        description= "Identical twins Annie and Hallie, separated at birth and each raised by one of their biological parents, discover each other for the first time at summer camp and make a plan to bring their wayward parents back together.",
+        prev_img= "https://www.hollywoodfl.org/ImageRepository/Document?documentID=20417",
+        detail_img = "https://d23.com/app/uploads/2017/02/1180w-600h_a-to-z-the-parent-trap-1998.jpg",
+        trailer_src= "https://www.youtube.com/embed/PMAhVpgzmRU?controls=0"
+        )
 
 
     db.session.add(movie1)
@@ -416,6 +596,16 @@ def seed_movies():
     db.session.add(movie19)
     db.session.add(movie20)
     db.session.add(movie21)
+    db.session.add(movie22)
+    db.session.add(movie23)
+    db.session.add(movie24)
+    db.session.add(movie25)
+    db.session.add(movie26)
+    db.session.add(movie27)
+    db.session.add(movie28)
+    db.session.add(movie29)
+    db.session.add(movie30)
+    db.session.add(movie31)
     db.session.commit()
 
 

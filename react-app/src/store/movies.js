@@ -16,6 +16,7 @@ export const getOneMovieAction = (movie) => {
     }
 }
 
+
 /* ___________ T H U N K S   ___________ */
 export const getAllMoviesThunk = () => async (dispatch) => {
     const response = await fetch('/api/movies/all');
@@ -47,6 +48,7 @@ export default function movieReducer(state={}, action) {
         case GETONEMOVIE:
             newState = {...state}
             newState[action.movie.id] = {... newState[action.movie.id], ...action.movie.id}
+            return newState;
         default:
              return state
     }

@@ -4,9 +4,10 @@ import { NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { getAllMoviesThunk } from '../../store/movies';
 import { getAllReviewsThunk } from '../../store/reviews';
-import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
 import { Modal } from '../../context/Modal';
 import MovieDetail from "../MovieDetailModal/MovieModal";
+import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
+import ThrillerCarousel from '../ThrillerCarousel/ThrillerCarousel';
 
 export default function MovieHomePage() {
     const dispatch = useDispatch();
@@ -50,8 +51,8 @@ export default function MovieHomePage() {
             </div>
             <div className='fade-bottom'></div>
             <HomePageCarousel/>
-            <h1 className='more-movies-holder'></h1>
-            {/* <HomePageCarousel/> */}
+            {/* <ThrillerCarousel/> */}
+            {/* <h1 className='more-movies-holder'></h1> */}
         </div>
     )
 }
