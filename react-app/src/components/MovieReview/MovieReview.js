@@ -20,9 +20,6 @@ export default function MovieReviewComponent({ movieId }) {
     const review = allReviews.filter(rev => rev.movie_id == movieId)[0]
     const { profId } = useParams();
     const path = window.location.pathname;
-    // const [thumbsDowDel, setThumbsDownDel] = useState(false)
-    // const [thumbsNeutralDel, setThumbsNeutralDel] = useState(false)
-    // const [thumbsUpDel, setThumbsUpDel] = useState(false)
     const [mylist, setMylist] = useState(false)
 
     const isReviewThumbsDown = (movie_id) => {

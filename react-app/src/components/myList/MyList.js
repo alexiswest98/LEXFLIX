@@ -8,6 +8,7 @@ import { Modal } from '../../context/Modal';
 import MovieReviewComponent from "../MovieReview/MovieReview";
 import { getAllMoviesThunk } from "../../store/movies";
 import { deleteMyListThunk } from "../../store/mylist";
+import { getAllReviewsThunk } from "../../store/reviews";
 import './myList.css';
 
 export default function MyList() {
@@ -28,6 +29,7 @@ export default function MyList() {
     useEffect(() => {
         dispatch(getAllMoviesThunk())
         dispatch(getAllMyListThunk(+profId))
+        dispatch(getAllReviewsThunk(+profId))
 
         const fetchMedia = async() => {
             setMedia(media)

@@ -14,7 +14,7 @@
 }
 
 .media-container {
-    background-color: rgb(255, 0, 0, 0.3);
+    /* background-color: rgb(255, 0, 0, 0.3); */
     width: 96vw;
     margin-left: 2%;
     /* margin-right: 2%;
@@ -120,8 +120,8 @@
 
 .get-details-button-list {
     border-radius: 50%;
-    width: 2.8%;
-    height: 4.8%;
+    width: 11%;
+    height: 23%;
     background-color: rgba(42,42,42,.6);;
     color: hsla(0,0%,100%,.5);
     border: 0.2em solid hsla(0,0%,100%,.5);
@@ -129,9 +129,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     cursor: pointer;
-    margin-left: 19.9%;
+    margin-left: 82.5%;
 }
   
 .get-details-button-list:hover {
