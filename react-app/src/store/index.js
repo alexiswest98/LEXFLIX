@@ -6,7 +6,6 @@ import profileReducer from './profiles';
 import reviewsReducer from './reviews';
 import moviesGenresReducer from './genresmovies';
 import myListReducer from './mylist';
-import mediaByGenreReducer from './mediabygenre';
 
 const rootReducer = combineReducers({
   session,
@@ -15,7 +14,6 @@ const rootReducer = combineReducers({
   reviews: reviewsReducer,
   movieGenres: moviesGenresReducer,
   myList: myListReducer,
-  mediaByGenre: mediaByGenreReducer
 });
 
 let enhancer;

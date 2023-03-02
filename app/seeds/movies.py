@@ -471,7 +471,7 @@ def seed_movies():
         year= 2001,
         duration= "1h 53m", 
         description= "After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.",
-        prev_img= "https://64.media.tumblr.com/d087ba53f14ef0035d45d88eeef527f2/7b8b230420606f43-5a/s1280x1920/6c46e943b5f4d0a91120d45d5d79dbd7ac660dc0.jpg",
+        prev_img= "https://64.media.tumblr.com/b61f702092b743576933e8806c29e2c5/a3a68366972ad0d4-0a/s1280x1920/ef6f979e0c74134ee073893d28f61a4ecc417bae.pnj",
         detail_img = "https://images.mubicdn.net/images/film/159/cache-33084-1617107095/image-w1280.jpg",
         trailer_src= "https://www.youtube.com/embed/rPeGaos7DB4?controls=0"
         )

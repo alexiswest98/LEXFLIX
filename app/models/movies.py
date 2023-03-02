@@ -52,5 +52,6 @@ class Movie(db.Model):
             "netflix_original": self.netflix_original,
             "lex_top": self.lex_top,
             "top_10": self.top_10,
-            "created_at": self.created_at
+            "created_at": self.created_at,
+            'genres': [genre.genre.genre_name for genre in self.movie_to_movie_genre]
         }

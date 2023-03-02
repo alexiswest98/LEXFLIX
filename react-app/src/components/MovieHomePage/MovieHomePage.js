@@ -8,11 +8,14 @@ import { Modal } from '../../context/Modal';
 import MovieDetail from "../MovieDetailModal/MovieModal";
 import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
 import ThrillerCarousel from '../ThrillerCarousel/ThrillerCarousel';
+import ComedyCarousel from '../ComedyCarousel/ComedyCarousel';
+import ActionCarousel from '../ActionCarousel/ActionCarousel';
+import RomanceCarousel from '../RomanceCarousel/RomanceCarousel';
 
 export default function MovieHomePage() {
     const dispatch = useDispatch();
     const movies = Object.values(useSelector(state => state.movies))
-    const headerMovie = useSelector(state => state.movies[20])
+    const headerMovie = useSelector(state => state.movies[25])
     const [showModal, setShowModal] = useState(false);
     const { profId } = useParams();
 
@@ -50,8 +53,11 @@ export default function MovieHomePage() {
                 )}
             </div>
             <div className='fade-bottom'></div>
-            <HomePageCarousel/>
+            {/* <HomePageCarousel/> */}
             <ThrillerCarousel/>
+            <ComedyCarousel/>
+            <ActionCarousel/>
+            <RomanceCarousel/>
             {/* <ThrillerCarousel/> */}
             {/* <h1 className='more-movies-holder'></h1> */}
         </div>
