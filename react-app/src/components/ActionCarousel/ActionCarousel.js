@@ -24,12 +24,12 @@ import '../../components/HomePageCarousels/styles.css';
 import { Pagination, Navigation } from "swiper";
 
 
-export default function ThrillerCarousel() {
+export default function ActionCarousel() {
   const dispatch = useDispatch();
   const movies = Object.values(useSelector(state => state.movies))
   const myList = Object.values(useSelector(state => state.myList))
   // console.log(movies[0].genres.includes("Thriller"))
-  const moviesCarousel = movies.filter(mov => mov.genres.includes("Thriller")).slice(0, 12)
+  const moviesCarousel = movies.filter(mov => mov.genres.includes("Action")).slice(0, 12)
   const { profId } = useParams();
   const [currMovieId, setCurrMovieId] = useState();
   const [showModal, setShowModal] = useState(false);
@@ -81,7 +81,7 @@ export default function ThrillerCarousel() {
 
   return (
     <div className="whole-carousel-outer-div">
-      <h1 className="movie-carousel-title">Thrillers</h1>
+      <h1 className="movie-carousel-title">Action</h1>
       <Swiper
         slidesPerView={6}
         spaceBetween={7}

@@ -7,7 +7,8 @@
   height: 38%;
   /* border: 1px solid green; */
   margin-top: -10vh;
-  z-index: 10;
+  margin-bottom: 5vh;
+  /* z-index: 1; */
 }
 
 .movie-carousel-title {
@@ -21,25 +22,6 @@
   height: 100%;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: transparent;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
 
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -48,7 +30,7 @@
   left: 0px;
   width: 99%;
   height: 20%;
-  z-index: 10;
+  /* z-index: 10; */
   /* background-color: red; */
 }
 
@@ -67,9 +49,35 @@
   height: 150%;
   width: 100%;
   /* border: 1px solid rgb(255, 222, 6); */
-  position: absolute;
+  position: relative;
   margin-top: -4vh;
   background: transparent;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  position: relative;
+  /* border: 1px solid rgb(255, 222, 6); */
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+#bigger-zindex {
+  z-index: 100;
 }
 
 .swiper-indiv-div {
@@ -79,8 +87,8 @@
   margin-top: -27vh;
   border-radius: 0.2em;
   cursor: pointer;
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  z-index: 100;
 }
 
 .swiper-img {
@@ -93,10 +101,11 @@
 .swiper-indiv-div:hover {
   transform: scale(1.5);
   position: absolute;
-  z-index: 100;
+  z-index: 200;
   height: 60%;
   margin-top: -5vh;
   box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
+  background-color: #141414;
 }
 
 .hover-entire-right:hover {
@@ -112,17 +121,21 @@
   border-radius: 0.2em 0.2em 0em 0em;
 }
 
-.swiper-indiv-div:hover > div {
-  display: block;
+.swiper-indiv-div:hover .hidden-details-info {
+  display: flex;
+  flex-direction: column;
   height: 45%;
-  z-index: 500;
+  width: 100%;
+  position: absolute;
   border-radius:0em 0em 0.2em 0.2em;
 }
+
 
 .hidden-details-info {
   display: none;
   margin-top: -0.5vh;
   background-color: #141414;
+  /* z-index: 9999; */
 }
 
 .top-half-hidden-details {

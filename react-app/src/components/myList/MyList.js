@@ -120,7 +120,7 @@ export default function MyList() {
                                         <span className="movie-duration-list">{med.movie_duration}</span>
                                     </div>
                                     <div className="bott-bottom-movie-details">
-                                        <span className="movie-is-text-list">{movieIs(med.movie_is)} {med.movie_id}</span>
+                                        <span className="movie-is-text-list">{movieIs(med.movie_is)}</span>
                                     </div>
                                 </div>
                             </div>
