@@ -95,25 +95,25 @@
 .new-span-list {
     color: #46d369;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.1rem;
     margin-left: 5%; 
   }
 
 .movie-rating-txt-list {
     font-weight: 500;
-    font-size: 0.8em;
+    font-size: 0.9rem;
     margin-left: 5%; 
 }
 
 .movie-duration-list {
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.1rem;
     margin-left: 3%;
 }
 
 .movie-is-text-list {
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.1rem;
     margin-left: 5%;
     text-shadow: 0 1px 1px rgb(0 0 0 / 70%);
 }
