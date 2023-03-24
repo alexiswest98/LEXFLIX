@@ -25,7 +25,7 @@ class TVShow(db.Model):
     ##relationships
     tv_to_reviews = db.relationship("TVReview", back_populates="reviews_to_tv", primaryjoin="TVShow.id==Review.movie_id", cascade='all,delete')
     tv_to_tv_genre = db.relationship("TVShowGenres", primaryjoin="TVShow.id==TVShowGenres.tv_id", back_populates='tv_show', cascade='all,delete')
-    movie_to_my_list = db.relationship("MyList", primaryjoin="TVShow.id==MyList.tv_id", back_populates='my_list_to_tv', cascade='all,delete')
+    tv_to_my_list = db.relationship("MyList", primaryjoin="TVShow.id==MyList.tv_id", back_populates='my_list_to_tv', cascade='all,delete')
 
     def to_dict(self):
         return {
