@@ -8,7 +8,7 @@ class MyList(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     movie_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("movies.id")), unique=True)
-    tv_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("movies.id")))
+    tv_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("tv_shows.id")), unique=True)
     profile_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("profiles.id")), nullable=False)
 
     ##relationships

@@ -18,13 +18,7 @@ class Profile(db.Model):
     profiles_to_user = db.relationship('User', back_populates='user_to_profiles', foreign_keys=[user_id])
     profiles_to_reviews = db.relationship("Review", back_populates="reviews_to_profiles",  primaryjoin="Profile.id==Review.profile_id", cascade='all,delete')
     profiles_to_my_list = db.relationship("MyList", back_populates="my_list_to_profiles",  primaryjoin="Profile.id==MyList.profile_id", cascade='all,delete')
-    # reviews = db.relationship(
-    #     "Profile",
-    #     secondary=follows,
-    #     primaryjoin=(follows.c.follower_id == id),
-    #     backref=db.backref("following", lazy="dynamic"),
-    #     lazy="dynamic"
-    #     )
+    profiles_to_tv_reviews = db.relationship("TVReview", back_populates="tv_reviews_to_profiles",  primaryjoin="Profile.id==TVReview.profile_id", cascade='all,delete')
 
     def to_dict(self):
         return {

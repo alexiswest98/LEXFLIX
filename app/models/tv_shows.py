@@ -19,11 +19,11 @@ class TVShow(db.Model):
     prev_img = db.Column(db.String, nullable=False)
     detail_img = db.Column(db.String, nullable=False)
     trailer_src = db.Column(db.String, nullable=False)
+    num_seasons = db.Column(db.String, nullable=False)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
 
-
     ##relationships
-    tv_to_reviews = db.relationship("TVReview", back_populates="reviews_to_tv", primaryjoin="TVShow.id==Review.movie_id", cascade='all,delete')
+    tv_to_reviews = db.relationship("TVReview", back_populates="reviews_to_tv", primaryjoin="TVShow.id==TVReview.movie_id", cascade='all,delete')
     tv_to_tv_genre = db.relationship("TVShowGenres", primaryjoin="TVShow.id==TVShowGenres.tv_id", back_populates='tv_show', cascade='all,delete')
     tv_to_my_list = db.relationship("MyList", primaryjoin="TVShow.id==MyList.tv_id", back_populates='my_list_to_tv', cascade='all,delete')
 
@@ -42,6 +42,7 @@ class TVShow(db.Model):
             "prev_img": self.prev_img,
             "detail_img": self.detail_img,
             "trailer_src": self.trailer_src,
+            "num_seasons": self.num_seasons,
             "created_at": self.created_at,
-            # 'genres': [genre.genre.genre_name for genre in self.tv_to_tv_genre]
+            'genres': [genre.genre.genre_name for genre in self.tv_to_tv_genre]
         }
