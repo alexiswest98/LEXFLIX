@@ -1,8 +1,8 @@
-"""create tables
+"""empty message
 
-Revision ID: 899b5b38c860
+Revision ID: e6d9602e2325
 Revises: 
-Create Date: 2022-12-22 14:54:18.792909
+Create Date: 2023-03-29 21:11:34.029652
 
 """
 from alembic import op
@@ -12,9 +12,8 @@ import os
 environment = os.getenv("FLASK_ENV")
 SCHEMA = os.environ.get("SCHEMA")
 
-
 # revision identifiers, used by Alembic.
-revision = '899b5b38c860'
+revision = 'e6d9602e2325'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -28,7 +27,6 @@ def upgrade():
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('genre_name')
     )
-
     if environment == "production":
         op.execute(f"ALTER TABLE genres SET SCHEMA {SCHEMA};")
 
@@ -52,9 +50,29 @@ def upgrade():
     sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
-
     if environment == "production":
         op.execute(f"ALTER TABLE movies SET SCHEMA {SCHEMA};")
+
+    op.create_table('tv_shows',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('tv_name', sa.String(), nullable=False),
+    sa.Column('director', sa.String(length=255), nullable=False),
+    sa.Column('cast', sa.String(), nullable=False),
+    sa.Column('writer', sa.String(length=500), nullable=False),
+    sa.Column('tv_is', sa.String(length=100), nullable=False),
+    sa.Column('rating', sa.String(length=40), nullable=False),
+    sa.Column('year', sa.Integer(), nullable=False),
+    sa.Column('duration', sa.String(), nullable=False),
+    sa.Column('description', sa.String(), nullable=False),
+    sa.Column('prev_img', sa.String(), nullable=False),
+    sa.Column('detail_img', sa.String(), nullable=False),
+    sa.Column('trailer_src', sa.String(), nullable=False),
+    sa.Column('num_seasons', sa.String(), nullable=False),
+    sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
+    sa.PrimaryKeyConstraint('id')
+    )
+    if environment == "production":
+        op.execute(f"ALTER TABLE tv_shows SET SCHEMA {SCHEMA};")
 
     op.create_table('users',
     sa.Column('id', sa.Integer(), nullable=False),
@@ -68,7 +86,6 @@ def upgrade():
     sa.UniqueConstraint('email'),
     sa.UniqueConstraint('username')
     )
-
     if environment == "production":
         op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
 
@@ -80,9 +97,19 @@ def upgrade():
     sa.ForeignKeyConstraint(['movie_id'], ['movies.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
-
     if environment == "production":
         op.execute(f"ALTER TABLE movie_genres SET SCHEMA {SCHEMA};")
+        
+    op.create_table('tv_show_genres',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('tv_id', sa.Integer(), nullable=False),
+    sa.Column('genre_id', sa.Integer(), nullable=False),
+    sa.ForeignKeyConstraint(['genre_id'], ['genres.id'], ),
+    sa.ForeignKeyConstraint(['tv_id'], ['movies.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    if environment == "production":
+        op.execute(f"ALTER TABLE tv_show_genres SET SCHEMA {SCHEMA};")
 
     op.create_table('profiles',
     sa.Column('id', sa.Integer(), nullable=False),
@@ -94,9 +121,22 @@ def upgrade():
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
-
     if environment == "production":
         op.execute(f"ALTER TABLE profiles SET SCHEMA {SCHEMA};")
+
+    op.create_table('tv_show_episodes',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('tv_id', sa.Integer(), nullable=False),
+    sa.Column('ep_number', sa.Integer(), nullable=False),
+    sa.Column('ep_name', sa.String(), nullable=False),
+    sa.Column('ep_description', sa.String(), nullable=False),
+    sa.Column('ep_duration', sa.Integer(), nullable=False),
+    sa.Column('ep_poster', sa.String(), nullable=False),
+    sa.ForeignKeyConstraint(['tv_id'], ['movies.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    if environment == "production":
+        op.execute(f"ALTER TABLE tv_show_episodes SET SCHEMA {SCHEMA};")
 
     op.create_table('reviews',
     sa.Column('id', sa.Integer(), nullable=False),
@@ -107,32 +147,49 @@ def upgrade():
     sa.ForeignKeyConstraint(['profile_id'], ['profiles.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
-
     if environment == "production":
         op.execute(f"ALTER TABLE reviews SET SCHEMA {SCHEMA};")
 
+    op.create_table('tv_show_reviews',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('tv_id', sa.Integer(), nullable=False),
+    sa.Column('profile_id', sa.Integer(), nullable=False),
+    sa.Column('rating', sa.String(), nullable=False),
+    sa.ForeignKeyConstraint(['profile_id'], ['profiles.id'], ),
+    sa.ForeignKeyConstraint(['tv_id'], ['tv_shows.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    if environment == "production":
+        op.execute(f"ALTER TABLE tv_show_reviews SET SCHEMA {SCHEMA};")
+
     op.create_table('my_list',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('movie_id', sa.Integer()),
+    sa.Column('movie_id', sa.Integer(), nullable=True),
+    sa.Column('tv_id', sa.Integer(), nullable=True),
     sa.Column('profile_id', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['movie_id'], ['movies.id'], ),
     sa.ForeignKeyConstraint(['profile_id'], ['profiles.id'], ),
-    sa.PrimaryKeyConstraint('id')
+    sa.ForeignKeyConstraint(['tv_id'], ['tv_shows.id'], ),
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('movie_id'),
+    sa.UniqueConstraint('tv_id')
     )
-
     if environment == "production":
         op.execute(f"ALTER TABLE my_list SET SCHEMA {SCHEMA};")
-        
     # ### end Alembic commands ###
 
 
 def downgrade():
     # ### commands auto generated by Alembic - please adjust! ###
     op.drop_table('my_list')
+    op.drop_table('tv_show_reviews')
     op.drop_table('reviews')
+    op.drop_table('tv_show_episodes')
     op.drop_table('profiles')
+    op.drop_table('tv_show_genres')
     op.drop_table('movie_genres')
     op.drop_table('users')
+    op.drop_table('tv_shows')
     op.drop_table('movies')
     op.drop_table('genres')
     # ### end Alembic commands ###
