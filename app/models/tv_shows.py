@@ -23,18 +23,19 @@ class TVShow(db.Model):
     created_at = db.Column(db.DateTime, server_default=db.func.now())
 
     ##relationships
-    tv_to_reviews = db.relationship("TVReview", back_populates="reviews_to_tv", primaryjoin="TVShow.id==TVReview.movie_id", cascade='all,delete')
+    tv_to_reviews = db.relationship("TVReview", back_populates="reviews_to_tv", primaryjoin="TVShow.id==TVReview.tv_id", cascade='all,delete')
     tv_to_tv_genre = db.relationship("TVShowGenres", primaryjoin="TVShow.id==TVShowGenres.tv_id", back_populates='tv_show', cascade='all,delete')
     tv_to_my_list = db.relationship("MyList", primaryjoin="TVShow.id==MyList.tv_id", back_populates='my_list_to_tv', cascade='all,delete')
+    tv_to_tv_episodes = db.relationship("TVShowEpisodes", primaryjoin="TVShow.id==TVShowEpisodes.tv_id", back_populates='tv_show_episode_to_tv', cascade='all,delete')
 
     def to_dict(self):
         return {
             "id": self.id,
-            "tv_name": self.movie_name,
+            "tv_name": self.tv_name,
             "director": self.director,
             "cast": self.cast,
             "writer": self.writer,
-            "tv_is": self.movie_is,
+            "tv_is": self.tv_is,
             "rating": self.rating,
             "year": self.year,
             "duration": self.duration,

@@ -15,16 +15,15 @@ class TVShowEpisodes(db.Model):
     ep_poster = db.Column(db.String, nullable=False)
 
     #relationships
-    tv_show = db.relationship("TVShow", back_populates="tv_to_tv_episodes", foreign_keys=[tv_id])
+    tv_show_episode_to_tv = db.relationship("TVShow", back_populates="tv_to_tv_episodes", foreign_keys=[tv_id])
 
     def to_dict(self):
         return {
+            'id': self.id,
             'tv_id': self.tv_id,
-            'episode_number': self.episode_number,
-            'episode_name': self.episode_name,
-            'episode_description': self.episode_description,
-            'episode_release_date': self.episode_release_date,
-            'episode_runtime': self.episode_runtime,
-            'episode_poster': self.episode_poster,
-            'episode_trailer': self.episode_trailer
+            'ep_number': self.ep_number,
+            'ep_name': self.ep_name,
+            'ep_description': self.ep_description,
+            'ep_duration': self.ep_duration,
+            'ep_poster': self.ep_poster
         }

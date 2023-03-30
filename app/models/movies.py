@@ -27,7 +27,6 @@ class Movie(db.Model):
     top_10 = db.Column(db.Boolean)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
 
-
     ##relationships
     # primaryjoin="Movie.id==Review.movie_id"
     movie_to_reviews = db.relationship("Review", back_populates="reviews_to_movie", primaryjoin="Movie.id==Review.movie_id", cascade='all,delete')

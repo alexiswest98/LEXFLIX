@@ -12,8 +12,8 @@ class TVReview(db.Model):
     rating = db.Column(db.String, nullable=False)
 
     ##relationships
-    reviews_to_tv = db.relationship('Movie', back_populates="tv_to_reviews", foreign_keys=[movie_id])
-    tv_reviews_to_profiles = db.relationship('Profile', back_populates="profiles_to_reviews", foreign_keys=[profile_id])
+    reviews_to_tv = db.relationship('TVShow', back_populates="tv_to_reviews", foreign_keys=[tv_id])
+    tv_reviews_to_profiles = db.relationship('Profile', back_populates="profiles_to_tv_reviews", foreign_keys=[profile_id])
 
     def to_dict(self):
         return {
