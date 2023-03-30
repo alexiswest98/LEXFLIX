@@ -8,13 +8,11 @@ class TVShow(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     tv_name = db.Column(db.String, nullable=False)
-    director = db.Column(db.String(255), nullable=False)
+    creators = db.Column(db.String(500), nullable=False)
     cast = db.Column(db.String, nullable=False)
-    writer = db.Column(db.String(500), nullable=False)
     tv_is = db.Column(db.String(100), nullable=False)
     rating = db.Column(db.String(40), nullable=False)
     year = db.Column(db.Integer, nullable=False)
-    duration = db.Column(db.String, nullable=False)
     description = db.Column(db.String, nullable=False)
     prev_img = db.Column(db.String, nullable=False)
     detail_img = db.Column(db.String, nullable=False)
@@ -32,13 +30,11 @@ class TVShow(db.Model):
         return {
             "id": self.id,
             "tv_name": self.tv_name,
-            "director": self.director,
+            "creators": self.director,
             "cast": self.cast,
-            "writer": self.writer,
             "tv_is": self.tv_is,
             "rating": self.rating,
             "year": self.year,
-            "duration": self.duration,
             "description": self.description,
             "prev_img": self.prev_img,
             "detail_img": self.detail_img,
