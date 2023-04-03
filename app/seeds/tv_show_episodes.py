@@ -747,5 +747,30 @@ def seed_tv_episodes():
         ep_duration="52m",
         ep_poster="https://occ-0-993-2433.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQ3m240NGklfP7iLk_Nos3X_3zq9-VcJ_P9NMGwnCybY7bldlYOD8ohUWxi1nDKDU2K8PuYzgEfYaU84cBFmJ4oifYfTyaU3EW66NtxiwqTf51OcRSyhis_2.jpg"
     )
+    ##black mirror
+    tv_episode93 = TVShowEpisodes(
+        tv_id=10,
+        ep_number=1,
+        ep_name="The National Anthem",
+        ep_description="Prime Minister Michael Callow faces a shocking dilemma when Princess Susannah, a much-loved member of the Royal Family, is kidnapped.",
+        ep_duration="44m",
+        ep_poster="https://occ-0-2794-3933.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABbD_1sHyQloR4kQ9ofcnhPNxGMGvuLCEGBNVXq7NRxSU0srruROAJIEAC5bG3QmjUMMLEL4zB21vHdF4WGCgitlIRo8dmPGCMKe0BTrtdL3JvQd2_9WWntg9.jpg"
+    )
+    tv_episode92 = TVShowEpisodes(
+        tv_id=10,
+        ep_number=2,
+        ep_name="Fifteen Million Merits",
+        ep_description="After failing to impress the judges on a singing competition show, a woman must either perform degrading acts or return to a slave-like existence.",
+        ep_duration="62m",
+        ep_poster="https://occ-0-2794-3933.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABc2lpwu1HYiVP4Gv3WBTM9ySTYR3YN0XGOqtPTMxFsoyorNNaBv1hTm2y9e-pcxWi0nRCdfUkbvB-jKs0mpIhwyycMxxCDHNDL54DipmrwDHdZPI1AZ8cVkp.jpg"
+    )
+    tv_episode92 = TVShowEpisodes(
+        tv_id=10,
+        ep_number=3,
+        ep_name="The Entire History of You",
+        ep_description="In the near future, everyone has access to a memory implant that records everything humans do, see and hear.",
+        ep_duration="49m",
+        ep_poster="https://m.media-amazon.com/images/M/MV5BMmY5NzEwM2QtZTI4ZS00N2UzLThjZTEtMDcyMjJlOWExNTc4XkEyXkFqcGdeQXVyNTMxMjgxMzA@._V1_.jpg"
+    )
 
     
