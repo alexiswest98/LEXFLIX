@@ -772,5 +772,110 @@ def seed_tv_episodes():
         ep_duration="49m",
         ep_poster="https://m.media-amazon.com/images/M/MV5BMmY5NzEwM2QtZTI4ZS00N2UzLThjZTEtMDcyMjJlOWExNTc4XkEyXkFqcGdeQXVyNTMxMjgxMzA@._V1_.jpg"
     )
+    ##money heist
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=1,
+        ep_name="Episode 1",
+        ep_description="The Professor recruits a young female robber and seven other criminals for a grand heist, targeting the Royal Mint of Spain.",
+        ep_duration="48m",
+        ep_poster="https://static.wikia.nocookie.net/money-heist/images/a/a1/Episode_1.png"
+    )
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=2,
+        ep_name="Episode 2",
+        ep_description="Hostage negotiator Raquel makes initial contact with the Professor. One of the hostages is a crucial part of the thieves' plans.",
+        ep_duration="42m",
+        ep_poster="https://static.wikia.nocookie.net/money-heist/images/9/93/Episode_2.jpg"
+    )
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=3,
+        ep_name="Episode 3",
+        ep_description="Police grab an image of the face of one of the robbers. Raquel is suspicious of the gentleman she meets at a bar.",
+        ep_duration="51m",
+        ep_poster="https://static.wikia.nocookie.net/money-heist/images/9/9c/Episode_3.jpg"
+    )
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=4,
+        ep_name="Episode 4",
+        ep_description="Raquel suffers a personal crisis with her ex. The hostages are frightened by the gunshots they overheard. The thieves argue among themselves.",
+        ep_duration="52m",
+        ep_poster="https://occ-0-64-1123.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABcqlGNbMGW7shjWbc5RIAMWipAIZ3M93jAxc5KFqh520pw0n3VLzVglXzq3gVzW2xK72AOd3PstdAczm4z-FlVn95MVWNYh0EdGVDd73Ne0d09G9_AGGLEsY.jpg"
+    )
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=5,
+        ep_name="Episode 5",
+        ep_description="The thieves let a medical team enter the Mint, and an undercover policeman sneaks in with them. Can the Professor stay one step ahead of Raquel?",
+        ep_duration="43m",
+        ep_poster="https://static.wikia.nocookie.net/money-heist/images/d/d6/Episode_5.jpg"
+    )
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=6,
+        ep_name="Episode 6",
+        ep_description="Mónica's condition worsens. The Professor enjoys the spoils of his latest trick. Río is disturbed by news he sees on the television.",
+        ep_duration="44m",
+        ep_poster="https://static.wikia.nocookie.net/money-heist/images/e/e7/Episode_6.jpg"
+    )
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=7,
+        ep_name="Episode 7",
+        ep_description="A break in the investigation and a mistake by one of the thieves puts the Professor at serious risk of being discovered.",
+        ep_duration="49m",
+        ep_poster="https://static.wikia.nocookie.net/money-heist/images/0/0f/Episode_7.jpg"
+    )
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=8,
+        ep_name="Episode 8",
+        ep_description="Tokyo catches Alison chatting with Río and confronts her. The police suspect a spy is in their midst.",
+        ep_duration="44m",
+        ep_poster="https://static.wikia.nocookie.net/money-heist/images/5/5a/Episode_8.jpg"
+    )
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=9,
+        ep_name="Episode 9",
+        ep_description="The Professor races to stop a witness from identifying him. Berlín seeks revenge once his own name is revealed and slandered in the press.",
+        ep_duration="43m",
+        ep_poster="https://i0.wp.com/www.screenspy.com/wp-content/uploads/2021/12/money-heist-s1-e9-9.png"
+    )
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=10,
+        ep_name="Episode 10",
+        ep_description="Raquel enters the Mint to ascertain that all of the hostages are still alive and well. Nairobi gives Alison advice.",
+        ep_duration="55m",
+        ep_poster="https://static.wikia.nocookie.net/money-heist/images/0/07/Episode_10.jpg"
+    )
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=11,
+        ep_name="Episode 11",
+        ep_description="Ángel and Raquel question each other's loyalties. Mónica makes a move on Denver. Río is faced with a difficult decision.",
+        ep_duration="43m",
+        ep_poster="https://static.wikia.nocookie.net/money-heist/images/d/d9/Episode_11.jpg"
+    )
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=12,
+        ep_name="Episode 12",
+        ep_description="Arturo continues to formulate an escape plan for a group of hostages. The Professor reveals who gave him the idea for the heist.",
+        ep_duration="44m",
+        ep_poster="https://static.wikia.nocookie.net/money-heist/images/1/1b/Episode_12.jpg"
+    )
+    tv_episode93 = TVShowEpisodes(
+        tv_id=11,
+        ep_number=13,
+        ep_name="Episode 13",
+        ep_description="The Professor meets Raquel's mother under stressful circumstances. At the Mint, the thieves offer the hostages a decision: money or freedom?",
+        ep_duration="56m",
+        ep_poster="https://static.wikia.nocookie.net/money-heist/images/4/4b/Episode_13.jpg"
+    )
 
     
