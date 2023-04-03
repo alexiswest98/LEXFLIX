@@ -11,8 +11,9 @@ class TVShowEpisodes(db.Model):
     ep_number = db.Column(db.Integer, nullable=False)
     ep_name = db.Column(db.String, nullable=False)
     ep_description = db.Column(db.String, nullable=False)
-    ep_duration = db.Column(db.Integer, nullable=False)
+    ep_duration = db.Column(db.String, nullable=False)
     ep_poster = db.Column(db.String, nullable=False)
+    season_number = db.Column(db.Integer, nullable=False)
 
     #relationships
     tv_show_episode_to_tv = db.relationship("TVShow", back_populates="tv_to_tv_episodes", foreign_keys=[tv_id])
@@ -25,5 +26,6 @@ class TVShowEpisodes(db.Model):
             'ep_name': self.ep_name,
             'ep_description': self.ep_description,
             'ep_duration': self.ep_duration,
-            'ep_poster': self.ep_poster
+            'ep_poster': self.ep_poster,
+            'season_number': self.season_number
         }

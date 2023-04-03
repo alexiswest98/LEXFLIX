@@ -128,8 +128,9 @@ def upgrade():
     sa.Column('ep_number', sa.Integer(), nullable=False),
     sa.Column('ep_name', sa.String(), nullable=False),
     sa.Column('ep_description', sa.String(), nullable=False),
-    sa.Column('ep_duration', sa.Integer(), nullable=False),
+    sa.Column('ep_duration', sa.String(), nullable=False),
     sa.Column('ep_poster', sa.String(), nullable=False),
+    sa.Column('season_number', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['tv_id'], ['movies.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
