@@ -1060,6 +1060,8 @@ def seed_tv_episodes():
     db.session.add(tv_episode115)
     db.session.add(tv_episode116)
 
+    db.session.commit()
+
 def undo_tv_episodes():
     if environment == "production":
         db.session.execute(f"TRUNCATE table {SCHEMA}.tv_show_episodes RESTART IDENTITY CASCADE;")

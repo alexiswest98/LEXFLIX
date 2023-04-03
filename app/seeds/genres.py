@@ -25,6 +25,35 @@ def seed_genres():
         genre_name='Mysteries')
     genre11 = Genre(
         genre_name='Children & Family')
+    genre12 = Genre(
+        genre_name='Kids\' TV')
+    genre13 = Genre(
+        genre_name='TV Cartoons')
+    genre14 = Genre(
+        genre_name='Fantasy TV Shows')
+    genre15 = Genre(
+        genre_name='Sci Fi TV')
+    genre16 = Genre(
+        genre_name='TV Thrillers')
+    genre17 = Genre(
+        genre_name='TV Horror')
+    genre18 = Genre(
+        genre_name='British')
+    genre19 = Genre(
+        genre_name='Teen TV Shows')
+    genre20 = Genre(
+        genre_name='TV Dramas')
+    genre21 = Genre(
+        genre_name='TV Mysteries')
+    genre22 = Genre(
+        genre_name='Crime TV Shows')
+    genre23 = Genre(
+        genre_name='Japanese')
+    genre24 = Genre(
+        genre_name='TV Shows Based on Manga')
+    genre24 = Genre(
+        genre_name='Korean')
+
 
 
     db.session.add(genre1)
@@ -38,6 +67,19 @@ def seed_genres():
     db.session.add(genre9)
     db.session.add(genre10)
     db.session.add(genre11)
+    db.session.add(genre12)
+    db.session.add(genre13)
+    db.session.add(genre14)
+    db.session.add(genre15)
+    db.session.add(genre16)
+    db.session.add(genre17)
+    db.session.add(genre18)
+    db.session.add(genre19)
+    db.session.add(genre20)
+    db.session.add(genre21)
+    db.session.add(genre22)
+    db.session.add(genre23)
+    db.session.add(genre24)
     db.session.commit()
 
 
