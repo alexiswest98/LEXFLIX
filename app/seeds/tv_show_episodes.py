@@ -347,7 +347,7 @@ def seed_tv_episodes():
         ep_number=7,
         ep_name="Eulogy",
         ep_description="As the Crains gather to say their final goodbyes, a flashback reveals Mr. Dudley's connection to the house -- and exposes a secret in the walls.",
-        ep_duration="60",
+        ep_duration="60m",
         ep_poster="https://occ-0-993-784.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABfrm8DZDqWRZoTEUTBCxqwcuXIf_4EMpKzAyosaMyzr0MAuCiCfOGui3NzS5QnsB0LhCjIweTCcFBSxwTDe1ghl7-x83GBFSzAMEBifEz-kw1Bl8oU_7kbPf.jpg"
     )
     tv_episode44 = TVShowEpisodes(
@@ -355,7 +355,7 @@ def seed_tv_episodes():
         ep_number=8,
         ep_name="Witness Marks",
         ep_description="A familiar terror revisits Shirley and Theo on Halloween night as Hugh and Steve go looking for Luke, who disappeared on a deadly errand.",
-        ep_duration="43",
+        ep_duration="43m",
         ep_poster="https://static.wikia.nocookie.net/the-haunting-of-hill-house3356/images/3/3e/S1E8.jpg"
     )
     tv_episode45 = TVShowEpisodes(
@@ -363,7 +363,7 @@ def seed_tv_episodes():
         ep_number=9,
         ep_name="Screaming Meemies",
         ep_description="While struggling to discern dreams from reality, Olivia fears for her children's safety, a motherly instinct Mrs. Dudley urges her to embrace.",
-        ep_duration="57",
+        ep_duration="57m",
         ep_poster="https://m.media-amazon.com/images/M/MV5BZTI4YzE1NDctOGM0YS00YTMzLThmNDMtMzdmMWRlNzU3NDA1XkEyXkFqcGdeQXVyODExNTExMTM@._V1_.jpg"
     )
     tv_episode46 = TVShowEpisodes(
@@ -371,7 +371,7 @@ def seed_tv_episodes():
         ep_number=10,
         ep_name="Silence Lay Steadily",
         ep_description="The Red Room's contents are finally revealed as the Crains return to the house to confront old ghosts, unspeakable secrets and an insatiable evil.",
-        ep_duration="71",
+        ep_duration="71m",
         ep_poster="https://static.wikia.nocookie.net/the-haunting-of-hill-house3356/images/5/56/B.jpg"
     )
     ##Hannibal
@@ -380,7 +380,7 @@ def seed_tv_episodes():
         ep_number=1,
         ep_name="Apéritif",
         ep_description="The head of the FBI Behavioral Science unit, Jack Crawford, calls on profiler Will Graham to assist them catch a serial killer. The killer has now kidnapped eight women, all similar in appearance and always on a Friday.",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://m.media-amazon.com/images/M/MV5BMjM0ODAxMDc0MF5BMl5BanBnXkFtZTcwNzQxOTMzOQ@@._V1_.jpg"
     )
     tv_episode48 = TVShowEpisodes(
@@ -388,7 +388,7 @@ def seed_tv_episodes():
         ep_number=2,
         ep_name="Amuse-Bouche",
         ep_description="Will and Jack hunt a killer who is burying his victims alive, so they will become fertilizer for his garden of fungus. While the tabloid journalist Freddie sets targets in on Will.",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://m.media-amazon.com/images/M/MV5BOTk4NTc5Njg2OF5BMl5BanBnXkFtZTcwNjUxOTMzOQ@@._V1_.jpg"
     )
     tv_episode49 = TVShowEpisodes(
@@ -396,7 +396,7 @@ def seed_tv_episodes():
         ep_number=3,
         ep_name="Potage",
         ep_description="Determined to give Abigail closure, Will and Hannibal take Abigail back to the scene of her father's crimes. But things take a turn for the worse when the copycat killer strikes again.",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://static.wikia.nocookie.net/hannibal/images/8/83/Potage1.png"
     )
     tv_episode50 = TVShowEpisodes(
@@ -404,7 +404,7 @@ def seed_tv_episodes():
         ep_number=4,
         ep_name="Oeuf",
         ep_description="A series of family murders takes place, and Will determines they were conducted by each of the families' missing children, who were abducted and brainwashed into killing their old families for their 'new family.'",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://fathersonholygore.files.wordpress.com/2015/08/img_0124.png"
     )
     tv_episode51 = TVShowEpisodes(
@@ -412,7 +412,7 @@ def seed_tv_episodes():
         ep_number=5,
         ep_name="Coquilles",
         ep_description="A murdered couple is found in a motel room, posed in praying positions with the flesh of their backs opened and strung to the ceiling to give them the appearance of wings.",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://static1.srcdn.com/wordpress/wp-content/uploads/2020/02/hannibal-season-1-episode-5-coquilles.jpg"
     )
     tv_episode52 = TVShowEpisodes(
@@ -420,7 +420,7 @@ def seed_tv_episodes():
         ep_number=6,
         ep_name="Entrée",
         ep_description="A nurse at the Baltimore State Hospital for the Criminally Insane is brutally murdered by a patient, Dr. Abel Gideon, in a manner reminiscent of the 'Chesapeake Ripper', who hasn't committed a murder in two years, as long as Gideon has been incarcerated.",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://m.media-amazon.com/images/M/MV5BOWM4ODBiZWEtZmY4Mi00NGZjLTk2NjUtM2IyMzM0MGVmODRhXkEyXkFqcGdeQXVyMDgyNjA5MA@@._V1_.jpg"
     )
     tv_episode53 = TVShowEpisodes(
@@ -428,7 +428,7 @@ def seed_tv_episodes():
         ep_number=7,
         ep_name="Sorbet",
         ep_description="The BAU is called in when a man is found in a hotel room bathtub with his kidney removed and Graham must determine whether this is the act of an organ harvester or if the Chesapeake Ripper has claimed his first victim in two years.",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://m.media-amazon.com/images/M/MV5BOTM4MTA2ZGQtMzMyMi00NGQ4LWE4NTEtOWVmOTZhOTlmNzQ3XkEyXkFqcGdeQXVyNzQ1NjgzOTA@._V1_.jpg"
     )
     tv_episode54 = TVShowEpisodes(
@@ -436,7 +436,7 @@ def seed_tv_episodes():
         ep_number=8,
         ep_name="Fromage",
         ep_description="Lecter's patient Franklin Froideveaux worries that his friend Tobias may be a psychopath, but Franklin's growing obsession with Lecter is what concerns the latter more.",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://fathersonholygore.files.wordpress.com/2015/08/img_0347.png"
     )
     tv_episode55 = TVShowEpisodes(
@@ -444,7 +444,7 @@ def seed_tv_episodes():
         ep_number=9,
         ep_name="Trou Normand",
         ep_description="A totem pole of human bodies ranging from freshly killed to decades old are found on a beach and while Graham is investigating the crime scene, he suddenly finds himself in Lecter's office, three and a half hours away, with no memory of how he got there.",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://fathersonholygore.files.wordpress.com/2015/08/img_0360.png"
     )
     tv_episode56 = TVShowEpisodes(
@@ -452,7 +452,7 @@ def seed_tv_episodes():
         ep_number=10,
         ep_name="Buffet Froid",
         ep_description="Beth LeBeau is found murdered, having drowned in her own blood as a result of her face being cut into a Glasgow smile. Graham's mental state continues to sharply decline.",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://static1.srcdn.com/wordpress/wp-content/uploads/2020/03/hannibal-season-1-episode-10-face-blindness.jpg"
     )
     tv_episode57 = TVShowEpisodes(
@@ -460,7 +460,7 @@ def seed_tv_episodes():
         ep_number=11,
         ep_name="Rôti",
         ep_description="Dr. Abel Gideon escapes from custody and begins targeting the psychiatrists who attempted to treat him, displaying their bodies with a Colombian necktie. Meanwhile, Graham's undiagnosed Encephalitis drives his temperature up, causing hallucinations.",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://collider.com/wp-content/uploads/hannibal-roti-hugh-dancy.jpg"
     )
     tv_episode58 = TVShowEpisodes(
@@ -468,7 +468,7 @@ def seed_tv_episodes():
         ep_number=12,
         ep_name="Relevés",
         ep_description="Graham deduces that several recent murders were all the work of a copycat patterning after recent serial murders, and that Georgia was killed because she may have remembered the face of whoever had killed Dr. Sutcliffe.",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://fathersonholygore.files.wordpress.com/2015/08/img_0587.png"
     )
     tv_episode59 = TVShowEpisodes(
@@ -476,7 +476,73 @@ def seed_tv_episodes():
         ep_number=13,
         ep_name="Savoureux",
         ep_description="Following his strange trip to Minnesota, Graham is taken into custody by Crawford for the probable murder of Abigail Hobbs. They find her severed ear in his kitchen sink and her blood under his fingernails.",
-        ep_duration="42",
+        ep_duration="42m",
         ep_poster="https://www.pogdesign.co.uk/cat/imgs/episodes/Hannibal/Hannibal-S01E13-1d931943bad0d8cd940850b3b918c3d8-full.jpg"
     )
     ##Alice in Borderland
+    tv_episode60 = TVShowEpisodes(
+        tv_id=6,
+        ep_number=1,
+        ep_name="Episode 1",
+        ep_description="Arisu and his friends run into a public bathroom to hide from the police, but when they reemerge, the streets of Tokyo are suddenly completely empty.",
+        ep_duration="49m",
+        ep_poster="https://occ-0-360-3647.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABVtm-VioPBSfed8WpPC6k5nfQ_ntr0Ac6TiAfeLYRs9s2ow2gbhA3diK2SfRSdKfKt-V1I0H41ap8JLj2hpJpBS4lUY_Wa7ZNMaDAbP99dmjsr4ky-C3URcs.jpg"
+    )
+    tv_episode61 = TVShowEpisodes(
+        tv_id=6,
+        ep_number=2,
+        ep_name="Episode 2",
+        ep_description="Leaving an injured Chota, Arisu and Karube head out to gain more experience. They come to a sprawling apartment, where a deadly game of tag awaits.",
+        ep_duration="51m",
+        ep_poster="https://m.media-amazon.com/images/M/MV5BMjljODRmN2YtYmQ1Zi00OTE4LWFkYWEtOTc0ODY4MzgzNzRiXkEyXkFqcGdeQXVyODczNDI0MTE@._V1_FMjpg_UX1000_.jpg"
+    )
+    tv_episode62 = TVShowEpisodes(
+        tv_id=6,
+        ep_number=3,
+        ep_name="Episode 3",
+        ep_description="With Chota and Shibuki's visas fast expiring, the four enter a vast botanical garden in Shinjuku, where they take part in a cruel game of betrayal.",
+        ep_duration="43m",
+        ep_poster="https://m.media-amazon.com/images/M/MV5BMDg5ZGI3Y2YtYzNmZi00MjI4LThhMmQtNTMyYjhhZWQ2NWQ4XkEyXkFqcGdeQXVyMTIyMzk3NDU1._V1_.jpg"
+    )
+    tv_episode62 = TVShowEpisodes(
+        tv_id=6,
+        ep_number=4,
+        ep_name="Episode 4",
+        ep_description="Arisu is overwhelmed with guilt and ready to give up, but Usagi urges him to keep going. Next up is a game of endurance in an underground highway.",
+        ep_duration="47m",
+        ep_poster="https://occ-0-360-3647.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABdSmxq-UqbXz6AgtN22Vm8xb42z331Uq6Yr0fy1qnGUKgY_X-h_JCZPSOG3mrpa6ZR0-zfgouFdNbq37UZFFMWRTi1F-WSksfmpkb7DZVRleB9rnxvcCoo3N.jpg"
+    )
+    tv_episode62 = TVShowEpisodes(
+        tv_id=6,
+        ep_number=5,
+        ep_name="Episode 5",
+        ep_description="After Arisu and Usagi find their way to the Beach, the king of the so-called utopian haven forces them to help gather the remaining playing cards.",
+        ep_duration="52m",
+        ep_poster="https://m.media-amazon.com/images/M/MV5BNjY3ZDJlMWQtOTFjNC00YzUxLWFiYzgtOTY2N2Y3ZGJiZjljXkEyXkFqcGdeQXVyMTIyMzk3NDU1._V1_.jpg"
+    )
+    tv_episode62 = TVShowEpisodes(
+        tv_id=6,
+        ep_number=6,
+        ep_name="Episode 6",
+        ep_description="Chishiya recruits Arisu and Usagi to help him change the status quo. An unforeseen event rocks the fragile power dynamics of the Beach.",
+        ep_duration="42m",
+        ep_poster="https://occ-0-360-3647.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABe0SGBbVRHHdZjnfyF6G-x7yzPN0tIrXRhTkEjpSEYZggFa4PngIPy-Zbb228NWyOgkUUJ3Gq2VTG-Nr_9Dt1soSDvHUqM5EC7-_PvtkfV03JaIDVWfddCfH.jpg"
+    )
+    tv_episode62 = TVShowEpisodes(
+        tv_id=6,
+        ep_number=7,
+        ep_name="Episode 7",
+        ep_description="Once a safe haven, the Beach becomes the arena for the next stage, where an epic witch hunt turns everyone against each other in a hostile showdown.",
+        ep_duration="49m",
+        ep_poster="https://occ-0-360-3647.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABbVu2V8s7dTPZzQ5kbj3EicXBQKz00egzqKjL--H4rnfxB0EaV-4KIBfHamPW7jwHBLKoJtCymhszqM3h2AsfJsH_LnBQ8TEnpr5nyZnjCuGVOeP_M_kqyzx.jpg"
+    )
+    tv_episode62 = TVShowEpisodes(
+        tv_id=6,
+        ep_number=8,
+        ep_name="Episode 8",
+        ep_description="Tensions inside the resort reach a boiling point. As the game clock nears zero, those who've survived the onslaught now face an uncertain future.",
+        ep_duration="53m",
+        ep_poster="https://occ-0-360-3647.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABY9QKBGX3rY_z42SuJwMoYgxUhjxiCVVsq7qKxwDc-CByz8MLfPEwnUw53soElvG57JOIVmWkVPgUVHFdg7qwDDsRxVz-JUBtmjL_cJTNFBJx8-cD2tt2yVt.jpg"
+    )
+    ##
+    
