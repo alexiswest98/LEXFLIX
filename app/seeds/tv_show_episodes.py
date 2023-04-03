@@ -683,6 +683,69 @@ def seed_tv_episodes():
         ep_poster="https://occ-0-300-325.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYuDBORiZZ6UTJ-SNSjZObcUQ5zAv3bp2ii2id7yAODy90wk4Tjp4ah-rAESVX0N-0zk0uofP4jB8W8BXPLfDujwvLhNC2CDiBWtNX5ynvWQjy7h_8cha8Gt.jpg"
     )
     ##wednesday
-
+    tv_episode85 = TVShowEpisodes(
+        tv_id=9,
+        ep_number=1,
+        ep_name="Wednesday's Child Is Full of Woe",
+        ep_description="When a deliciously wicked prank gets Wednesday expelled, her parents ship her off to Nevermore Academy, the boarding school where they fell in love.",
+        ep_duration="59m",
+        ep_poster="https://occ-0-993-2433.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABcI5SSc8tsgcpT-6RUHuB0n7iuZ_d9DBIJORfPL-AOimOsg5G56qnJHTY39TlAGDewFM7IqVcFGflR4u8X4kZoWXXJKpdFtZfwuL9qcuV7vnZ8ArEWVdnurT.jpg"
+    )
+    tv_episode86 = TVShowEpisodes(
+        tv_id=9,
+        ep_number=2,
+        ep_name="Woe is the Loneliest Number",
+        ep_description="The sheriff questions Wednesday about the night's strange happenings. Later, Wednesday faces off against a fierce rival in the cutthroat Poe Cup race.",
+        ep_duration="48m",
+        ep_poster="https://occ-0-993-2433.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABRimuBP1gFARJ2texmP9BRCpNBHS6BPxywXYxqxfgXWrDZzrdd2al5Ic5HSVQjIPZz067PBk-8WODwDeNzkgtyDw7AubISms2gkY1Oja5_R5yY6oWV6x1EO7.jpg"
+    )
+    tv_episode87 = TVShowEpisodes(
+        tv_id=9,
+        ep_number=3,
+        ep_name="Friend or Woe",
+        ep_description="Wednesday stumbles on a secret society. During Outreach Day, Nevermore's outcasts mingle with Jericho's normies in Pilgrim World. Fudge, anyone?",
+        ep_duration="48m",
+        ep_poster="https://occ-0-993-2433.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABbPdO8OO3wIb08psCFqR9zfKRfFKOHjCgwDjfjsJe51EIa29w6PwpCo1CX7OH3azauUMoBCtJyKseGEXF9fiEXCJQCIvPmSodYKGVWVlPNz3qx_yxKW5dvLS.jpg"
+    )
+    tv_episode88 = TVShowEpisodes(
+        tv_id=9,
+        ep_number=4,
+        ep_name="Woe What a Night",
+        ep_description="Wednesday asks Xavier to the Rave'N dance, sparking Tyler's jealousy — but Thing's got something up his sleeve. Meanwhile, Eugene stakes out the cave.",
+        ep_duration="49m",
+        ep_poster="https://occ-0-993-2433.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABcSTk3X_aULK7m9O2ibOxQxd2nMQdAlNKIcL1tzFSbqXH_09IF9XORxeHTrRuDyBotqhuiCRgK8DsAkb08zJhCE_EiaKRNXNxS_Sr4fmyrbL2ihrPE3ZZNWM.jpg"
+    )
+    tv_episode89 = TVShowEpisodes(
+        tv_id=9,
+        ep_number=5,
+        ep_name="You Reap What You Woe",
+        ep_description="During Parents Weekend, Wednesday digs into her family's past — and accidentally gets her dad arrested. Enid feels the pressure to 'wolf out.'",
+        ep_duration="52m",
+        ep_poster="https://occ-0-993-2433.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABTkygdlRrjkCgCuY9_Awri731V4z-T2E8K8F1WkE4nf_Q7ZQE9qw5K5pKdBvSZsUmCklV9BA22DaRqVc_8dWgxya7MGDST5IbEPPPOeNqYrXEJvUmGAtaGpO.jpg"
+    )
+    tv_episode90 = TVShowEpisodes(
+        tv_id=9,
+        ep_number=6,
+        ep_name="Quid Pro Woe",
+        ep_description="Wednesday's friends throw her a surprise birthday party. They mean well... but she'd much rather mark the miserable occasion by solving the murders.",
+        ep_duration="50m",
+        ep_poster="https://occ-0-395-420.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABftwPVi5K-gtO5KPplQFMGUlIX-xBA82-m75iuZ-FuuELSKzWn7L2PFrhl8RFEHuM-GQlIiUYcsXAehRsR3GI7nkPuw3bxXtGg4hfJoGM_TBjBp7zjKvUjka.jpg"
+    )
+    tv_episode91 = TVShowEpisodes(
+        tv_id=9,
+        ep_number=7,
+        ep_name="If You Don't Woe Me by Now",
+        ep_description="Kooky Uncle Fester pays a visit and shares his theory about the monster. Wednesday begrudgingly agrees to a date with Tyler at Crackstone's crypt.",
+        ep_duration="47m",
+        ep_poster="https://occ-0-993-2433.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQODYcdhitU30HQhDLH69j3CB9Q-krxJpDRBr6jErexSG2pFi7cGKGzohRacO4qKvYRG0fi6VxcZymmRJ9zhx0ZeUlwudCI9CHInNovbBsd7RZU2YIJIW6yT.jpg"
+    )
+    tv_episode92 = TVShowEpisodes(
+        tv_id=9,
+        ep_number=8,
+        ep_name="A Murder of Woes",
+        ep_description="Wednesday lands in trouble with Principal Weems, but that's just the start of her problems. To fight an ancient evil, she'll need all her friends' help.",
+        ep_duration="52m",
+        ep_poster="https://occ-0-993-2433.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQ3m240NGklfP7iLk_Nos3X_3zq9-VcJ_P9NMGwnCybY7bldlYOD8ohUWxi1nDKDU2K8PuYzgEfYaU84cBFmJ4oifYfTyaU3EW66NtxiwqTf51OcRSyhis_2.jpg"
+    )
 
     
