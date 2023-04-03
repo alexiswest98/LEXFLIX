@@ -19,6 +19,7 @@ class TVReview(db.Model):
         return {
             'id': self.id,
             'tv_id': self.tv_id,
+            'tv_name': self.reviews_to_tv.tv_name,
             'profile_id': self.profile_id,
             'rating': self.rating
         }

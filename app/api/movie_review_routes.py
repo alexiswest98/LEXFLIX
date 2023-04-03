@@ -42,6 +42,7 @@ def make_movie_review(profileId, movieId):
     # if review: 
     #     return jsonify({'errors': 'Profile user can only have one review per movie'}, 400)
     # else:
+    #front end set up: if it has a review and they click again it will delete it or edit it
     form = CreateReviewForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     data = form.data

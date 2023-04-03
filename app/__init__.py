@@ -14,6 +14,7 @@ from .api.genre_routes import genre_routes
 from .api.my_list_routes import my_list_routes
 from .api.tv_show_routes import tv_routes
 from .api.tv_show_ep_routes import tv_show_ep_routes
+from .api.tv_show_reviews_routes import tv_show_review_routes
 from .seeds import seed_commands
 from .config import Config
 
@@ -43,6 +44,7 @@ app.register_blueprint(my_list_routes, url_prefix='/api/mylist')
 ##tv routes
 app.register_blueprint(tv_routes, url_prefix='/api/tv')
 app.register_blueprint(tv_show_ep_routes, url_prefix='/api/tvep')
+app.register_blueprint(tv_show_review_routes, url_prefix='/api/tvreview')
 
 db.init_app(app)
 Migrate(app, db)
