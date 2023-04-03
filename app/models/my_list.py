@@ -36,6 +36,6 @@ class MyList(db.Model):
                 'tv_name':self.my_list_to_tv.tv_name,
                 'detail_img':self.my_list_to_tv.prev_img,
                 'tv_rating':self.my_list_to_tv.rating,
-                'tv_duration':self.my_list_to_tv.duration,
+                'num_seasons':self.my_list_to_tv.num_seasons,
                 'tv_is':self.my_list_to_tv.tv_is
             }

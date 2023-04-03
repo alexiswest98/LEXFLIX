@@ -7,13 +7,13 @@ class TVShowEpisodes(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    tv_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('movies.id')), nullable=False)
+    tv_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('tv_shows.id')), nullable=False)
     ep_number = db.Column(db.Integer, nullable=False)
     ep_name = db.Column(db.String, nullable=False)
     ep_description = db.Column(db.String, nullable=False)
     ep_duration = db.Column(db.String, nullable=False)
     ep_poster = db.Column(db.String, nullable=False)
-    season_number = db.Column(db.Integer, nullable=False)
+    season_number = db.Column(db.Integer, default=1, nullable=False)
 
     #relationships
     tv_show_episode_to_tv = db.relationship("TVShow", back_populates="tv_to_tv_episodes", foreign_keys=[tv_id])

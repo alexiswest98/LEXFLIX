@@ -11,7 +11,7 @@ class Genre(db.Model):
 
     ##relationships
     genres_to_movie = db.relationship('MovieGenres', primaryjoin="Genre.id==MovieGenres.genre_id", back_populates='genre', cascade='all,delete')
-    genres_to_tv = db.relationship('MovieGenres', primaryjoin="Genre.id==TVShowGenres.genre_id", back_populates='tvgenre', cascade='all,delete')
+    genres_to_tv = db.relationship('TVShowGenres', primaryjoin="Genre.id==TVShowGenres.genre_id", back_populates='tvgenre', cascade='all,delete')
 
     def to_dict(self):
         return {
