@@ -504,7 +504,7 @@ def seed_tv_episodes():
         ep_duration="43m",
         ep_poster="https://m.media-amazon.com/images/M/MV5BMDg5ZGI3Y2YtYzNmZi00MjI4LThhMmQtNTMyYjhhZWQ2NWQ4XkEyXkFqcGdeQXVyMTIyMzk3NDU1._V1_.jpg"
     )
-    tv_episode62 = TVShowEpisodes(
+    tv_episode63 = TVShowEpisodes(
         tv_id=6,
         ep_number=4,
         ep_name="Episode 4",
@@ -512,7 +512,7 @@ def seed_tv_episodes():
         ep_duration="47m",
         ep_poster="https://occ-0-360-3647.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABdSmxq-UqbXz6AgtN22Vm8xb42z331Uq6Yr0fy1qnGUKgY_X-h_JCZPSOG3mrpa6ZR0-zfgouFdNbq37UZFFMWRTi1F-WSksfmpkb7DZVRleB9rnxvcCoo3N.jpg"
     )
-    tv_episode62 = TVShowEpisodes(
+    tv_episode64 = TVShowEpisodes(
         tv_id=6,
         ep_number=5,
         ep_name="Episode 5",
@@ -520,7 +520,7 @@ def seed_tv_episodes():
         ep_duration="52m",
         ep_poster="https://m.media-amazon.com/images/M/MV5BNjY3ZDJlMWQtOTFjNC00YzUxLWFiYzgtOTY2N2Y3ZGJiZjljXkEyXkFqcGdeQXVyMTIyMzk3NDU1._V1_.jpg"
     )
-    tv_episode62 = TVShowEpisodes(
+    tv_episode65 = TVShowEpisodes(
         tv_id=6,
         ep_number=6,
         ep_name="Episode 6",
@@ -528,7 +528,7 @@ def seed_tv_episodes():
         ep_duration="42m",
         ep_poster="https://occ-0-360-3647.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABe0SGBbVRHHdZjnfyF6G-x7yzPN0tIrXRhTkEjpSEYZggFa4PngIPy-Zbb228NWyOgkUUJ3Gq2VTG-Nr_9Dt1soSDvHUqM5EC7-_PvtkfV03JaIDVWfddCfH.jpg"
     )
-    tv_episode62 = TVShowEpisodes(
+    tv_episode66 = TVShowEpisodes(
         tv_id=6,
         ep_number=7,
         ep_name="Episode 7",
@@ -536,7 +536,7 @@ def seed_tv_episodes():
         ep_duration="49m",
         ep_poster="https://occ-0-360-3647.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABbVu2V8s7dTPZzQ5kbj3EicXBQKz00egzqKjL--H4rnfxB0EaV-4KIBfHamPW7jwHBLKoJtCymhszqM3h2AsfJsH_LnBQ8TEnpr5nyZnjCuGVOeP_M_kqyzx.jpg"
     )
-    tv_episode62 = TVShowEpisodes(
+    tv_episode67 = TVShowEpisodes(
         tv_id=6,
         ep_number=8,
         ep_name="Episode 8",
@@ -544,5 +544,71 @@ def seed_tv_episodes():
         ep_duration="53m",
         ep_poster="https://occ-0-360-3647.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABY9QKBGX3rY_z42SuJwMoYgxUhjxiCVVsq7qKxwDc-CByz8MLfPEwnUw53soElvG57JOIVmWkVPgUVHFdg7qwDDsRxVz-JUBtmjL_cJTNFBJx8-cD2tt2yVt.jpg"
     )
-    ##
+    ##Stranger Things
+    tv_episode68 = TVShowEpisodes(
+        tv_id=7,
+        ep_number=1,
+        ep_name="Chapter One: The Vanishing of Will Byers",
+        ep_description="On his way home from a friend's house, young Will sees something terrifying. Nearby, a sinister secret lurks in the depths of a government lab.",
+        ep_duration="49m",
+        ep_poster="https://occ.a.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYtfkVLxw6lawtNwtIyOhLDnTEXi2AvuyqYG3i-jZ3Y1mrRsZCJAt8mcAxiZqZHQvCS2pl4StiieJUrohIS70br7yzenTsQqVgsVKq3C5A8vuoL_GstEWeB7.jpg"
+    )
+    tv_episode69 = TVShowEpisodes(
+        tv_id=7,
+        ep_number=2,
+        ep_name="Chapter Two: The Weirdo on Maple Street",
+        ep_description="Lucas, Mike and Dustin try to talk to the girl they found in the woods. Hopper questions an anxious Joyce about an unsettling phone call.",
+        ep_duration="56m",
+        ep_poster="https://occ.a.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQtwsxsHgdgWIND4fSpPITza0IkQHiqZDXdeVicRWtG9JhFAws01znsKfW8XeqW_2WWBmJpqpnmdN9b7uOy3ePJ2P0Rb30PJsTNGWkXTV0aFZDawHX8kIN3Z.jpg"
+    )
+    tv_episode70 = TVShowEpisodes(
+        tv_id=7,
+        ep_number=3,
+        ep_name="Chapter Three: Holly, Jolly",
+        ep_description="An increasingly concerned Nancy looks for Barb and finds out what Jonathan's been up to. Joyce is convinced Will is trying to talk to her.",
+        ep_duration="52m",
+        ep_poster="https://occ.a.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABfvDB1xGZuh-SkB7WccIvvvpGTvyOaoYqtePmpAV3pfCbB01RJbg2srq_yIL9UXu-tvyPH9oHIPbiXRfUsL8P7d7LLHxwZeSGpen3Bwyw7gCzFO0XYaBPOku.jpg"
+    )
+    tv_episode71 = TVShowEpisodes(
+        tv_id=7,
+        ep_number=4,
+        ep_name="Chapter Four: The Body",
+        ep_description="Refusing to believe Will is dead, Joyce tries to connect with her son. The boys give Eleven a makeover. Nancy and Jonathan form an unlikely alliance.",
+        ep_duration="51m",
+        ep_poster="https://pyxis.nymag.com/v1/imgs/abb/25b/9ef00d096fcf6a3606e9be30489b88f425-12-stanger-things-7.2x.rsocial.w600.jpg"
+    )
+    tv_episode72 = TVShowEpisodes(
+        tv_id=7,
+        ep_number=5,
+        ep_name="Chapter Five: The Flea and the Acrobat",
+        ep_description="Hopper breaks into the lab while Nancy and Jonathan confront the force that took Will. The boys ask Mr. Clarke how to travel to another dimension.",
+        ep_duration="53m",
+        ep_poster="https://occ.a.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQ4GYyP7zd6_FkLaO3FRYw0Zxvi71gu1R3Jg7HNIpg9uUYIvL_UxeUKWTWJPqYjdsd5RL_fmg_tJKKs6rlzsyalFS7XlIcaHm8rskzSkWaQZDCbjWhAg92TP.jpg"
+    )
+    tv_episode73 = TVShowEpisodes(
+        tv_id=7,
+        ep_number=6,
+        ep_name="Chapter Six: The Monster",
+        ep_description="A frantic Jonathan looks for Nancy in the darkness, but Steve's looking for her, too. Hopper and Joyce uncover the truth about the lab's experiments.",
+        ep_duration="47m",
+        ep_poster="https://static.wikia.nocookie.net/strangerthings8338/images/3/39/The_Monster_-_Nancy_hides.png"
+    )
+    tv_episode74 = TVShowEpisodes(
+        tv_id=7,
+        ep_number=7,
+        ep_name="Chapter Seven: The Bathtub",
+        ep_description="Eleven struggles to reach Will, while Lucas warns that 'the bad men are coming.' Nancy and Jonathan show the police what Jonathan caught on camera.",
+        ep_duration="42m",
+        ep_poster="https://static.wikia.nocookie.net/strangerthings8338/images/a/a4/The_Bathtub_Official_Image.jpg"
+    )
+    tv_episode75 = TVShowEpisodes(
+        tv_id=7,
+        ep_number=8,
+        ep_name="Chapter Eight: The Upside Down",
+        ep_description="Dr. Brenner holds Hopper and Joyce for questioning while the boys wait with Eleven in the gym. Back at Will's, Nancy and Jonathan prepare for battle.",
+        ep_duration="55m",
+        ep_poster="https://static.wikia.nocookie.net/strangerthings8338/images/b/b6/The_Upside_Down_S01-E08_SS_001.png"
+    )
+
+
     
