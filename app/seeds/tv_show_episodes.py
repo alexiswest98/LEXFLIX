@@ -756,7 +756,7 @@ def seed_tv_episodes():
         ep_duration="44m",
         ep_poster="https://occ-0-2794-3933.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABbD_1sHyQloR4kQ9ofcnhPNxGMGvuLCEGBNVXq7NRxSU0srruROAJIEAC5bG3QmjUMMLEL4zB21vHdF4WGCgitlIRo8dmPGCMKe0BTrtdL3JvQd2_9WWntg9.jpg"
     )
-    tv_episode92 = TVShowEpisodes(
+    tv_episode94 = TVShowEpisodes(
         tv_id=10,
         ep_number=2,
         ep_name="Fifteen Million Merits",
@@ -764,7 +764,7 @@ def seed_tv_episodes():
         ep_duration="62m",
         ep_poster="https://occ-0-2794-3933.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABc2lpwu1HYiVP4Gv3WBTM9ySTYR3YN0XGOqtPTMxFsoyorNNaBv1hTm2y9e-pcxWi0nRCdfUkbvB-jKs0mpIhwyycMxxCDHNDL54DipmrwDHdZPI1AZ8cVkp.jpg"
     )
-    tv_episode92 = TVShowEpisodes(
+    tv_episode95 = TVShowEpisodes(
         tv_id=10,
         ep_number=3,
         ep_name="The Entire History of You",
@@ -773,7 +773,7 @@ def seed_tv_episodes():
         ep_poster="https://m.media-amazon.com/images/M/MV5BMmY5NzEwM2QtZTI4ZS00N2UzLThjZTEtMDcyMjJlOWExNTc4XkEyXkFqcGdeQXVyNTMxMjgxMzA@._V1_.jpg"
     )
     ##money heist
-    tv_episode93 = TVShowEpisodes(
+    tv_episode96 = TVShowEpisodes(
         tv_id=11,
         ep_number=1,
         ep_name="Episode 1",
@@ -781,7 +781,7 @@ def seed_tv_episodes():
         ep_duration="48m",
         ep_poster="https://static.wikia.nocookie.net/money-heist/images/a/a1/Episode_1.png"
     )
-    tv_episode93 = TVShowEpisodes(
+    tv_episode97 = TVShowEpisodes(
         tv_id=11,
         ep_number=2,
         ep_name="Episode 2",
@@ -789,7 +789,7 @@ def seed_tv_episodes():
         ep_duration="42m",
         ep_poster="https://static.wikia.nocookie.net/money-heist/images/9/93/Episode_2.jpg"
     )
-    tv_episode93 = TVShowEpisodes(
+    tv_episode98 = TVShowEpisodes(
         tv_id=11,
         ep_number=3,
         ep_name="Episode 3",
@@ -797,7 +797,7 @@ def seed_tv_episodes():
         ep_duration="51m",
         ep_poster="https://static.wikia.nocookie.net/money-heist/images/9/9c/Episode_3.jpg"
     )
-    tv_episode93 = TVShowEpisodes(
+    tv_episode99 = TVShowEpisodes(
         tv_id=11,
         ep_number=4,
         ep_name="Episode 4",
@@ -805,7 +805,7 @@ def seed_tv_episodes():
         ep_duration="52m",
         ep_poster="https://occ-0-64-1123.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABcqlGNbMGW7shjWbc5RIAMWipAIZ3M93jAxc5KFqh520pw0n3VLzVglXzq3gVzW2xK72AOd3PstdAczm4z-FlVn95MVWNYh0EdGVDd73Ne0d09G9_AGGLEsY.jpg"
     )
-    tv_episode93 = TVShowEpisodes(
+    tv_episode100 = TVShowEpisodes(
         tv_id=11,
         ep_number=5,
         ep_name="Episode 5",
@@ -813,7 +813,7 @@ def seed_tv_episodes():
         ep_duration="43m",
         ep_poster="https://static.wikia.nocookie.net/money-heist/images/d/d6/Episode_5.jpg"
     )
-    tv_episode93 = TVShowEpisodes(
+    tv_episode101 = TVShowEpisodes(
         tv_id=11,
         ep_number=6,
         ep_name="Episode 6",
@@ -821,7 +821,7 @@ def seed_tv_episodes():
         ep_duration="44m",
         ep_poster="https://static.wikia.nocookie.net/money-heist/images/e/e7/Episode_6.jpg"
     )
-    tv_episode93 = TVShowEpisodes(
+    tv_episode102 = TVShowEpisodes(
         tv_id=11,
         ep_number=7,
         ep_name="Episode 7",
@@ -829,7 +829,7 @@ def seed_tv_episodes():
         ep_duration="49m",
         ep_poster="https://static.wikia.nocookie.net/money-heist/images/0/0f/Episode_7.jpg"
     )
-    tv_episode93 = TVShowEpisodes(
+    tv_episode103 = TVShowEpisodes(
         tv_id=11,
         ep_number=8,
         ep_name="Episode 8",
@@ -837,7 +837,7 @@ def seed_tv_episodes():
         ep_duration="44m",
         ep_poster="https://static.wikia.nocookie.net/money-heist/images/5/5a/Episode_8.jpg"
     )
-    tv_episode93 = TVShowEpisodes(
+    tv_episode104 = TVShowEpisodes(
         tv_id=11,
         ep_number=9,
         ep_name="Episode 9",
@@ -845,7 +845,7 @@ def seed_tv_episodes():
         ep_duration="43m",
         ep_poster="https://i0.wp.com/www.screenspy.com/wp-content/uploads/2021/12/money-heist-s1-e9-9.png"
     )
-    tv_episode93 = TVShowEpisodes(
+    tv_episode105 = TVShowEpisodes(
         tv_id=11,
         ep_number=10,
         ep_name="Episode 10",
@@ -853,7 +853,7 @@ def seed_tv_episodes():
         ep_duration="55m",
         ep_poster="https://static.wikia.nocookie.net/money-heist/images/0/07/Episode_10.jpg"
     )
-    tv_episode93 = TVShowEpisodes(
+    tv_episode106 = TVShowEpisodes(
         tv_id=11,
         ep_number=11,
         ep_name="Episode 11",
@@ -861,7 +861,7 @@ def seed_tv_episodes():
         ep_duration="43m",
         ep_poster="https://static.wikia.nocookie.net/money-heist/images/d/d9/Episode_11.jpg"
     )
-    tv_episode93 = TVShowEpisodes(
+    tv_episode107 = TVShowEpisodes(
         tv_id=11,
         ep_number=12,
         ep_name="Episode 12",
@@ -869,7 +869,7 @@ def seed_tv_episodes():
         ep_duration="44m",
         ep_poster="https://static.wikia.nocookie.net/money-heist/images/1/1b/Episode_12.jpg"
     )
-    tv_episode93 = TVShowEpisodes(
+    tv_episode108 = TVShowEpisodes(
         tv_id=11,
         ep_number=13,
         ep_name="Episode 13",
@@ -877,5 +877,195 @@ def seed_tv_episodes():
         ep_duration="56m",
         ep_poster="https://static.wikia.nocookie.net/money-heist/images/4/4b/Episode_13.jpg"
     )
+    ##The End of the F***ing World
+    tv_episode109 = TVShowEpisodes(
+        tv_id=12,
+        ep_number=1,
+        ep_name="Episode 1",
+        ep_description="Bored with killing animals, 17-year-old James is busy plotting his first real murder when brash new girl Alyssa catches him off guard at school.",
+        ep_duration="19m",
+        ep_poster="https://occ-0-987-2705.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYQ1JT8i5dlYk3dnwaDNT5sUdaNHYNPSSoU_P-D44kNeA2fcJG_vGyiQIDnXFdoSav9r13XqJVfx5dmUdpSbbyyFlnlztNJR5ON8ye-xE4si0dbyOeKWgxJ9.jpg"
+    )
+    tv_episode110 = TVShowEpisodes(
+        tv_id=12,
+        ep_number=1,
+        ep_name="Episode 2",
+        ep_description="On the road, James and Alyssa quickly realize they're in over their heads, but neither wants to admit it. A friendly army vet offers them help.",
+        ep_duration="22m",
+        ep_poster="https://occ-0-3934-2568.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQOBE_WdiCzsFlrqsmsbCVaWWioOxF9GDeA_cK_bcwhVrba9OC5jLI1-7P9w3pG_FqbKrSEshXp8ZoNYNO3C9KT7seArqpycGbxk76wNNENjszF3zJckl4Gv.jpg"
+    )
+    tv_episode111 = TVShowEpisodes(
+        tv_id=12,
+        ep_number=1,
+        ep_name="Episode 3",
+        ep_description="Hoping to lie low for a few days, the pair breaks into a home stocked with swanky amenities -- and a disturbing secret.",
+        ep_duration="22m",
+        ep_poster="https://occ-0-3934-2568.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYoC54fePEuky8c-nFerJcZfzhdFvLHwB111aJrwoKSYFEHqYPNuJk1O6-MmB8Fupede4xoQWBppyFnd5DxB_VJecsy142Q-7ngiG5UytV4qBOQdFL58N_dq.jpg"
+    )
+    tv_episode112 = TVShowEpisodes(
+        tv_id=12,
+        ep_number=1,
+        ep_name="Episode 4",
+        ep_description="Alyssa begins to see James in a new light as they scramble to cover their tracks and alter their appearance after a harrowing night.",
+        ep_duration="21m",
+        ep_poster="https://occ-0-3934-2568.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABTSO7shsS6ruCbj3RkxPckKCddxIlJCkGm19DozirJ4rW_FGSyGa3hQFuhHfKaOGPRFMS18DNQbPdKY9UvdYbohbo5iOrs1g9wS2Jp47ZXj9jntaDwNQI6Yn.jpg"
+    )
+    tv_episode113 = TVShowEpisodes(
+        tv_id=12,
+        ep_number=1,
+        ep_name="Episode 5",
+        ep_description="A flashback to a painful moment from childhood prompts James to change his plans. Out of cash, Alyssa resorts to shoplifting.",
+        ep_duration="21m",
+        ep_poster="https://occ-0-3934-2568.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABZpdzxMI51-vsRern3obx-IFO6QYeaYhTYf5A7qJ9ZaD9ikiy9_5_LCIp0SdhR4M7xOcFQ33d4PNPcG7a9ZutXUVZoy_fuEhf2ko-OzqC8STY4nGwkzULuoU.jpg"
+    )
+    tv_episode114 = TVShowEpisodes(
+        tv_id=12,
+        ep_number=1,
+        ep_name="Episode 6",
+        ep_description="James reveals he's a man of hidden talents, Alyssa squares off with a shrewd gas station manager, and Eunice makes a startling discovery.",
+        ep_duration="22m",
+        ep_poster="https://occ-0-3934-2568.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABdf2ROhYgSkg6ll2vuhLecABd-XBIx7-BhM3H2GvRMx5vajsVnauHGvS2AiP_RiyReheRA86vC5w1WuSZPomJs8WqG_Hz_7ldRhYZhmVrEPhUTdbbtORGpFo.jpg"
+    )
+    tv_episode115 = TVShowEpisodes(
+        tv_id=12,
+        ep_number=1,
+        ep_name="Episode 7",
+        ep_description="As Alyssa reconnects with her dad, a worried James faces a dilemma. Eunice and Teri clash over the best way to approach the teens.",
+        ep_duration="21m",
+        ep_poster="https://www.pogdesign.co.uk/cat/imgs/episodes/The-End-of-the-Fing-World/The-End-of-the-Fing-World-S01E07-c7ea5cc1d7a02273fc1aba9218a4ffea-full.jpg"
+    )
+    tv_episode116 = TVShowEpisodes(
+        tv_id=12,
+        ep_number=1,
+        ep_name="Episode 8",
+        ep_description="Eunice goes rogue, Leslie shows his true colors, and Alyssa and James plan their escape -- but soon realize they're out of time.",
+        ep_duration="20m",
+        ep_poster="https://occ-0-3934-2568.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQo3Ro5huXtbfga7MD3GVSqv6ih287VUSPDWX7DRj5PWkvZRFOE2MOo2WJd0bCs-bQqvJCJfvUYjzpMYAT4K6NSeDner1NzVgYK-IzQ0L2ZziMlKC-mGcyyS.jpg"
+    )
+    
+    db.session.add(tv_episode1)
+    db.session.add(tv_episode2)
+    db.session.add(tv_episode3)
+    db.session.add(tv_episode4)
+    db.session.add(tv_episode5)
+    db.session.add(tv_episode6)
+    db.session.add(tv_episode7)
+    db.session.add(tv_episode8)
+    db.session.add(tv_episode9)
+    db.session.add(tv_episode10)
+    db.session.add(tv_episode11)
+    db.session.add(tv_episode12)
+    db.session.add(tv_episode13)
+    db.session.add(tv_episode14)
+    db.session.add(tv_episode15)
+    db.session.add(tv_episode16)
+    db.session.add(tv_episode17)
+    db.session.add(tv_episode18)
+    db.session.add(tv_episode19)
+    db.session.add(tv_episode20)
+    db.session.add(tv_episode21)
+    db.session.add(tv_episode22)
+    db.session.add(tv_episode23)
+    db.session.add(tv_episode24)
+    db.session.add(tv_episode25)
+    db.session.add(tv_episode26)
+    db.session.add(tv_episode27)
+    db.session.add(tv_episode28)
+    db.session.add(tv_episode29)
+    db.session.add(tv_episode30)
+    db.session.add(tv_episode31)
+    db.session.add(tv_episode32)
+    db.session.add(tv_episode33)
+    db.session.add(tv_episode34)
+    db.session.add(tv_episode35)
+    db.session.add(tv_episode36)
+    db.session.add(tv_episode37)
+    db.session.add(tv_episode38)
+    db.session.add(tv_episode39)
+    db.session.add(tv_episode40)
+    db.session.add(tv_episode41)
+    db.session.add(tv_episode42)
+    db.session.add(tv_episode43)
+    db.session.add(tv_episode44)
+    db.session.add(tv_episode45)
+    db.session.add(tv_episode46)
+    db.session.add(tv_episode47)
+    db.session.add(tv_episode48)
+    db.session.add(tv_episode49)
+    db.session.add(tv_episode50)
+    db.session.add(tv_episode51)
+    db.session.add(tv_episode52)
+    db.session.add(tv_episode53)
+    db.session.add(tv_episode54)
+    db.session.add(tv_episode55)
+    db.session.add(tv_episode56)
+    db.session.add(tv_episode57)
+    db.session.add(tv_episode58)
+    db.session.add(tv_episode59)
+    db.session.add(tv_episode60)
+    db.session.add(tv_episode61)
+    db.session.add(tv_episode62)
+    db.session.add(tv_episode63)
+    db.session.add(tv_episode64)
+    db.session.add(tv_episode65)
+    db.session.add(tv_episode66)
+    db.session.add(tv_episode67)
+    db.session.add(tv_episode68)
+    db.session.add(tv_episode69)
+    db.session.add(tv_episode70)
+    db.session.add(tv_episode71)
+    db.session.add(tv_episode72)
+    db.session.add(tv_episode73)
+    db.session.add(tv_episode74)
+    db.session.add(tv_episode75)
+    db.session.add(tv_episode76)
+    db.session.add(tv_episode77)
+    db.session.add(tv_episode78)
+    db.session.add(tv_episode79)
+    db.session.add(tv_episode80)
+    db.session.add(tv_episode81)
+    db.session.add(tv_episode82)
+    db.session.add(tv_episode83)
+    db.session.add(tv_episode84)
+    db.session.add(tv_episode85)
+    db.session.add(tv_episode86)
+    db.session.add(tv_episode87)
+    db.session.add(tv_episode88)
+    db.session.add(tv_episode89)
+    db.session.add(tv_episode90)
+    db.session.add(tv_episode91)
+    db.session.add(tv_episode92)
+    db.session.add(tv_episode93)
+    db.session.add(tv_episode94)
+    db.session.add(tv_episode95)
+    db.session.add(tv_episode96)
+    db.session.add(tv_episode97)
+    db.session.add(tv_episode98)
+    db.session.add(tv_episode99)
+    db.session.add(tv_episode100)
+    db.session.add(tv_episode101)
+    db.session.add(tv_episode102)
+    db.session.add(tv_episode103)
+    db.session.add(tv_episode104)
+    db.session.add(tv_episode105)
+    db.session.add(tv_episode106)
+    db.session.add(tv_episode107)
+    db.session.add(tv_episode108)
+    db.session.add(tv_episode109)
+    db.session.add(tv_episode110)
+    db.session.add(tv_episode111)
+    db.session.add(tv_episode112)
+    db.session.add(tv_episode113)
+    db.session.add(tv_episode114)
+    db.session.add(tv_episode115)
+    db.session.add(tv_episode116)
+
+def undo_tv_episodes():
+    if environment == "production":
+        db.session.execute(f"TRUNCATE table {SCHEMA}.tv_show_episodes RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute("DELETE FROM tv_show_episodes")
+        
+    db.session.commit()
 
     
