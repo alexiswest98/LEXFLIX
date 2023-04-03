@@ -2,7 +2,6 @@ from app.models import db, environment, SCHEMA
 from app.models.tv_shows import TVShow
 
 # Adds a demo user, you can add other users here if you want
-
 def seed_tv():
     tv1 = TVShow(
         tv_name="Avatar",

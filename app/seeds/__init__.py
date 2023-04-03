@@ -6,6 +6,10 @@ from .profiles import seed_profiles, undo_profiles
 from .reviews import seed_reviews, undo_reviews
 from .movie_genres import seed_movie_genres, undo_movie_genres
 from .my_list import seed_my_list, undo_my_list
+from .tv_shows import seed_tv, undo_tv
+from .tv_show_genres import seed_tv_show_genres, undo_tv_show_genres
+from .tv_show_episodes import seed_tv_episodes, undo_tv_episodes
+from .tv_show_reviews import seed_tv_reviews, undo_tv_reviews
 
 from app.models.db import db, environment, SCHEMA
 
@@ -26,15 +30,23 @@ def seed():
         undo_profiles()
         undo_genres()
         undo_movies()
+        undo_tv()
         undo_movie_genres()
+        undo_tv_show_genres()
+        undo_tv_episodes()
         undo_reviews()
+        undo_tv_reviews()
         undo_my_list()
     seed_users()
     seed_profiles()
     seed_genres()
     seed_movies()
+    seed_tv()
     seed_movie_genres()
+    seed_tv_show_genres()
+    seed_tv_episodes()
     seed_reviews()
+    seed_tv_reviews()
     seed_my_list()
     # Add other seed functions here
 
@@ -43,8 +55,12 @@ def seed():
 @seed_commands.command('undo')
 def undo():
     undo_my_list()
+    undo_tv_reviews()
     undo_reviews()
+    undo_tv_episodes()
+    undo_tv_show_genres()
     undo_movie_genres()
+    undo_tv()
     undo_movies()
     undo_genres()
     undo_profiles()
