@@ -609,6 +609,80 @@ def seed_tv_episodes():
         ep_duration="55m",
         ep_poster="https://static.wikia.nocookie.net/strangerthings8338/images/b/b6/The_Upside_Down_S01-E08_SS_001.png"
     )
+    ##squid game
+    tv_episode76 = TVShowEpisodes(
+        tv_id=8,
+        ep_number=1,
+        ep_name="Red Light, Green Light",
+        ep_description="Hoping to win easy money, a broke and desperate Gi-hun agrees to take part in an enigmatic game. Not long into the first round, unforeseen horrors unfold.",
+        ep_duration="60m",
+        ep_poster="https://occ-0-300-325.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABcgVURx2aVqBO-ahF6pNsqh6XLdN2zWXsjt7bPe0ndT4lLfoTynn8eOSHT4o5ERPRNaTuI9sEhEmjlkmS_enUWuYT54etS_Z2c9axK2q_rwm5ubHY9x5TwTG.jpg"
+    )
+    tv_episode77 = TVShowEpisodes(
+        tv_id=8,
+        ep_number=2,
+        ep_name="Hell",
+        ep_description="Split on whether to continue or quit, the group holds a vote. But their realities in the outside world may prove to be just as unforgiving as the game.",
+        ep_duration="63m",
+        ep_poster="https://occ-0-300-325.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABdkTxh49-uTZ6CQMb5ly-nTgu3d9vk9Ij9q2xjseCAjgo1d4SKUWwVXZD_RB9UH2ltggxNm0YylvOCjXNtSSorfBp9KJaTuz-a-cLkg6WWc93obVJzN33G9b.jpg"
+    )
+    tv_episode78 = TVShowEpisodes(
+        tv_id=8,
+        ep_number=3,
+        ep_name="The Man with the Umbrella",
+        ep_description="A few players enter the next round — which promises equal doses of sweet and deadly — with hidden advantages. Meanwhile, Jun-ho sneaks his way inside.",
+        ep_duration="55m",
+        ep_poster="https://occ-0-300-325.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABbARELvP6isNm5sHcvW4fgQyaff64BK9DcyIVRNotr8sm01spljhJBew99EMuYev1E58_2vbSa3xfxKCxrh3EdUupRyCUcwwXIUGVaqL__WvlMWR2hDqbG9N.jpg"
+    )
+    tv_episode79 = TVShowEpisodes(
+        tv_id=8,
+        ep_number=4,
+        ep_name="Stick to the Team",
+        ep_description="As alliances form among the players, no one is safe in the dorm after lights-out. The third game challenges Gi-hun's team to think strategically.",
+        ep_duration="56m",
+        ep_poster="https://occ-0-300-325.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABfULc6d4fbnWvJ3kp8idjBKtpmLkQG26rHgkPoZn7-YnjblZ94GTR-tL9a7A9cOKh90kjTmC58U_QABJpNj5irSClb1iQAQEKVqh9evgb9NUfgYshfAj0T3m.jpg"
+    )
+    tv_episode80 = TVShowEpisodes(
+        tv_id=8,
+        ep_number=5,
+        ep_name="A Fair World",
+        ep_description="Gi-hun and his team take turns keeping guard through the night. The masked men encounter trouble with their co-conspirators.",
+        ep_duration="52m",
+        ep_poster="https://occ-0-300-325.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABayNMtg7c4dQ8I1vSbye_mXDsE8er_YuwdkmVnQ2WLcGPRSLyd9_ZyL8o9EEJT_1R2gZXc6kz_HkkHp4O4442H3Pfnqi8vHJPISMWcXgPfyh9PB8MQptrg6g.jpg"
+    )
+    tv_episode81 = TVShowEpisodes(
+        tv_id=8,
+        ep_number=6,
+        ep_name="Gganbu",
+        ep_description="Players pair off for the fourth game. Gi-hun grapples with a moral dilemma, Sang-woo chooses self-preservation and Sae-byeok shares her untold story.",
+        ep_duration="62m",
+        ep_poster="https://occ-0-300-325.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYeAqA0G2uvoQS8qN2q-FS4pV3qFLEoKhtIU9ppSsPSqswtxaWcmt89kyA8-yteGYzicIkp0c3FrCV_oR4zurvcx3D-7Q8c204XLhUnqbj6xectZY8uTS0Yo.jpg"
+    )
+    tv_episode82 = TVShowEpisodes(
+        tv_id=8,
+        ep_number=7,
+        ep_name="VIPS",
+        ep_description="The Masked Leader welcomes VIP guests to the facility for a front-row viewing of the show. In the fifth game, some players crack under pressure.",
+        ep_duration="58m",
+        ep_poster="https://occ-0-300-325.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYFD63meHAceg_zjRpkx1u86sr9FEGPJNWBQloq5Ywbex4JU1dfwtyi7SWrpftaYZr3JxLtGdSuxfXRA6XnJYvP1u1WUS9fQjsX2uV-_iRmJeTSl0QQt7P84.jpg"
+    )
+    tv_episode83 = TVShowEpisodes(
+        tv_id=8,
+        ep_number=8,
+        ep_name="Front Man",
+        ep_description="Ahead of the last round, distrust and disgust run deep among the finalists. Jun-ho makes a getaway, determined to expose the game's dirty secrets.",
+        ep_duration="33m",
+        ep_poster="https://occ-0-300-325.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABRtEUf0r5ZlEO9TBKpla-ViSRU4flRZsFDpb_UZlZTyodClVp636EfLg0ZF1he4IDTY4e8LbvyWGakt9Kz3e-0GrMaaLyfm9U0TJKt5Vi6LVjAmgwOyfm3l4.jpg"
+    )
+    tv_episode84 = TVShowEpisodes(
+        tv_id=8,
+        ep_number=9,
+        ep_name="One Lucky Day",
+        ep_description="The final round presents another cruel test — but this time, how it ends depends on just one player. The game's creator steps out of the shadows.",
+        ep_duration="56m",
+        ep_poster="https://occ-0-300-325.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYuDBORiZZ6UTJ-SNSjZObcUQ5zAv3bp2ii2id7yAODy90wk4Tjp4ah-rAESVX0N-0zk0uofP4jB8W8BXPLfDujwvLhNC2CDiBWtNX5ynvWQjy7h_8cha8Gt.jpg"
+    )
+    ##wednesday
 
 
     
