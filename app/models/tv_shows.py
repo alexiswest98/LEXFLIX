@@ -43,5 +43,5 @@ class TVShow(db.Model):
             "trailer_src": self.trailer_src,
             "num_seasons": self.num_seasons,
             "created_at": self.created_at,
-            'genres': [genre.genre.genre_name for genre in self.tv_to_tv_genre]
+            'genres': [genre.tvgenre.genre_name for genre in self.tv_to_tv_genre]
         }

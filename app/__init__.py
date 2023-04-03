@@ -12,6 +12,7 @@ from .api.movie_routes import movie_routes
 from .api.movie_review_routes import movie_review_routes
 from .api.genre_routes import genre_routes
 from .api.my_list_routes import my_list_routes
+from .api.tv_show_routes import tv_routes
 from .seeds import seed_commands
 from .config import Config
 
@@ -38,6 +39,8 @@ app.register_blueprint(movie_routes, url_prefix='/api/movies')
 app.register_blueprint(movie_review_routes, url_prefix='/api/review')
 app.register_blueprint(genre_routes, url_prefix='/api/genre')
 app.register_blueprint(my_list_routes, url_prefix='/api/mylist')
+##tv routes
+app.register_blueprint(tv_routes, url_prefix='/api/tv')
 
 db.init_app(app)
 Migrate(app, db)
