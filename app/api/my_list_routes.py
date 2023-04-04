@@ -31,7 +31,7 @@ def add_my_list(profileId, movieId):
     # print(media)
 
     if media:
-        return jsonify({'errors': 'Profile user already has this show or movie in My-List'}, 400)
+        return jsonify({'errors': 'Profile user already has this movie in My-List'}, 400)
 
     if not media and form.validate_on_submit():
         newAddition = MyList(
@@ -44,6 +44,27 @@ def add_my_list(profileId, movieId):
     return jsonify(form.errors)
 
 ##add a show to my list
+@my_list_routes.route('/profile/<int:profileId>/tvshow/<int:showId>', methods=["POST"])
+@login_required
+def add_my_list_show(profileId, showId):
+    form = CreateMyListForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+    data = form.data
+    ##error validation
+    media = MyList.query.filter(MyList.profile_id==profileId, MyList.tv_id==showId).first()
+
+    if media:
+        return jsonify({'errors': 'Profile user already has this show in My-List'}, 400)
+    if not media and form.validate_on_submit():
+        newAddition = MyList(
+            tv_id = data['tv_id'],
+            profile_id = data['profile_id'],
+        )
+        db.session.add(newAddition)
+        db.session.commit()
+        return jsonify(newAddition.to_dict())
+    return jsonify(form.errors)
+
 
 ##delete from my-list
 @my_list_routes.route('/<int:mediaId>/delete', methods=["DELETE"])
