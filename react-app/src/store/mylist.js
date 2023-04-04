@@ -1,6 +1,7 @@
 /* ----- TYPES ------ */
 const GETMYLIST = 'mylist/getmylist'
 const ADDMOVIEMYLIST = 'mylist/addmylist'
+const ADDTVMYLIST = 'mylist/addtvmylist'
 const DELETEMYLIST = 'mylist/deletemylist'
 
 /* ----- ACTIONS ------ */
@@ -18,7 +19,13 @@ const addMovieMyListAction = (movie) => {
     }
 };
 
-//need separate add show action
+//need separate add tv show action
+const addTvMyListAction = (tv) => {
+    return {
+        type: ADDTVMYLIST,
+        tv
+    }
+};
 
 const deleteAllMyListAction = (mediaId) => {
     return {
@@ -56,6 +63,24 @@ export const addMovieMyListThunk = (profileId, movieId ) => async dispatch => {
     }
 }
 
+//tv show just added
+export const addTVMyListThunk = (profileId, tvId) => async dispatch => {
+    const response = await fetch(`/api/mylist/profile/${profileId}/tvshow/${tvId}`, {
+        method: 'POST',
+        headers: {'COntent-Type':'application/json'},
+        body: JSON.stringify({
+            tv_id: tvId,
+            profile_id: profileId
+        })
+    })
+
+    if(response.ok){
+        const tv =await response.json()
+        dispatch(addTvMyListAction(tv))
+        return tv
+    }
+}
+
 export const deleteMyListThunk = (mediaId) => async dispatch => {
     const response = await fetch(`/api/mylist/${mediaId}/delete`, { method: 'DELETE' })
 
@@ -78,6 +103,11 @@ const myListReducer = (state = {}, action) => {
         case ADDMOVIEMYLIST:
             newState = {...state}
             newState[action.movie.id] = action.movie
+            return newState;
+        //may have to come back to bc movie id and tv id may be the same
+        case ADDTVMYLIST:
+            newState = {...state}
+            newState[action.tv.id] = action.tv
             return newState;
         case DELETEMYLIST:
             newState = {...state}
