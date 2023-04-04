@@ -134,3 +134,5 @@ const tvReviewReducer = (state = {}, action) => {
             return state;
     }
 }
+
+export default tvReviewReducer;

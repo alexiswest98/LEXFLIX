@@ -7,6 +7,8 @@ import reviewsReducer from './reviews';
 import moviesGenresReducer from './genresmovies';
 import myListReducer from './mylist';
 import tvshowReducer from './tvshows';
+import tvReviewReducer from './tvreviews';
+import tvShowEpisodesReducer from './tvepisodes';
 
 const rootReducer = combineReducers({
   session,
@@ -15,7 +17,9 @@ const rootReducer = combineReducers({
   reviews: reviewsReducer,
   movieGenres: moviesGenresReducer,
   myList: myListReducer,
-  tvShow: tvshowReducer
+  tvShow: tvshowReducer,
+  tvReview: tvReviewReducer,
+  tvShowEpisodes: tvShowEpisodesReducer
 });
 
 let enhancer;
