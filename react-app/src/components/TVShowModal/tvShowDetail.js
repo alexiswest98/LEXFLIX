@@ -4,27 +4,36 @@ import { NavLink } from "react-router-dom";
 import { useHistory, useParams } from "react-router-dom";
 import MovieReviewComponent from "../MovieReview/MovieReview";
 // import { getMoviesGenresThunk } from "../../store/genresmovies";
-import "./movieModal.css";
+// import "./movieModal.css";
 
 function TVDetail({ setShowModal, tvId }) {
     const dispatch = useDispatch();
     const history = useHistory();
     const { profId } = useParams();
     const tvShow = useSelector(state => state.tvShow[tvId])
-    const [movGenres, setMovieGenres] = useState("")
+    // const [movGenres, setMovieGenres] = useState("")
 
+    const getGenres = (genres) => {
+        let newString = [];
+        for(let i = 0; i < genres.length - 1; i++) {
+            newString.push(genres[i].genre_name, ", ");
+        }
+        let lastgenre= genres[genres.length - 1];
+        newString.push(lastgenre.genre_name);
+        return newString.join("")
+    }
 
     return (
         <div className="outer-whole-movie-modal">
             <div className="top-half-movie-modal"
                 style={{
                     backgroundSize: "cover",
-                    backgroundImage: `url("${movie.detail_img}")`,
+                    backgroundImage: `url("${tvShow.detail_img}")`,
                     backgroundPosition: 'center center'
                 }}
             >
                 <div className='movie-modal-functions'>
-                    <NavLink to={`/${profId}/watch/${movieId}`} exact='true'>
+                    <NavLink to={`/browse/${profId}/TV`} exact='true'>
                         <button className='play-header-button-modal'>
                             <i class="fa-sharp fa-solid fa-play"></i>
                             Play
@@ -38,44 +47,45 @@ function TVDetail({ setShowModal, tvId }) {
             </div>
             <div className='fade-bottom-modal'></div>
             <div className="bottom-half-movie-modal">
-                <h1 className="movie-title-modal">{movie.movie_name}</h1>
+                <h1 className="movie-title-modal">{tvShow.tv_name}</h1>
                 <div className="middle-details-modal">
                     <div className="left-side-modal-details">
                         <div className="top-mid-movie-dets">
-                            <h3 className="moviemodal-yr">{movie.year}</h3>
-                            <div className={`modal-rating-border ${movie.rating == "R" || movie.rating == "G" || movie.rating == "PG" ? "smaller-rating" : ""}`}>
-                                {movie.rating}
+                            <h3 className="moviemodal-yr">{tvShow.year}</h3>
+                            <div className='modal-rating-border'>
+                                {tvShow.rating}
                             </div>
-                            <h3 className="moviemodal-duration">{movie.duration}</h3>
+                            <h3 className="moviemodal-duration">{tvShow.num_seasons}</h3>
                         </div>
                         <div className="bottom-mid-movie-dets">
-                            <h4>{movie.description}</h4>
+                            <h4>{tvShow.description}</h4>
                         </div>
                     </div>
                     <div className="right-side-modal-details">
                         <div className="indiv-modal-right-details">
                             <span className="modal-midd-right-txt" id="label-grey">Cast: </span>
-                            <span className="modal-midd-right-txt"> {movie.cast}</span>
+                            <span className="modal-midd-right-txt"> {tvShow.cast}</span>
                         </div>
                         <div className="indiv-modal-right-details">
                             <span className="modal-midd-right-txt" id="label-grey">Genres: </span>
-                            <span className="modal-midd-right-txt">{movieGenreWord()}</span>
+                            <span className="modal-midd-right-txt">{getGenres(tvShow.genres)}</span>
                         </div>
                         <div className="indiv-modal-right-details">
                             <span className="modal-midd-right-txt" id="label-grey">This Movie is: </span>
-                            <span className="modal-midd-right-txt"> {movie.movie_is}</span>
+                            <span className="modal-midd-right-txt"> {tvShow.tv_is}</span>
                         </div>
                     </div>
                 </div>
+                {/* !!!episodes go here */}
                 <div className="more-about-movie-modal">
-                    <h3 className="movie-more-modal">About {movie.movie_name}</h3>
+                    <h3 className="movie-more-modal">About {tvShow.tv_name}</h3>
                     <div className="indiv-modal-right-details">
-                        <span className="smaller-more-txt" id="label-grey">Director: </span>
-                        <span className="smaller-more-txt">{movie.director}</span>
+                        <span className="smaller-more-txt" id="label-grey">Cast: </span>
+                        <span className="smaller-more-txt">{tvShow.cast}</span>
                     </div>
                     <div className="indiv-modal-right-details">
-                        <span className="smaller-more-txt" id="label-grey">Writer: </span>
-                        <span className="smaller-more-txt">{movie.writer}</span>
+                        <span className="smaller-more-txt" id="label-grey">Creators: </span>
+                        <span className="smaller-more-txt">{tvShow.creators}</span>
                     </div>
                 </div>
             </div>

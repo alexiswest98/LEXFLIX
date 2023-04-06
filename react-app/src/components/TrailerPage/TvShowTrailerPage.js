@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
-import { getAllTvShowsThunk } from '../../store/movies';
+import { getAllTvShowsThunk } from '../../store/tvshows';
 import "./trailerPage.css"
 
 export default function TVTrailerPage() {
     const dispatch = useDispatch();
     const { profId, tvId } = useParams();
     const tvShow = useSelector(state => state.tvShow[+tvId])
-    // console.log(profId)
+    console.log(tvShow)
 
     useEffect(() => {
         dispatch(getAllTvShowsThunk())

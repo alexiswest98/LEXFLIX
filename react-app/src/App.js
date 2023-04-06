@@ -19,7 +19,7 @@ import TrailerPage from './components/TrailerPage/TrailerPage';
 import MovieHomePage from './components/MovieHomePage/MovieHomePage';
 import ComingSoon from './components/ComingSoon';
 import MyList from './components/myList/MyList';
-import TVTrailerPage from './components/TVTrailerPage/TVTrailerPage';
+import TVTrailerPage from './components/TrailerPage/TvShowTrailerPage';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -87,7 +87,7 @@ function App() {
           {/* <NavBar /> */}
           <TrailerPage/>
         </ProtectedRoute>
-        <ProtectedRoute path='/:profId/watchTV/:movieId' exact='true'>
+        <ProtectedRoute path='/:profId/watchTV/:tvId' exact='true'>
           <TVTrailerPage/>
         </ProtectedRoute>
         <Route path='/' exact='true' >
