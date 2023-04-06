@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { useHistory, useParams } from "react-router-dom";
 import MovieReviewComponent from "../MovieReview/MovieReview";
+import { getTvShowEpisodesThunk } from "../../store/tvepisodes";
 // import { getMoviesGenresThunk } from "../../store/genresmovies";
 // import "./movieModal.css";
 
@@ -11,6 +12,7 @@ function TVDetail({ setShowModal, tvId }) {
     const history = useHistory();
     const { profId } = useParams();
     const tvShow = useSelector(state => state.tvShow[tvId])
+    const episodes = Object.values(useSelector(state => state.tvShowEpisodes))
     // const [movGenres, setMovieGenres] = useState("")
 
     const getGenres = (genres) => {
@@ -22,6 +24,10 @@ function TVDetail({ setShowModal, tvId }) {
         newString.push(lastgenre.genre_name);
         return newString.join("")
     }
+
+    useEffect(() => {
+        dispatch(getTvShowEpisodesThunk(tvId))
+    }, [dispatch, tvId])
 
     if(!tvShow) return null;
 
@@ -79,6 +85,11 @@ function TVDetail({ setShowModal, tvId }) {
                     </div>
                 </div>
                 {/* !!!episodes go here */}
+                {episodes.map((episode) => (
+                    <div>
+                        <img src={episode.ep_poster} alt="episode poster" />                 
+                    </div>
+                ))}
                 <div className="more-about-movie-modal">
                     <h3 className="movie-more-modal">About {tvShow.tv_name}</h3>
                     <div className="indiv-modal-right-details">
