@@ -23,6 +23,8 @@ function TVDetail({ setShowModal, tvId }) {
         return newString.join("")
     }
 
+    if(!tvShow) return null;
+
     return (
         <div className="outer-whole-movie-modal">
             <div className="top-half-movie-modal"
@@ -33,7 +35,7 @@ function TVDetail({ setShowModal, tvId }) {
                 }}
             >
                 <div className='movie-modal-functions'>
-                    <NavLink to={`/browse/${profId}/TV`} exact='true'>
+                    <NavLink to={`/${profId}/watchTV/${tvShow.id}`} exact='true'>
                         <button className='play-header-button-modal'>
                             <i class="fa-sharp fa-solid fa-play"></i>
                             Play

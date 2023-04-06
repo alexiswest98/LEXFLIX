@@ -47,7 +47,7 @@ export default function ComingSoon() {
                 {/* !!!!!! */}
                 {showModal && (
                       <Modal onClose={() => setShowModal(false)}>
-                        <TVDetail setShowModal={setShowModal} movieId={headerShow.id}/>
+                        <TVDetail setShowModal={setShowModal} tvId={headerShow.id}/>
                       </Modal>
                 )}
             </div>
