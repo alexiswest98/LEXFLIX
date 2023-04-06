@@ -19,6 +19,7 @@ import TrailerPage from './components/TrailerPage/TrailerPage';
 import MovieHomePage from './components/MovieHomePage/MovieHomePage';
 import ComingSoon from './components/ComingSoon';
 import MyList from './components/myList/MyList';
+import TVTrailerPage from './components/TVTrailerPage/TVTrailerPage';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -85,6 +86,9 @@ function App() {
         <ProtectedRoute path='/:profId/watch/:movieId' exact='true' >
           {/* <NavBar /> */}
           <TrailerPage/>
+        </ProtectedRoute>
+        <ProtectedRoute path='/:profId/watchTV/:movieId' exact='true'>
+          <TVTrailerPage/>
         </ProtectedRoute>
         <Route path='/' exact='true' >
           <NavBar />

@@ -14,7 +14,7 @@ def seed_tv():
         rating="TV-Y7",
         year=2005,
         description="In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.",
-        prev_img="https://i0.wp.com/thehollywoodhandle.co/wp-content/uploads/2022/09/avatar-the-last-airbender-live-action-netflix-1593111887.jpeg",
+        prev_img="https://wwwimage-us.pplusstatic.com/base/files/seo/atla_social_1200x627.jpg",
         detail_img ="https://i.ytimg.com/vi/IItCMQx0LHg/maxresdefault.jpg",
         trailer_src= "https://www.youtube.com/embed/ooVvH2IYz0w",
         num_seasons= "3 Seasons"
@@ -78,7 +78,7 @@ def seed_tv():
         rating="TV-MA",
         year=2013,
         description="Explores the early relationship between renowned psychiatrist Hannibal Lecter and a young FBI criminal profiler who is haunted by his ability to empathize with serial killers.",
-        prev_img="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/fdec64cc338311973ff743a0ad445b1b3bfd54dc0b708c209acf3475f474fdbc._UY500_UX667_RI_V_TTW_.jpg",
+        prev_img="https://4.bp.blogspot.com/-XU6ckXIdJak/Vy_x20iWESI/AAAAAAAAAu8/7qOU81sgbXs_pUfPx_kGTUoKS71nmrSsgCLcB/s1600/LI2i3.jpg",
         detail_img ="https://bloody-disgusting.com/wp-content/uploads/2014/12/hannibal5.jpg",
         trailer_src= "https://www.youtube.com/embed/Es3B24z8fdA",
         num_seasons= "3 Seasons"
@@ -94,7 +94,7 @@ def seed_tv():
         rating="TV-MA",
         year=2020,
         description="Arisu is a man without much money or luck. He is unemployed currently as well. Out of the blue a blinding light engulfs him one day in whose aftermath the city of Tokyo has lost all its inhabitants save Arisu and two friends. This is a dangerous and potentially fatal game of survival now in which they are forced to take part.",
-        prev_img="https://www.heavenofhorror.com/wp-content/uploads/2020/12/alice-in-borderland-netflix.jpg",
+        prev_img="https://flxt.tmsimg.com/assets/p18829068_b_h10_aa.jpg",
         detail_img ="https://cdn.mos.cms.futurecdn.net/KSDF9cn3NGgrCu6tJXkq3K.jpg",
         trailer_src= "https://www.youtube.com/embed/49_44FFKZ1M",
         num_seasons= "2 Seasons"
@@ -126,7 +126,7 @@ def seed_tv():
         rating="TV-MA",
         year=2021,
         description="Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits with deadly high stakes. A survival game that has a whopping 45.6 billion-won prize at stake.",
-        prev_img="https://occ.a.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABdRPL22ib8EsNT5eS2VwkSl5KRJRrTme4dRVkzuYQ9eM3AEHw3OHZ46O5HvewEPnecp09M0_6HlruTs-4OfTcgWQPVZVm9lGQ_8zSgqMmQmKy_ZLpmLXWDz4P6hPUGzvtrWSMw.jpg",
+        prev_img="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/04/Squid-Game-poster.jpg",
         detail_img ="https://occ-0-2186-3934.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABe1fA_q1l9tqtFkCK7xxnTUkhV3NHZDpPy7yF-YgiPUDPzGfeMlcRoKXiOfHl2UVx9oINILikJ1NaUYxpOnGKLAv_f49b5p3jyA7.jpg",
         trailer_src= "https://www.youtube.com/embed/oqxAJKy0ii4",
         num_seasons= "1 Season"
@@ -142,7 +142,7 @@ def seed_tv():
         rating="TV-14",
         year=2022,
         description="Follows Wednesday Addams' years as a student, when she attempts to master her emerging psychic ability, thwart a killing spree, and solve the mystery that embroiled her parents.",
-        prev_img="https://www.heavenofhorror.com/wp-content/uploads/2022/11/wednesday-netflix-review.jpg",
+        prev_img="https://i.ytimg.com/vi/YGDLb7N21bY/maxresdefault.jpg",
         detail_img ="https://snworksceo.imgix.net/bdh/6c19bab8-1b40-4fc3-8f46-56c83f214069.sized-1000x1000.jpg",
         trailer_src= "https://www.youtube.com/embed/Di310WS8zLk",
         num_seasons= "1 Season"
@@ -158,7 +158,7 @@ def seed_tv():
         rating="TV-MA",
         year=2011,
         description="An anthology series exploring a twisted, high-tech multiverse where humanity's greatest innovations and darkest instincts collide.",
-        prev_img="https://hips.hearstapps.com/hmg-prod/images/screen-shot-2018-01-04-at-10-15-40-1515060958.jpg",
+        prev_img="https://variety.com/wp-content/uploads/2017/08/black-mirror-logo.jpg",
         detail_img ="https://cdn.vox-cdn.com/thumbor/OZnNQGUKIW-4EEAD4DxcSIP05_s=/0x0:3200x1600/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/16317504/black_mirror_episodes.jpg",
         trailer_src= "https://www.youtube.com/embed/V0XOApF5nLU",
         num_seasons= "5 Seasons"
