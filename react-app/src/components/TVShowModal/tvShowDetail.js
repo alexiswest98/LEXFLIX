@@ -5,7 +5,7 @@ import { useHistory, useParams } from "react-router-dom";
 import MovieReviewComponent from "../MovieReview/MovieReview";
 import { getTvShowEpisodesThunk } from "../../store/tvepisodes";
 // import { getMoviesGenresThunk } from "../../store/genresmovies";
-// import "./movieModal.css";
+import "./tvShowDetail.css";
 
 function TVDetail({ setShowModal, tvId }) {
     const dispatch = useDispatch();
@@ -18,10 +18,10 @@ function TVDetail({ setShowModal, tvId }) {
     const getGenres = (genres) => {
         let newString = [];
         for(let i = 0; i < genres.length - 1; i++) {
-            newString.push(genres[i].genre_name, ", ");
+            newString.push(genres[i], ", ");
         }
         let lastgenre= genres[genres.length - 1];
-        newString.push(lastgenre.genre_name);
+        newString.push(lastgenre);
         return newString.join("")
     }
 
@@ -32,17 +32,17 @@ function TVDetail({ setShowModal, tvId }) {
     if(!tvShow) return null;
 
     return (
-        <div className="outer-whole-movie-modal">
-            <div className="top-half-movie-modal"
+        <div className="outer-whole-tv-modal">
+            <div className="top-half-tv-modal"
                 style={{
                     backgroundSize: "cover",
                     backgroundImage: `url("${tvShow.detail_img}")`,
                     backgroundPosition: 'center center'
                 }}
             >
-                <div className='movie-modal-functions'>
+                <div className='tv-modal-functions'>
                     <NavLink to={`/${profId}/watchTV/${tvShow.id}`} exact='true'>
-                        <button className='play-header-button-modal'>
+                        <button className='play-header-button-modal-tv'>
                             <i class="fa-sharp fa-solid fa-play"></i>
                             Play
                         </button>
@@ -54,51 +54,61 @@ function TVDetail({ setShowModal, tvId }) {
                 </div>
             </div>
             <div className='fade-bottom-modal'></div>
-            <div className="bottom-half-movie-modal">
-                <h1 className="movie-title-modal">{tvShow.tv_name}</h1>
-                <div className="middle-details-modal">
-                    <div className="left-side-modal-details">
-                        <div className="top-mid-movie-dets">
-                            <h3 className="moviemodal-yr">{tvShow.year}</h3>
-                            <div className='modal-rating-border'>
+            <div className="bottom-half-tv-modal">
+                <h1 className="tv-title-modal">{tvShow.tv_name}</h1>
+                <div className="middle-details-modal-tv">
+                    <div className="left-side-modal-details-tv">
+                        <div className="top-mid-tv-dets">
+                            <h3 className="tvmodal-yr">{tvShow.year}</h3>
+                            <div className='modal-rating-border-tv'>
                                 {tvShow.rating}
                             </div>
-                            <h3 className="moviemodal-duration">{tvShow.num_seasons}</h3>
+                            <h3 className="tvmodal-seasons">{tvShow.num_seasons}</h3>
                         </div>
-                        <div className="bottom-mid-movie-dets">
+                        <div className="bottom-mid-tv-dets">
                             <h4>{tvShow.description}</h4>
                         </div>
                     </div>
-                    <div className="right-side-modal-details">
-                        <div className="indiv-modal-right-details">
-                            <span className="modal-midd-right-txt" id="label-grey">Cast: </span>
-                            <span className="modal-midd-right-txt"> {tvShow.cast}</span>
+                    <div className="right-side-modal-details-tv">
+                        <div className="indiv-modal-right-details-tv">
+                            <span className="modal-midd-right-txt-tv" id="label-grey">Cast: </span>
+                            <span className="modal-midd-right-txt-tv"> {tvShow.cast}</span>
                         </div>
-                        <div className="indiv-modal-right-details">
-                            <span className="modal-midd-right-txt" id="label-grey">Genres: </span>
-                            <span className="modal-midd-right-txt">{getGenres(tvShow.genres)}</span>
+                        <div className="indiv-modal-right-details-tv">
+                            <span className="modal-midd-right-txt-tv" id="label-grey">Genres: </span>
+                            <span className="modal-midd-right-txt-tv">{getGenres(tvShow.genres)}</span>
                         </div>
-                        <div className="indiv-modal-right-details">
-                            <span className="modal-midd-right-txt" id="label-grey">This Movie is: </span>
-                            <span className="modal-midd-right-txt"> {tvShow.tv_is}</span>
+                        <div className="indiv-modal-right-details-tv">
+                            <span className="modal-midd-right-txt-tv" id="label-grey">This Movie is: </span>
+                            <span className="modal-midd-right-txt-tv"> {tvShow.tv_is}</span>
                         </div>
                     </div>
+                </div>
+                <div className="ep-title-container">
+                    <div className="right-side-ep-title">
+                        <h2 className="ep-title">Episodes</h2>
+                        <h4 className="ep-title-details">Season 1: <span className="rating-border">{tvShow.rating}</span></h4>
+                    </div>
+                    <div className="left-side-ep-title">
+
+                    </div>
+
                 </div>
                 {/* !!!episodes go here */}
                 {episodes.map((episode) => (
                     <div>
-                        <img src={episode.ep_poster} alt="episode poster" />                 
+                        <img src={episode.ep_poster} alt="episode poster" className="tvep-img" />                 
                     </div>
                 ))}
-                <div className="more-about-movie-modal">
-                    <h3 className="movie-more-modal">About {tvShow.tv_name}</h3>
-                    <div className="indiv-modal-right-details">
-                        <span className="smaller-more-txt" id="label-grey">Cast: </span>
-                        <span className="smaller-more-txt">{tvShow.cast}</span>
+                <div className="more-about-tv-modal">
+                    <h3 className="tv-more-modal">About {tvShow.tv_name}</h3>
+                    <div className="indiv-modal-right-details-tv">
+                        <span className="smaller-more-txt-tv" id="label-grey">Cast: </span>
+                        <span className="smaller-more-txt-tv">{tvShow.cast}</span>
                     </div>
-                    <div className="indiv-modal-right-details">
-                        <span className="smaller-more-txt" id="label-grey">Creators: </span>
-                        <span className="smaller-more-txt">{tvShow.creators}</span>
+                    <div className="indiv-modal-right-details-tv">
+                        <span className="smaller-more-txt-tv" id="label-grey">Creators: </span>
+                        <span className="smaller-more-txt-tv">{tvShow.creators}</span>
                     </div>
                 </div>
             </div>

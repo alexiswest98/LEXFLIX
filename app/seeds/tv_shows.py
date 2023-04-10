@@ -15,7 +15,7 @@ def seed_tv():
         year=2005,
         description="In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.",
         prev_img="https://wwwimage-us.pplusstatic.com/base/files/seo/atla_social_1200x627.jpg",
-        detail_img ="https://i.ytimg.com/vi/IItCMQx0LHg/maxresdefault.jpg",
+        detail_img ="https://www.slashfilm.com/img/gallery/nickelodeons-first-avatar-the-last-airbender-animated-movie-will-bring-the-gaang-back-together/l-intro-1658550631.jpg",
         trailer_src= "https://www.youtube.com/embed/ooVvH2IYz0w",
         num_seasons= "3 Seasons"
     )
