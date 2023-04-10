@@ -82,20 +82,19 @@
     margin-left: 4%;
     margin-block-start: 0.2rem;
     margin-block-end: 0.4rem;
+    font-size: 2.2rem;
 }
 
 .middle-details-modal-tv {
     display: flex;
-    height: 55%;
+    height: 54%;
     width: 100%;
-    /* background-color: blueviolet; */
 }
 
 .left-side-modal-details-tv {
     width: 60%;
     height: 100%;
     padding-left: 4%;
-    /* background-color: rgb(184, 228, 183); */
 }
 
 .top-mid-tv-dets {
@@ -138,7 +137,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* background-color: PINK; */
 }
 
 .indiv-modal-right-details-tv {
@@ -180,13 +178,14 @@
     height: 20%;
     margin-left: 4%;
     display: flex;
-    background-color: red;
+    /* background-color: red; */
     margin-bottom: 2%;
 }
 
 .ep-title {
     margin-block-start: 0rem;
     margin-block-end: 0rem;
+    font-size: 1.7rem;
 }
 
 .ep-title-details {
@@ -197,7 +196,8 @@
 .right-side-ep-title {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 75%;
+    height: 100%;
 }
 
 .tvep-img {
@@ -212,5 +212,40 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     width: 8%;
-    margin-left: 1rem;
+    margin-left: 0.2rem;
+}
+
+.left-side-ep-title {
+    width: 25%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.ep-title-box {
+    background-color: rgb(36, 36, 36);
+    border: 0.1em solid rgb(77, 77, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    width: 70%;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.2rem;
+}
+
+.full-ep-container {
+    border-top: 1px solid #404040;
+    width: 94%;
+    margin-left: 4%;
+}
+
+.indiv-ep-box {
+    width: 100%;
+    height: 12%;
+    border-bottom: 1px solid #404040;
 }

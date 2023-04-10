@@ -90,16 +90,18 @@ function TVDetail({ setShowModal, tvId }) {
                         <h4 className="ep-title-details">Season 1: <span className="rating-border">{tvShow.rating}</span></h4>
                     </div>
                     <div className="left-side-ep-title">
-
+                        <div className="ep-title-box">Season 1</div>
                     </div>
 
                 </div>
                 {/* !!!episodes go here */}
+                <div className="full-ep-container">
                 {episodes.map((episode) => (
-                    <div>
+                    <div className="indiv-ep-box">
                         <img src={episode.ep_poster} alt="episode poster" className="tvep-img" />                 
                     </div>
                 ))}
+                </div>
                 <div className="more-about-tv-modal">
                     <h3 className="tv-more-modal">About {tvShow.tv_name}</h3>
                     <div className="indiv-modal-right-details-tv">
