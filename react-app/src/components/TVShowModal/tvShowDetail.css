@@ -51,8 +51,8 @@
     padding-left: 0.7rem;
     padding-right: 0.7rem;
     border-radius: 0.2rem;
-    width: 6.5rem;
-    height: 2.1rem;
+    width: 7.5rem;
+    height: 2.5rem;
 }
 
 /* ??
@@ -139,11 +139,6 @@
     flex-direction: column;
 }
 
-.indiv-modal-right-details-tv {
-    height: 33%;
-    width: 100%;
-    margin-right: 4%;
-}
 
 .modal-midd-right-txt-tv {
     margin-block-start: 0.2rem;
@@ -155,20 +150,29 @@
 }
 
 .more-about-tv-modal {
-    width: 90%;
+    width: 92%;
+    height: 55%;
     margin-left: 4%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    /* background-color: green; */
+}
+
+.indiv-modal-right-details-tv {
+    width: 100%;
+    margin-right: 4%;
+    margin-bottom: 1%;
 }
 
 .tv-more-modal {
     margin-block-start: 0.3rem;
-    margin-block-end: 0.2rem;
+    margin-block-end: 0.6rem;
     font-size: 1.5rem;
     color:#777;
 }
 
 .smaller-more-txt {
     font-size: 0.9rem;
-    margin-bottom: 0.6rem;
 } 
 
 /* episodes css */
@@ -200,12 +204,6 @@
     height: 100%;
 }
 
-.tvep-img {
-    width: 30%;
-    height: 5%;
-    object-fit: cover;
-    border-radius: 0.2rem;
-}
 
 .rating-border {
     border: 1px solid grey;
@@ -223,7 +221,7 @@
     /* justify-content: center; */
     align-items: center;
     justify-content: flex-end;
-
+    
 }
 
 .ep-title-box {
@@ -242,10 +240,52 @@
     border-top: 1px solid #404040;
     width: 94%;
     margin-left: 4%;
+    
 }
 
 .indiv-ep-box {
     width: 100%;
     height: 12%;
     border-bottom: 1px solid #404040;
+    display: flex;
+    align-items: center;
+    padding: 1.4rem;
+}
+
+.ep-number {
+    color: #d2d2d2;
+    font-size: 1.7rem;
+    flex: 0 0 6%;
+}
+
+.tvep-img {
+    width: 22%;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 0.2rem;
+    margin-right: 2%;
+}
+
+.inner-ep-details{
+    /* background-color: green; */
+    width: 62%;
+    height: 5rem;
+}
+
+.indiv-ep-name-title {
+    margin-block-start: 0rem;
+    margin-block-end: 0.5rem;
+}
+
+.indiv-ep-descr {
+    margin-block-start: 0.4rem;
+    margin-block-end: 0rem;
+    font-size: 0.92rem;
+    color: #d2d2d2;
+}
+
+.ep-title-duration-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }

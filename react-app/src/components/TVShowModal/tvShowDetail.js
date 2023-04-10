@@ -47,10 +47,6 @@ function TVDetail({ setShowModal, tvId }) {
                             Play
                         </button>
                     </NavLink>
-                    {/* <div className="add-to-my-list-modal">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 2V11H2V13H11V22H13V13H22V11H13V2H11Z" fill="currentColor"></path></svg>
-                </div> */}
-                    {/* <MovieReviewComponent movieId={movieId}/> */}
                 </div>
             </div>
             <div className='fade-bottom-modal'></div>
@@ -79,7 +75,7 @@ function TVDetail({ setShowModal, tvId }) {
                             <span className="modal-midd-right-txt-tv">{getGenres(tvShow.genres)}</span>
                         </div>
                         <div className="indiv-modal-right-details-tv">
-                            <span className="modal-midd-right-txt-tv" id="label-grey">This Movie is: </span>
+                            <span className="modal-midd-right-txt-tv" id="label-grey">This Show is: </span>
                             <span className="modal-midd-right-txt-tv"> {tvShow.tv_is}</span>
                         </div>
                     </div>
@@ -98,19 +94,35 @@ function TVDetail({ setShowModal, tvId }) {
                 <div className="full-ep-container">
                 {episodes.map((episode) => (
                     <div className="indiv-ep-box">
-                        <img src={episode.ep_poster} alt="episode poster" className="tvep-img" />                 
+                        <div className='ep-number'>{episode.ep_number}</div>
+                        <img src={episode.ep_poster} alt="episode poster" className="tvep-img" />  
+                        <div className="inner-ep-details">
+                            <div className="ep-title-duration-box">
+                                <h3 className="indiv-ep-name-title">{episode.ep_name}</h3>
+                                <span>{episode.ep_duration}</span>
+                            </div>
+                            <h5 className="indiv-ep-descr">{episode.ep_description}</h5>
+                        </div>               
                     </div>
                 ))}
                 </div>
                 <div className="more-about-tv-modal">
                     <h3 className="tv-more-modal">About {tvShow.tv_name}</h3>
                     <div className="indiv-modal-right-details-tv">
+                        <span className="smaller-more-txt-tv" id="label-grey">Creators: </span>
+                        <span className="smaller-more-txt-tv">{tvShow.creators}</span>
+                    </div>
+                    <div className="indiv-modal-right-details-tv">
                         <span className="smaller-more-txt-tv" id="label-grey">Cast: </span>
                         <span className="smaller-more-txt-tv">{tvShow.cast}</span>
                     </div>
                     <div className="indiv-modal-right-details-tv">
-                        <span className="smaller-more-txt-tv" id="label-grey">Creators: </span>
-                        <span className="smaller-more-txt-tv">{tvShow.creators}</span>
+                        <span className="smaller-more-txt-tv" id="label-grey">Genres: </span>
+                        <span className="smaller-more-txt-tv">{getGenres(tvShow.genres)}</span>
+                    </div>
+                    <div className="indiv-modal-right-details-tv">
+                        <span className="smaller-more-txt-tv" id="label-grey">This Show is: </span>
+                        <span className="smaller-more-txt-tv">{tvShow.tv_is}</span>
                     </div>
                 </div>
             </div>
