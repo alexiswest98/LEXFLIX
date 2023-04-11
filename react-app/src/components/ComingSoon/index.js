@@ -4,10 +4,12 @@ import { NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { getAllTvShowsThunk } from '../../store/tvshows';
 import { getAllTvReviewsThunk } from '../../store/tvreviews';
-import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
+// import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
+import TVShowCarousel from '../TvShowCarousel/TvShowCarousel';
 import { Modal } from '../../context/Modal';
 import TVDetail from '../TVShowModal/tvShowDetail';
 // import MovieDetail from "../MovieDetailModal/MovieModal";
+import avatar from './avatar.jpg';
 import './index.css'
 
 export default function ComingSoon() {
@@ -29,7 +31,7 @@ export default function ComingSoon() {
             <div className='whole-outer-movie-body'
                 style={{
                     backgroundSize: "cover",
-                    backgroundImage: `url("${headerShow.prev_img}")`,
+                    backgroundImage: `url('${avatar}')`,
                     backgroundPosition: 'center center'
                 }}>
             </div>
@@ -52,7 +54,7 @@ export default function ComingSoon() {
                 )}
             </div>
             <div className='fade-bottom'></div>
-            <HomePageCarousel/>
+            <TVShowCarousel/>
             <h1 className='more-movies-holder'></h1>
         </div>
     )

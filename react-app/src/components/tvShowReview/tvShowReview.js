@@ -71,7 +71,7 @@ export default function TvReviewComponent({ tvId }) {
             rating: 'Thumbs Down'
             }
 
-            await dispatch(editTvReviewThunk(editReview))
+            await dispatch(editTvReviewThunk(tvId, editReview))
         }
     }
 
@@ -93,7 +93,7 @@ export default function TvReviewComponent({ tvId }) {
                 rating: 'Thumbs Neutral'
             }
 
-            await dispatch(editTvReviewThunk(editReview))
+            await dispatch(editTvReviewThunk(tvId, editReview))
         }
     }
 
@@ -115,7 +115,7 @@ export default function TvReviewComponent({ tvId }) {
                 rating: 'Thumbs Up'
             }
 
-            await dispatch(editTvReviewThunk(editReview))
+            await dispatch(editTvReviewThunk(tvId, editReview))
         }
     }
 

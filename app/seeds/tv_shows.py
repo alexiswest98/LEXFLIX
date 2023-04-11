@@ -14,7 +14,7 @@ def seed_tv():
         rating="TV-Y7",
         year=2005,
         description="In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.",
-        prev_img="https://wwwimage-us.pplusstatic.com/base/files/seo/atla_social_1200x627.jpg",
+        prev_img="https://i0.wp.com/thehollywoodhandle.co/wp-content/uploads/2022/09/avatar-the-last-airbender-live-action-netflix-1593111887.jpeg",
         detail_img ="https://www.slashfilm.com/img/gallery/nickelodeons-first-avatar-the-last-airbender-animated-movie-will-bring-the-gaang-back-together/l-intro-1658550631.jpg",
         trailer_src= "https://www.youtube.com/embed/ooVvH2IYz0w",
         num_seasons= "3 Seasons"
@@ -142,7 +142,7 @@ def seed_tv():
         rating="TV-14",
         year=2022,
         description="Follows Wednesday Addams' years as a student, when she attempts to master her emerging psychic ability, thwart a killing spree, and solve the mystery that embroiled her parents.",
-        prev_img="https://i.ytimg.com/vi/YGDLb7N21bY/maxresdefault.jpg",
+        prev_img="https://i.ytimg.com/vi/7kkFDEHrzes/maxresdefault.jpg",
         detail_img ="https://snworksceo.imgix.net/bdh/6c19bab8-1b40-4fc3-8f46-56c83f214069.sized-1000x1000.jpg",
         trailer_src= "https://www.youtube.com/embed/Di310WS8zLk",
         num_seasons= "1 Season"
@@ -159,7 +159,7 @@ def seed_tv():
         year=2011,
         description="An anthology series exploring a twisted, high-tech multiverse where humanity's greatest innovations and darkest instincts collide.",
         prev_img="https://variety.com/wp-content/uploads/2017/08/black-mirror-logo.jpg",
-        detail_img ="https://cdn.vox-cdn.com/thumbor/OZnNQGUKIW-4EEAD4DxcSIP05_s=/0x0:3200x1600/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/16317504/black_mirror_episodes.jpg",
+        detail_img ="https://culturedvultures.com/wp-content/uploads/2016/10/Black-Mirror-Playtest.jpg",
         trailer_src= "https://www.youtube.com/embed/V0XOApF5nLU",
         num_seasons= "5 Seasons"
     )

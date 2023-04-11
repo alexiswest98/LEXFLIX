@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useHistory, useParams } from "react-router-dom";
 import MovieReviewComponent from "../MovieReview/MovieReview";
 import { getTvShowEpisodesThunk } from "../../store/tvepisodes";
@@ -29,7 +29,7 @@ function TVDetail({ setShowModal, tvId }) {
         dispatch(getTvShowEpisodesThunk(tvId))
     }, [dispatch, tvId])
 
-    if(!tvShow) return null;
+    if(!tvShow || !episodes) return null;
 
     return (
         <div className="outer-whole-tv-modal">
@@ -95,7 +95,12 @@ function TVDetail({ setShowModal, tvId }) {
                 {episodes.map((episode) => (
                     <div className="indiv-ep-box">
                         <div className='ep-number'>{episode.ep_number}</div>
-                        <img src={episode.ep_poster} alt="episode poster" className="tvep-img" />  
+                        <Link to={`/${profId}/watchTV/${tvId}`} className="tvep-img-div">
+                            <img src={episode.ep_poster} alt="episode poster" className="tvep-img"/>
+                            <div className="play-ep-div">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="playSVG" data-name="Play"><path d="M4 2.69127C4 1.93067 4.81547 1.44851 5.48192 1.81506L22.4069 11.1238C23.0977 11.5037 23.0977 12.4963 22.4069 12.8762L5.48192 22.1849C4.81546 22.5515 4 22.0693 4 21.3087V2.69127Z" fill="currentColor"></path></svg>
+                            </div>
+                        </Link>
                         <div className="inner-ep-details">
                             <div className="ep-title-duration-box">
                                 <h3 className="indiv-ep-name-title">{episode.ep_name}</h3>
@@ -125,6 +130,7 @@ function TVDetail({ setShowModal, tvId }) {
                         <span className="smaller-more-txt-tv">{tvShow.tv_is}</span>
                     </div>
                 </div>
+                <div className="seeding-warning">For the sake of seeding countless amounts of episodes, each show only has 1 season :)</div>
             </div>
         </div>
     )
