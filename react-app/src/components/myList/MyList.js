@@ -47,9 +47,12 @@ export default function MyList() {
         if (idx === 0 || idx === 5 || idx === 10 || idx === 15 || idx === 20) return true;
     }
 
-    // const isInMyList = (med) => {
-    //     if(media.includes(med)) return true;
-    // }
+    //need some way to differentiate between tv and movies 
+    const isMovie = (mediaId) => {
+        const curr = media.find(media => media.id === mediaId)
+        if (curr.movie_id !== null) return true;
+        return false;
+    }
 
     const deleteFromMyList = async (mediaId) => {
         await dispatch(deleteMyListThunk(mediaId))
