@@ -7,7 +7,7 @@ import { getAllReviewsThunk } from '../../store/reviews';
 import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
 import { Modal } from '../../context/Modal';
 import MovieDetail from "../MovieDetailModal/MovieModal";
-import TVShowCarousel from '../TvShowCarousel/TvShowCarousel';
+// import TVShowCarousel from '../TvShowCarousel/TvShowCarousel';
 import './homePage.css'
 
 export default function HomePage() {
@@ -52,7 +52,7 @@ export default function HomePage() {
             </div>
             <div className='fade-bottom'></div>
             <HomePageCarousel/>
-            <TVShowCarousel/>
+            {/* <TVShowCarousel/> */}
             <h1 className='more-movies-holder'></h1>
         </div>
     )
