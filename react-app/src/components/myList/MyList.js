@@ -69,7 +69,17 @@ export default function MyList() {
     }
 
 
-    if (!media) return null;
+    if (!media || media.includes(404)) return (
+        <div className="my-list-container">
+            <div className="my-list-title-container">
+                <h1 className="my-list-title">My List</h1>
+            </div>
+            <div className="no-mylist-container">
+                <h2 className="no-mylist-media">You haven't added any titles to your list yet.</h2>
+            </div>
+        </div>
+    )
+
 
     return (
         <div className="my-list-container">
@@ -134,7 +144,7 @@ export default function MyList() {
                                             <span className="movie-duration-list">{med.movie_duration}</span>
                                         </div>
                                         <div className="bott-bottom-movie-details">
-                                            <span className="movie-is-text-list">{movieIs(med.movie_is)}</span>
+                                            <span className="movie-is-text-list">{med.movie_is}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -196,7 +206,7 @@ export default function MyList() {
                                                 <span className="movie-duration-list">{med.num_seasons}</span>
                                             </div>
                                             <div className="bott-bottom-movie-details">
-                                                <span className="movie-is-text-list">{movieIs(med.tv_is)}</span>
+                                                <span className="movie-is-text-list">{med.tv_is}</span>
                                             </div>
                                         </div>
                                     </div>

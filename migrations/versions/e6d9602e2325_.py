@@ -169,9 +169,7 @@ def upgrade():
     sa.ForeignKeyConstraint(['movie_id'], ['movies.id'], ),
     sa.ForeignKeyConstraint(['profile_id'], ['profiles.id'], ),
     sa.ForeignKeyConstraint(['tv_id'], ['tv_shows.id'], ),
-    sa.PrimaryKeyConstraint('id'),
-    sa.UniqueConstraint('movie_id'),
-    sa.UniqueConstraint('tv_id')
+    sa.PrimaryKeyConstraint('id')
     )
     if environment == "production":
         op.execute(f"ALTER TABLE my_list SET SCHEMA {SCHEMA};")
