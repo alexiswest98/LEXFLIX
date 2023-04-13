@@ -9,8 +9,10 @@ import { Modal } from '../../context/Modal';
 import MovieReviewComponent from "../MovieReview/MovieReview";
 import TvReviewComponent from "../tvShowReview/tvShowReview";
 import { getAllMoviesThunk } from "../../store/movies";
+import { getAllTvShowsThunk } from "../../store/tvshows";
 import { deleteMyListThunk } from "../../store/mylist";
 import { getAllReviewsThunk } from "../../store/reviews";
+import { getAllTvReviewsThunk } from "../../store/tvreviews";
 import './myList.css';
 
 export default function MyList() {
@@ -30,8 +32,10 @@ export default function MyList() {
 
     useEffect(() => {
         dispatch(getAllMoviesThunk())
+        dispatch(getAllTvShowsThunk())
         dispatch(getAllMyListThunk(+profId))
         dispatch(getAllReviewsThunk(+profId))
+        dispatch(getAllTvReviewsThunk(+profId))
 
         const fetchMedia = async () => {
             setMedia(media)
@@ -52,9 +56,12 @@ export default function MyList() {
     //need some way to differentiate between tv and movies 
     const isMovie = (mediaId) => {
         const curr = media.find(media => media.id === mediaId)
-        if (curr.movie_id !== null) return true;
-        else return false;
+        if (curr.movie_id) return true;
+        if(curr.tv_id) return false;
+        return false;
     }
+
+    // console.log("!!!!!!!!", isMovie(10))
 
     const deleteFromMyList = async (mediaId) => {
         await dispatch(deleteMyListThunk(mediaId))

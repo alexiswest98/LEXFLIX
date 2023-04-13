@@ -28,7 +28,7 @@ import { Link } from "react-router-dom";
 export default function TVShowCarousel() {
   const dispatch = useDispatch();
   const tvshows = Object.values(useSelector(state => state.tvShow))
-  const myList = Object.values(useSelector(state => state.myList))
+  const myList = Object.values(useSelector(state => state?.myList))
   const { profId } = useParams();
   const [currTvId, setCurrTvId] = useState();
   const [showModal, setShowModal] = useState(false);

@@ -332,8 +332,10 @@
 
 .seeding-warning {
     width: 94%;
-    height: 3vh;
+    height: 4vh;
     display: flex;
     justify-content: center;
-    color: rgb(109, 45, 45);
+    color: rgb(125, 40, 40);
+    margin: 1vh 0;
+    /* border: 1px solid pink; */
 }
