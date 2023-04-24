@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { getAllTvShowsThunk } from '../../store/tvshows';
 import { getAllTvReviewsThunk } from '../../store/tvreviews';
 // import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
-import TVShowCarousel from '../TvShowCarousel/TvShowCarousel';
+import TVShowCarousel from '../TVShowCarousel/TVShowCarousel';
 import { Modal } from '../../context/Modal';
 import TVDetail from '../TVShowModal/tvShowDetail';
 // import MovieDetail from "../MovieDetailModal/MovieModal";

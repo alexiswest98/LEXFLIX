@@ -7,7 +7,7 @@ import { getAllReviewsThunk } from '../../store/reviews';
 import HomePageCarousel from '../HomePageCarousels/HomePageCarousels';
 import { Modal } from '../../context/Modal';
 import MovieDetail from "../MovieDetailModal/MovieModal";
-import TVShowCarousel from '../TvShowCarousel/TvShowCarousel';
+import TVShowCarousel from '../TVShowCarousel/TVShowCarousel';
 import './homePage.css'
 
 export default function HomePage() {
