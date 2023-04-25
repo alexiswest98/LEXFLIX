@@ -23,6 +23,7 @@ export default function MyList() {
     const [isOver, setIsOver] = useState(false)
     const [selectedIndex, setSelectedIndex] = useState(null)
     const [showModal, setShowModal] = useState(false);
+    const [showTVModal, setShowTVModal] = useState(false);
     const [mediaId, setMediaId] = useState(0);
     //testing re render after delete
     const [count, setCount] = useState(0);
@@ -108,7 +109,7 @@ export default function MyList() {
                                     setSelectedIndex(null);
                                 }}
                             >
-                                <img className="my-list-media-image" src={med.detail_img} alt="media-image" />
+                                <img className="my-list-media-image" src={med.detail_img} alt="media-image" onMouseOver={() => setMediaId(med.movie_id)} />
                                 <div className="hidden-details-info">
                                     <div className="top-half-hidden-details">
                                         <Link to={`/${profId}/watch/${med.movie_id}`} className="play-butt-details my-list-grow">
@@ -122,7 +123,6 @@ export default function MyList() {
                                         <MovieReviewComponent movieId={med.movie_id} />
                                         <div className="get-details-button-list" onClick={() => {
                                             setShowModal(true)
-                                            setMediaId(med.movie_id)
                                             // setIsOver(false);
                                             // setSelectedIndex(null);
                                         }}>
@@ -160,7 +160,7 @@ export default function MyList() {
                                     key={med.id}
                                     onMouseOver={() => {
                                         //have to have conditional so when modal is open, it doesn't trigger the hover effect
-                                        if (!showModal) {
+                                        if (!showTVModal) {
                                             setIsOver(true);
                                             setSelectedIndex(idx);
                                         }
@@ -170,7 +170,7 @@ export default function MyList() {
                                         setSelectedIndex(null);
                                     }}
                                 >
-                                    <img className="my-list-media-image" src={med.detail_img} alt="media-image" />
+                                    <img className="my-list-media-image" src={med.detail_img} alt="media-image" onMouseOver={() => setMediaId(med.tv_id)} />
                                     <div className="hidden-details-info">
                                         <div className="top-half-hidden-details">
                                             <Link to={`/${profId}/watchTV/${med.tv_id}`} className="play-butt-details my-list-grow">
@@ -183,16 +183,15 @@ export default function MyList() {
                                             </div>
                                             <TvReviewComponent tvId={med.tv_id} />
                                             <div className="get-details-button-list" onClick={() => {
-                                                setShowModal(true)
-                                                setMediaId(med.tv_id)
+                                                setShowTVModal(true)
                                                 // setIsOver(false);
                                                 // setSelectedIndex(null);
                                             }}>
                                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="down-arrow-details"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.293 7.29297L12.0001 14.5859L4.70718 7.29297L3.29297 8.70718L11.293 16.7072C11.4805 16.8947 11.7349 17.0001 12.0001 17.0001C12.2653 17.0001 12.5196 16.8947 12.7072 16.7072L20.7072 8.70718L19.293 7.29297Z" fill="currentColor"></path></svg>
                                             </div>
-                                            {showModal && (
-                                                <Modal onClose={() => setShowModal(false)}>
-                                                    <TVDetail setShowModal={setShowModal} tvId={mediaId} />
+                                            {showTVModal && (
+                                                <Modal onClose={() => setShowTVModal(false)}>
+                                                    <TVDetail setShowModal={setShowTVModal} tvId={mediaId} />
                                                 </Modal>
                                             )}
 
