@@ -569,7 +569,7 @@ def seed_movies():
         year= 1998,
         duration= "2h 8m", 
         description= "Identical twins Annie and Hallie, separated at birth and each raised by one of their biological parents, discover each other for the first time at summer camp and make a plan to bring their wayward parents back together.",
-        prev_img= "https://www.hollywoodfl.org/ImageRepository/Document?documentID=20417",
+        prev_img= "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/300E2FE605731ED0F338D027EDB9FC2FD0384DCC98620AFFE5F3EDE7E58CAD87/scale?width=1200&aspectRatio=1.78&format=jpeg",
         detail_img = "https://d23.com/app/uploads/2017/02/1180w-600h_a-to-z-the-parent-trap-1998.jpg",
         trailer_src= "https://www.youtube.com/embed/PMAhVpgzmRU?controls=0"
         )
