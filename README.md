@@ -74,7 +74,7 @@ To get a local copy up and running follow these simple example steps.
 
 - [x] Profiles
     - [x] Create a profile
-    - [x] Load all profiles
+    - [x] View profiles
     - [x] Create a profile
     - [x] Update a profile
     - [x] Delete a profiles
@@ -82,14 +82,15 @@ To get a local copy up and running follow these simple example steps.
     - [x] View Movie carousel
     - [x] See individual movie details on hover
     - [x] See individual movie details modal
-    - [x] Delete a task
-- [x] Movie Reviews
-    - [x] Create a review for a movie
-    - [x] View existing reviews for movies
-    - [x] Create a movie review
-    - [x] Update a movie review
-    - [x] Delete a movie review
-
+    - [x] Watch trailer
+- [x] Reviews
+    - [x] Create a Movie and TVshow review
+    - [x] Update a Movie and TVshow review
+    - [x] Delete a Movie and TVshow review
+  - [x] My List
+    - [x] Add to My List
+    - [x] Remove from My List
+    - [x] View TVshows and Movies from My List
 
 ## Get in touch!
 - [Alexis' GitHub](https://github.com/alexiswest98)
