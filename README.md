@@ -84,9 +84,9 @@ To get a local copy up and running follow these simple example steps.
     - [x] See individual movie details modal
     - [x] Watch trailer
 - [x] Reviews
-    - [x] Create a Movie and TVshow review
-    - [x] Update a Movie and TVshow review
-    - [x] Delete a Movie and TVshow review
+    - [x] Create a Movie and TV Show review
+    - [x] Update a Movie and TV Show review
+    - [x] Delete a Movie and TV Show review
 - [x] My List
     - [x] Add to My List
     - [x] Remove from My List
