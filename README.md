@@ -87,7 +87,7 @@ To get a local copy up and running follow these simple example steps.
     - [x] Create a Movie and TVshow review
     - [x] Update a Movie and TVshow review
     - [x] Delete a Movie and TVshow review
-  - [x] My List
+- [x] My List
     - [x] Add to My List
     - [x] Remove from My List
     - [x] View TVshows and Movies from My List
